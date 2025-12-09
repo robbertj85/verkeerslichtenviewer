@@ -127,9 +127,9 @@ def get_traffic_lights_gdf(use_cache: bool = True) -> gpd.GeoDataFrame:
             # Priority categories
             'has_emergency': 'PBC:EMERGENCY' in category_ids,
             'has_road_operator': 'PBC:ROAD_OPERATOR' in category_ids,
-            'has_public_transport': 'PBC:PUBLIC_TRANSPORT' in category_ids,
+            'has_public_transport': 'PBC:PUBLIC' in category_ids,  # API uses PBC:PUBLIC
             'has_logistics': 'PBC:LOGISTICS' in category_ids,
-            'has_agriculture': 'PBC:AGRICULTURE' in category_ids,
+            'has_agriculture': 'PBC:MACHINERY' in category_ids,  # API uses PBC:MACHINERY
             # Component organizations
             'tlc_organization': tlc_org,
             'its_organization': its_org,

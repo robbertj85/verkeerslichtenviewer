@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-09T14:54:34.455604",
+  "generated_at": "2025-12-09T18:11:15.344465",
   "total_traffic_lights": 1217,
   "by_authority": {
     "Alkmaar": 1,
@@ -86,9 +86,9 @@
   "priority_stats": {
     "emergency": 1203,
     "road_operator": 1194,
-    "public_transport": 0,
+    "public_transport": 466,
     "logistics": 452,
-    "agriculture": 0
+    "agriculture": 14
   },
   "source": "UDAP (Urban Data Access Platform)",
   "source_url": "https://map.udap.nl"
