@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "UDAP Viewer - Slimme Verkeerslichten Nederland",
+  title: "Verkeerslichtenviewer - Slimme Verkeerslichten Nederland",
   description: "Interactieve kaart van intelligente verkeerslichten (iVRI) in Nederland. Bekijk locaties, prioriteitsklassen en statistieken van het UDAP netwerk.",
   keywords: ["UDAP", "iVRI", "verkeerslichten", "Nederland", "smart traffic lights", "Talking Traffic"],
-  authors: [{ name: "UDAP Viewer" }],
+  authors: [{ name: "Verkeerslichtenviewer" }],
   openGraph: {
-    title: "UDAP Viewer - Slimme Verkeerslichten Nederland",
+    title: "Verkeerslichtenviewer - Slimme Verkeerslichten Nederland",
     description: "Interactieve kaart van intelligente verkeerslichten (iVRI) in Nederland",
     type: "website",
   },

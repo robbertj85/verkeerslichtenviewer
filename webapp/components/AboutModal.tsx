@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { PRIORITY_INFO, PriorityCategory } from '@/types/traffic-lights';
 
 interface AboutModalProps {
   isOpen: boolean;
@@ -42,7 +43,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
     >
       <div className="p-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-gray-900">Over UDAP Viewer</h2>
+          <h2 className="text-xl font-bold text-gray-900">Over Verkeerslichtenviewer</h2>
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600 transition"
@@ -65,27 +66,30 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             <p className="mb-2">
               iVRI&apos;s kunnen prioriteit geven aan verschillende verkeersdeelnemers:
             </p>
-            <ul className="space-y-1">
-              <li className="flex items-center gap-2">
-                <span>🚨</span>
-                <span><strong>Nood- en Hulpdiensten</strong> - Ambulance, brandweer, politie</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>🚧</span>
-                <span><strong>Weginspecteur & Berging</strong> - Strooiwagens, bergingsvoertuigen</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>🚌</span>
-                <span><strong>Openbaar Vervoer</strong> - Bussen, trams</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>🚛</span>
-                <span><strong>Vrachtverkeer</strong> - Logistiek transport</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>🚜</span>
-                <span><strong>Landbouwverkeer</strong> - Tractoren, landbouwmachines</span>
-              </li>
+            <ul className="space-y-1.5">
+              {([
+                ['emergency', 'Ambulance, brandweer, politie'],
+                ['road_operator', 'Strooiwagens, bergingsvoertuigen'],
+                ['public_transport', 'Bussen, trams'],
+                ['logistics', 'Logistiek transport'],
+                ['agriculture', 'Tractoren, landbouwmachines'],
+              ] as [PriorityCategory, string][]).map(([key, description]) => {
+                const info = PRIORITY_INFO[key];
+                return (
+                  <li key={key} className="flex items-center gap-2">
+                    <svg
+                      className="w-4 h-4 flex-shrink-0"
+                      fill="none"
+                      stroke={info.color}
+                      strokeWidth={1.5}
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d={info.svgPath} />
+                    </svg>
+                    <span><strong>{info.name}</strong> - {description}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

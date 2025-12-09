@@ -97,7 +97,7 @@ export default function Home() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-lg md:text-xl font-bold text-gray-900">
-              🚦 <span className="hidden sm:inline">UDAP Viewer</span>
+              🚦 <span className="hidden sm:inline">Verkeerslichtenviewer</span>
               <span className="sm:hidden">iVRI</span>
             </h1>
           </div>

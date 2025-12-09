@@ -4,65 +4,44 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 export default function ApiDocsPage() {
-  const redocContainerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Dynamically load Redoc
+    // Load Swagger UI CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css';
+    document.head.appendChild(link);
+
+    // Load Swagger UI JS
     const script = document.createElement('script');
-    script.src = 'https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js';
+    script.src = 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js';
     script.async = true;
-    script.onerror = () => {
-      console.error('Failed to load Redoc');
-    };
     script.onload = () => {
-      // @ts-expect-error Redoc is loaded from CDN
-      if (window.Redoc && redocContainerRef.current) {
-        // Clear loading state first
-        redocContainerRef.current.innerHTML = '';
-        // @ts-expect-error Redoc is loaded from CDN
-        window.Redoc.init('/openapi.json', {
-          theme: {
-            colors: {
-              primary: {
-                main: '#2563eb',
-              },
-            },
-            typography: {
-              fontSize: '15px',
-              fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-              headings: {
-                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                fontWeight: '600',
-              },
-              code: {
-                fontSize: '14px',
-                fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace',
-              },
-            },
-            sidebar: {
-              width: '280px',
-              backgroundColor: '#f8fafc',
-            },
-            rightPanel: {
-              backgroundColor: '#1e293b',
-            },
-          },
-          hideDownloadButton: false,
-          hideHostname: false,
-          expandResponses: '200',
-          pathInMiddlePanel: true,
-          sortPropsAlphabetically: false,
-          nativeScrollbars: true,
-        }, redocContainerRef.current);
+      if (containerRef.current) {
+        containerRef.current.innerHTML = '';
+        // @ts-expect-error SwaggerUIBundle is loaded from CDN
+        window.SwaggerUIBundle({
+          url: '/openapi.json',
+          dom_id: '#swagger-ui',
+          presets: [
+            // @ts-expect-error SwaggerUIBundle is loaded from CDN
+            window.SwaggerUIBundle.presets.apis,
+            // @ts-expect-error SwaggerUIBundle is loaded from CDN
+            window.SwaggerUIBundle.SwaggerUIStandalonePreset
+          ],
+          layout: 'BaseLayout',
+          deepLinking: true,
+          showExtensions: true,
+          showCommonExtensions: true,
+        });
       }
     };
     document.body.appendChild(script);
 
     return () => {
-      // Cleanup
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
+      if (script.parentNode) script.parentNode.removeChild(script);
+      if (link.parentNode) link.parentNode.removeChild(link);
     };
   }, []);
 
@@ -100,8 +79,8 @@ export default function ApiDocsPage() {
         </div>
       </header>
 
-      {/* Redoc container */}
-      <div ref={redocContainerRef} id="redoc-container">
+      {/* Swagger UI container */}
+      <div ref={containerRef} id="swagger-ui" className="swagger-container">
         {/* Loading state */}
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-center">
@@ -110,6 +89,13 @@ export default function ApiDocsPage() {
           </div>
         </div>
       </div>
+
+      <style jsx global>{`
+        .swagger-ui .topbar { display: none; }
+        .swagger-ui .info { margin: 30px 0; }
+        .swagger-ui .info .title { font-size: 2rem; }
+        .swagger-ui .scheme-container { padding: 15px 0; }
+      `}</style>
     </div>
   );
 }

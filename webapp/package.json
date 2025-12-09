@@ -1,7 +1,7 @@
 {
-  "name": "udap-viewer",
+  "name": "verkeerslichtenviewer",
   "version": "1.0.0",
-  "description": "UDAP Traffic Light Viewer - Interactive map of smart traffic lights in the Netherlands",
+  "description": "Verkeerslichtenviewer - Interactive map of smart traffic lights in the Netherlands",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,10 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "leaflet": "^1.9.4",
     "next": "^14.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "leaflet": "^1.9.4",
     "react-leaflet": "^4.2.1"
   },
   "devDependencies": {
@@ -21,11 +21,11 @@
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "typescript": "^5.0.0",
-    "tailwindcss": "^3.4.0",
-    "postcss": "^8.4.0",
     "autoprefixer": "^10.4.0",
     "eslint": "^8.0.0",
-    "eslint-config-next": "^14.2.0"
+    "eslint-config-next": "^16.0.8",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0"
   }
 }

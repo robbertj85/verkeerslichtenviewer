@@ -9,10 +9,10 @@
 
 // TLC Organization logos - direct mappings to company websites
 export const TLC_LOGOS: Record<string, string> = {
-  'Vialis': 'https://logo.clearbit.com/vialis.nl',
-  'Swarco': 'https://logo.clearbit.com/swarco.com',
-  'Swarco - Peek Traffic': 'https://logo.clearbit.com/swarco.com',
-  'Ko Hartog': 'https://logo.clearbit.com/kohartog.nl',
+  'Vialis': 'https://www.vialis.nl/sites/vw_vialis/logo/logo.svg?v=20250203',
+  'Swarco': 'https://www.swarco.com/sites/default/files/public/color/swarco-326cfe75/logo.svg',
+  'Swarco - Peek Traffic': 'https://www.swarco.com/sites/default/files/public/color/swarco-326cfe75/logo.svg',
+  'Ko Hartog': 'https://www.kohartog.nl/images/kohartog_logo_mobile.webp',
 };
 
 // Province logos - using Wikipedia coat of arms

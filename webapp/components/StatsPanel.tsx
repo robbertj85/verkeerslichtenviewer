@@ -34,10 +34,11 @@ export default function StatsPanel({ data, filters }: StatsPanelProps) {
         return false;
       }
 
-      // Priority filter - show if ANY of the selected priorities match
-      if (filters.priorities.length > 0) {
+      // Priority filter - when "all" (5 priorities), show everything
+      // When single priority selected, only show those with that priority
+      if (filters.priorities.length > 0 && filters.priorities.length < 5) {
         const hasPriority = filters.priorities.some(p => props.priorities.includes(p));
-        if (!hasPriority && props.priorities.length > 0) {
+        if (!hasPriority) {
           return false;
         }
       }
@@ -97,36 +98,44 @@ export default function StatsPanel({ data, filters }: StatsPanelProps) {
   return (
     <div className="bg-white rounded-lg shadow-sm p-4 space-y-4">
       {/* Main stats */}
-      <div className="stats-gradient rounded-lg p-4 text-white">
-        <h2 className="text-sm font-medium opacity-80">Verkeerslichten</h2>
+      <div>
         <div className="flex items-baseline gap-2">
-          <span className="text-3xl font-bold">{stats.filtered.toLocaleString('nl-NL')}</span>
+          <span className="text-2xl font-bold text-gray-900">{stats.filtered.toLocaleString('nl-NL')}</span>
           {stats.filtered !== stats.total && (
-            <span className="text-sm opacity-70">/ {stats.total.toLocaleString('nl-NL')}</span>
+            <span className="text-sm text-gray-400">/ {stats.total.toLocaleString('nl-NL')}</span>
           )}
+          <span className="text-sm text-gray-500">verkeerslichten</span>
         </div>
-        <p className="text-xs opacity-70 mt-1">
+        <p className="text-xs text-gray-400 mt-1">
           {stats.uniqueAuthorities} wegbeheerders
         </p>
       </div>
 
       {/* Priority breakdown */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-700 mb-2">Prioriteitsklassen</h3>
-        <div className="space-y-2">
+        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Prioriteitsklassen</h3>
+        <div className="space-y-1.5">
           {(Object.entries(PRIORITY_INFO) as [PriorityCategory, typeof PRIORITY_INFO[PriorityCategory]][]).map(([key, info]) => {
             const count = stats.priorityCounts[key];
             const percentage = stats.filtered > 0 ? (count / stats.filtered) * 100 : 0;
 
             return (
               <div key={key} className="flex items-center gap-2">
-                <span className="text-lg" title={info.name}>{info.icon}</span>
-                <div className="flex-1">
-                  <div className="flex justify-between text-xs mb-0.5">
+                <svg
+                  className="w-4 h-4 flex-shrink-0"
+                  fill="none"
+                  stroke={info.color}
+                  strokeWidth={1.5}
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d={info.svgPath} />
+                </svg>
+                <div className="flex-1 min-w-0">
+                  <div className="flex justify-between items-center text-xs">
                     <span className="text-gray-600 truncate">{info.name}</span>
-                    <span className="text-gray-900 font-medium">{count}</span>
+                    <span className="text-gray-900 font-medium ml-2">{count}</span>
                   </div>
-                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                  <div className="h-1 bg-gray-100 rounded-full overflow-hidden mt-0.5">
                     <div
                       className="h-full rounded-full transition-all duration-300"
                       style={{
@@ -144,10 +153,10 @@ export default function StatsPanel({ data, filters }: StatsPanelProps) {
 
       {/* Top authorities */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-700 mb-2">Top Wegbeheerders</h3>
-        <div className="space-y-1">
+        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Top Wegbeheerders</h3>
+        <div className="space-y-0.5">
           {stats.topAuthorities.map(([name, count]) => (
-            <div key={name} className="flex justify-between text-sm">
+            <div key={name} className="flex justify-between text-xs">
               <span className="text-gray-600 truncate">{name}</span>
               <span className="text-gray-900 font-medium ml-2">{count}</span>
             </div>
