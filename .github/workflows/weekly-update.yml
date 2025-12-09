@@ -1,0 +1,64 @@
+name: Weekly UDAP Data Update
+
+on:
+  schedule:
+    # Run every Monday at 3:00 AM CET (2:00 AM UTC in winter, 1:00 AM UTC in summer)
+    # Using 2:00 AM UTC to be safe for CET
+    - cron: '0 2 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Update traffic lights data
+        run: |
+          python main.py --refresh
+
+      - name: Update statistics history
+        run: |
+          python scripts/update_stats_history.py
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet webapp/public/data/ || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add webapp/public/data/
+
+          # Get stats for commit message
+          TOTAL=$(python -c "import json; d=json.load(open('webapp/public/data/summary.json')); print(d['total_traffic_lights'])")
+          WEEK=$(date +%Y-W%V)
+
+          git commit -m "📊 Weekly data update: ${TOTAL} traffic lights (${WEEK})
+
+          Automated update from UDAP API.
+
+          Co-Authored-By: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+
+          git push
+
+      - name: No changes detected
+        if: steps.check_changes.outputs.changes != 'true'
+        run: |
+          echo "No changes detected in traffic light data this week."

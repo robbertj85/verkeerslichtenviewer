@@ -1,0 +1,549 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Verkeerslichtenviewer API",
+    "description": "REST API voor toegang tot data van intelligente verkeerslichten (iVRI's) in Nederland.\n\nData is afkomstig van het **UDAP (Urban Data Access Platform)** - het landelijke platform\nvoor slimme verkeerslichten dat onderdeel is van Talking Traffic.\n\n## Kenmerken\n- **Real-time data** - Gegevens worden regelmatig gesynchroniseerd met UDAP\n- **Filtering** - Filter op wegbeheerder, prioriteitsklasse of TLC leverancier\n- **Export** - Download data in GeoJSON, JSON of CSV formaat\n- **Geen authenticatie** - De API is vrij toegankelijk\n\n## Prioriteitsklassen\nVerkeerslichten kunnen geconfigureerd zijn voor verschillende prioriteitsklassen:\n\n| Klasse | Beschrijving |\n|--------|--------------|\n| `emergency` | Nood- en hulpdiensten (brandweer, ambulance, politie) |\n| `road_operator` | Weginspecteur & berging |\n| `public_transport` | Openbaar vervoer (bus, tram) |\n| `logistics` | Vrachtverkeer |\n| `agriculture` | Landbouwverkeer |\n\n## Attributie\nBij gebruik van deze data, vermeld de bron: **UDAP (Urban Data Access Platform) - map.udap.nl**\n",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Verkeerslichtenviewer",
+      "url": "https://map.udap.nl"
+    },
+    "license": {
+      "name": "Open Data",
+      "url": "https://map.udap.nl"
+    }
+  },
+  "servers": [
+    {
+      "url": "/api/v1",
+      "description": "API v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Verkeerslichten",
+      "description": "Endpoints voor verkeerslichtdata"
+    },
+    {
+      "name": "Statistieken",
+      "description": "Samenvattende statistieken"
+    },
+    {
+      "name": "Export",
+      "description": "Data export functionaliteit"
+    }
+  ],
+  "paths": {
+    "/subjects": {
+      "get": {
+        "summary": "Lijst verkeerslichten",
+        "description": "Haal een gepagineerde lijst op van alle intelligente verkeerslichten (iVRI's).\n\nResultaten kunnen gefilterd worden op wegbeheerder, prioriteitsklasse of TLC leverancier.\n",
+        "operationId": "getSubjects",
+        "tags": [
+          "Verkeerslichten"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Paginanummer (1-indexed)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            },
+            "example": 1
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Aantal items per pagina",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000,
+              "default": 100
+            },
+            "example": 100
+          },
+          {
+            "name": "authority",
+            "in": "query",
+            "description": "Filter op wegbeheerder (exact match)",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Amsterdam"
+          },
+          {
+            "name": "priority",
+            "in": "query",
+            "description": "Filter op prioriteitsklasse",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "emergency",
+                "road_operator",
+                "public_transport",
+                "logistics",
+                "agriculture"
+              ]
+            },
+            "example": "emergency"
+          },
+          {
+            "name": "tlc_organization",
+            "in": "query",
+            "description": "Filter op TLC leverancier",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Vialis"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Succesvolle response met gepagineerde lijst",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubjectsResponse"
+                },
+                "example": {
+                  "total": 1217,
+                  "page": 1,
+                  "limit": 100,
+                  "total_pages": 13,
+                  "data": [
+                    {
+                      "id": "7919000a-1234-5678-abcd-ef0123456789",
+                      "name": "AMS001tlc",
+                      "identifier": "7919000a",
+                      "latitude": 52.3676,
+                      "longitude": 4.9041,
+                      "roadRegulatorId": 1,
+                      "roadRegulatorName": "Amsterdam",
+                      "has_emergency": true,
+                      "has_road_operator": true,
+                      "has_public_transport": true,
+                      "has_logistics": false,
+                      "has_agriculture": false,
+                      "priorities": [
+                        "emergency",
+                        "road_operator",
+                        "public_transport"
+                      ],
+                      "priority_count": 3,
+                      "tlc_organization": "Vialis",
+                      "its_organization": "",
+                      "ris_organization": "",
+                      "coordinates": [
+                        4.9041,
+                        52.3676
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stats": {
+      "get": {
+        "summary": "Statistieken overzicht",
+        "description": "Haal samenvattende statistieken op over het complete verkeerslichten netwerk.\n\nBevat:\n- Totaal aantal verkeerslichten\n- Verdeling per wegbeheerder\n- Verdeling per TLC leverancier\n- Verdeling per prioriteitsklasse\n",
+        "operationId": "getStats",
+        "tags": [
+          "Statistieken"
+        ],
+        "responses": {
+          "200": {
+            "description": "Succesvolle response met statistieken",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatsResponse"
+                },
+                "example": {
+                  "generated_at": "2024-01-15T10:30:00.000Z",
+                  "total_traffic_lights": 1217,
+                  "by_authority": {
+                    "Amsterdam": 156,
+                    "Rotterdam": 142,
+                    "'s-Hertogenbosch": 43,
+                    "Utrecht": 38
+                  },
+                  "by_tlc_organization": {
+                    "Vialis": 580,
+                    "Swarco": 320,
+                    "Swarco - Peek Traffic": 245,
+                    "Ko Hartog": 72
+                  },
+                  "priority_stats": {
+                    "emergency": 1100,
+                    "road_operator": 950,
+                    "public_transport": 620,
+                    "logistics": 180,
+                    "agriculture": 45
+                  },
+                  "source": "UDAP",
+                  "source_url": "https://map.udap.nl"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/export": {
+      "get": {
+        "summary": "Data export",
+        "description": "Download de complete dataset van verkeerslichten in verschillende formaten.\n\n**Beschikbare formaten:**\n- `geojson` - GeoJSON FeatureCollection (voor GIS software zoals QGIS)\n- `json` - Platte JSON array\n- `csv` - Comma-separated values (voor Excel/spreadsheets)\n",
+        "operationId": "exportData",
+        "tags": [
+          "Export"
+        ],
+        "parameters": [
+          {
+            "name": "format",
+            "in": "query",
+            "description": "Export formaat",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "geojson",
+                "json",
+                "csv"
+              ],
+              "default": "geojson"
+            },
+            "example": "geojson"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Succesvolle download",
+            "content": {
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeoJSONExport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TrafficLight"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "string",
+                  "description": "CSV met headers"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TrafficLight": {
+        "type": "object",
+        "description": "Een intelligent verkeerslicht (iVRI)",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unieke identifier (UUID)",
+            "example": "7919000a-1234-5678-abcd-ef0123456789"
+          },
+          "name": {
+            "type": "string",
+            "description": "Naam/code van het verkeerslicht",
+            "example": "AMS001tlc"
+          },
+          "identifier": {
+            "type": "string",
+            "description": "Korte identifier",
+            "example": "7919000a"
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double",
+            "description": "Breedtegraad (WGS84)",
+            "example": 52.3676
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double",
+            "description": "Lengtegraad (WGS84)",
+            "example": 4.9041
+          },
+          "roadRegulatorId": {
+            "type": "integer",
+            "nullable": true,
+            "description": "ID van de wegbeheerder",
+            "example": 1
+          },
+          "roadRegulatorName": {
+            "type": "string",
+            "description": "Naam van de wegbeheerder",
+            "example": "Amsterdam"
+          },
+          "has_emergency": {
+            "type": "boolean",
+            "description": "Heeft nood- en hulpdiensten prioriteit",
+            "example": true
+          },
+          "has_road_operator": {
+            "type": "boolean",
+            "description": "Heeft weginspecteur/berging prioriteit",
+            "example": true
+          },
+          "has_public_transport": {
+            "type": "boolean",
+            "description": "Heeft openbaar vervoer prioriteit",
+            "example": true
+          },
+          "has_logistics": {
+            "type": "boolean",
+            "description": "Heeft vrachtverkeer prioriteit",
+            "example": false
+          },
+          "has_agriculture": {
+            "type": "boolean",
+            "description": "Heeft landbouwverkeer prioriteit",
+            "example": false
+          },
+          "priorities": {
+            "type": "array",
+            "description": "Lijst van actieve prioriteitsklassen",
+            "items": {
+              "type": "string",
+              "enum": [
+                "emergency",
+                "road_operator",
+                "public_transport",
+                "logistics",
+                "agriculture"
+              ]
+            },
+            "example": [
+              "emergency",
+              "road_operator",
+              "public_transport"
+            ]
+          },
+          "priority_count": {
+            "type": "integer",
+            "description": "Aantal actieve prioriteitsklassen",
+            "example": 3
+          },
+          "tlc_organization": {
+            "type": "string",
+            "description": "TLC (Traffic Light Controller) leverancier",
+            "example": "Vialis"
+          },
+          "its_organization": {
+            "type": "string",
+            "description": "ITS organisatie",
+            "example": ""
+          },
+          "ris_organization": {
+            "type": "string",
+            "description": "RIS organisatie",
+            "example": ""
+          },
+          "coordinates": {
+            "type": "array",
+            "description": "[longitude, latitude] array (GeoJSON conventie)",
+            "items": {
+              "type": "number"
+            },
+            "example": [
+              4.9041,
+              52.3676
+            ]
+          }
+        }
+      },
+      "SubjectsResponse": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "description": "Totaal aantal resultaten (zonder paginering)",
+            "example": 1217
+          },
+          "page": {
+            "type": "integer",
+            "description": "Huidige paginanummer",
+            "example": 1
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Items per pagina",
+            "example": 100
+          },
+          "total_pages": {
+            "type": "integer",
+            "description": "Totaal aantal pagina's",
+            "example": 13
+          },
+          "data": {
+            "type": "array",
+            "description": "Lijst van verkeerslichten",
+            "items": {
+              "$ref": "#/components/schemas/TrafficLight"
+            }
+          }
+        }
+      },
+      "StatsResponse": {
+        "type": "object",
+        "properties": {
+          "generated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Tijdstip van data generatie",
+            "example": "2024-01-15T10:30:00.000Z"
+          },
+          "total_traffic_lights": {
+            "type": "integer",
+            "description": "Totaal aantal verkeerslichten",
+            "example": 1217
+          },
+          "by_authority": {
+            "type": "object",
+            "description": "Aantal per wegbeheerder",
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "example": {
+              "Amsterdam": 156,
+              "Rotterdam": 142
+            }
+          },
+          "by_tlc_organization": {
+            "type": "object",
+            "description": "Aantal per TLC leverancier",
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "example": {
+              "Vialis": 580,
+              "Swarco": 320
+            }
+          },
+          "priority_stats": {
+            "type": "object",
+            "description": "Aantal per prioriteitsklasse",
+            "properties": {
+              "emergency": {
+                "type": "integer",
+                "example": 1100
+              },
+              "road_operator": {
+                "type": "integer",
+                "example": 950
+              },
+              "public_transport": {
+                "type": "integer",
+                "example": 620
+              },
+              "logistics": {
+                "type": "integer",
+                "example": 180
+              },
+              "agriculture": {
+                "type": "integer",
+                "example": 45
+              }
+            }
+          },
+          "source": {
+            "type": "string",
+            "description": "Databron naam",
+            "example": "UDAP"
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL van de databron",
+            "example": "https://map.udap.nl"
+          }
+        }
+      },
+      "GeoJSONExport": {
+        "type": "object",
+        "description": "GeoJSON FeatureCollection",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "FeatureCollection"
+            ],
+            "example": "FeatureCollection"
+          },
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "generated_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "total_traffic_lights": {
+                "type": "integer"
+              },
+              "source": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              }
+            }
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "Feature"
+                  ]
+                },
+                "geometry": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "Point"
+                      ]
+                    },
+                    "coordinates": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "properties": {
+                  "$ref": "#/components/schemas/TrafficLight"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
