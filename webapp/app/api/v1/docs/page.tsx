@@ -3,6 +3,10 @@
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 
+// Swagger UI CDN URLs - using latest stable version
+const SWAGGER_CSS_URL = 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css';
+const SWAGGER_JS_URL = 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js';
+
 export default function ApiDocsPage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -10,12 +14,12 @@ export default function ApiDocsPage() {
     // Load Swagger UI CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css';
+    link.href = SWAGGER_CSS_URL;
     document.head.appendChild(link);
 
     // Load Swagger UI JS
     const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js';
+    script.src = SWAGGER_JS_URL;
     script.async = true;
     script.onload = () => {
       if (containerRef.current) {
