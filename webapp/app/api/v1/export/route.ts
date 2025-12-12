@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 import path from 'path';
+import { rateLimit, getClientIdentifier, rateLimitConfigs } from '@/lib/rate-limit';
 
 interface TrafficLightProperties {
   id: string;
@@ -38,16 +39,45 @@ interface TrafficLightData {
   features: TrafficLightFeature[];
 }
 
+// Valid export formats
+const VALID_FORMATS = ['geojson', 'json', 'csv'];
+
 export async function GET(request: NextRequest) {
   try {
-    const format = request.nextUrl.searchParams.get('format') || 'geojson';
+    // Rate limiting (stricter for export - larger responses)
+    const clientId = getClientIdentifier(request);
+    const rateLimitResult = rateLimit(`export:${clientId}`, rateLimitConfigs.exportApi);
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'Retry-After': String(Math.ceil((rateLimitResult.reset - Date.now()) / 1000)),
+            'X-RateLimit-Limit': String(rateLimitConfigs.exportApi.limit),
+            'X-RateLimit-Remaining': '0',
+          },
+        }
+      );
+    }
+
+    const format = (request.nextUrl.searchParams.get('format') || 'geojson').toLowerCase();
+
+    // Validate format parameter
+    if (!VALID_FORMATS.includes(format)) {
+      return NextResponse.json(
+        { error: `Invalid format parameter. Must be one of: ${VALID_FORMATS.join(', ')}` },
+        { status: 400 }
+      );
+    }
 
     // Read the GeoJSON file
     const dataPath = path.join(process.cwd(), 'public', 'data', 'traffic_lights.geojson');
     const fileContent = await fs.readFile(dataPath, 'utf-8');
     const data: TrafficLightData = JSON.parse(fileContent);
 
-    switch (format.toLowerCase()) {
+    switch (format) {
       case 'geojson': {
         return new NextResponse(JSON.stringify(data, null, 2), {
           headers: {
@@ -132,6 +162,7 @@ export async function GET(request: NextRequest) {
       }
 
       default:
+        // This shouldn't happen due to validation above, but TypeScript needs it
         return NextResponse.json(
           { error: `Unsupported format: ${format}. Use geojson, json, or csv.` },
           { status: 400 }
@@ -139,7 +170,10 @@ export async function GET(request: NextRequest) {
     }
 
   } catch (error) {
-    console.error('Export error:', error);
+    // Log error without exposing details in production
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Export error:', error);
+    }
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }

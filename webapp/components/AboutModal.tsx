@@ -121,11 +121,31 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             </ul>
           </div>
 
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-2">Licentie</h3>
+            <p className="mb-2">
+              Deze software is beschikbaar onder de{' '}
+              <a
+                href="https://opensource.org/licenses/MIT"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                MIT-licentie
+              </a>.
+            </p>
+          </div>
+
           <div className="pt-4 border-t border-gray-200">
+            <p className="text-xs text-gray-500 mb-2">
+              <strong>Disclaimer:</strong> De berekeningen en schattingen in deze tool zijn uitsluitend
+              bedoeld ter indicatie en zijn gebaseerd op openbaar beschikbaar onderzoek.
+              Gebruik is geheel op eigen risico.
+            </p>
             <p className="text-xs text-gray-400">
               Dit is een onofficiële viewer. Data wordt opgehaald van de publieke UDAP API.
               <br />
-              © {new Date().getFullYear()} - Gebouwd met Next.js en Leaflet
+              © {new Date().getFullYear()} Transport Beat BV
             </p>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import { Summary } from '@/types/traffic-lights';
+import { Summary, PRIORITY_INFO, PriorityCategory } from '@/types/traffic-lights';
 
 type ExportFormat = 'geojson' | 'json' | 'csv';
 
@@ -96,19 +96,17 @@ export default function DataExportPage() {
 
   const sortedPriorities = useMemo(() => {
     if (!summary?.priority_stats) return [];
-    const priorityLabels: Record<string, { label: string; icon: string; color: string }> = {
-      emergency: { label: 'Nood- en Hulpdiensten', icon: '🚨', color: '#dc2626' },
-      road_operator: { label: 'Weginspecteur & Berging', icon: '🚧', color: '#f97316' },
-      public_transport: { label: 'Openbaar Vervoer', icon: '🚌', color: '#2563eb' },
-      logistics: { label: 'Vrachtverkeer', icon: '🚛', color: '#16a34a' },
-      agriculture: { label: 'Landbouwverkeer', icon: '🚜', color: '#ca8a04' },
-    };
     return Object.entries(summary.priority_stats)
-      .map(([key, count]) => ({
-        key,
-        count,
-        ...priorityLabels[key],
-      }))
+      .map(([key, count]) => {
+        const info = PRIORITY_INFO[key as PriorityCategory];
+        return {
+          key,
+          count,
+          label: info?.name || key,
+          color: info?.color || '#6b7280',
+          svgPath: info?.svgPath || '',
+        };
+      })
       .sort((a, b) => b.count - a.count);
   }, [summary]);
 
@@ -144,7 +142,7 @@ export default function DataExportPage() {
         {/* Summary cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow-sm p-4">
-            <div className="text-3xl font-bold text-blue-600">
+            <div className="text-3xl font-bold text-gray-900">
               {loading ? '...' : summary?.total_traffic_lights?.toLocaleString('nl-NL') || '0'}
             </div>
             <div className="text-sm text-gray-500">Verkeerslichten</div>
@@ -155,19 +153,19 @@ export default function DataExportPage() {
             )}
           </div>
           <div className="bg-white rounded-lg shadow-sm p-4">
-            <div className="text-3xl font-bold text-green-600">
+            <div className="text-3xl font-bold text-gray-900">
               {loading ? '...' : Object.keys(summary?.by_authority || {}).length}
             </div>
             <div className="text-sm text-gray-500">Wegbeheerders</div>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-4">
-            <div className="text-3xl font-bold text-purple-600">
+            <div className="text-3xl font-bold text-gray-900">
               {loading ? '...' : Object.keys(summary?.by_tlc_organization || {}).length}
             </div>
             <div className="text-sm text-gray-500">TLC Leveranciers</div>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-4">
-            <div className="text-3xl font-bold text-orange-600">
+            <div className="text-3xl font-bold text-gray-900">
               {loading ? '...' : history?.metadata?.total_weeks || 1}
             </div>
             <div className="text-sm text-gray-500">Weken getrackt</div>
@@ -237,8 +235,12 @@ export default function DataExportPage() {
             {/* Download options */}
             <div className="grid md:grid-cols-3 gap-4 mb-8">
               {/* GeoJSON */}
-              <div className="bg-white rounded-lg shadow-sm p-6">
-                <div className="text-3xl mb-3">🌍</div>
+              <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+                <div className="mb-3">
+                  <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
                 <h3 className="font-semibold text-gray-900 mb-1">GeoJSON</h3>
                 <p className="text-sm text-gray-500 mb-4">
                   Geografisch formaat voor GIS software, QGIS, mapbox, etc.
@@ -268,8 +270,12 @@ export default function DataExportPage() {
               </div>
 
               {/* JSON */}
-              <div className="bg-white rounded-lg shadow-sm p-6">
-                <div className="text-3xl mb-3">📋</div>
+              <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+                <div className="mb-3">
+                  <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
                 <h3 className="font-semibold text-gray-900 mb-1">JSON</h3>
                 <p className="text-sm text-gray-500 mb-4">
                   Standaard JSON formaat voor web development en scripts.
@@ -277,7 +283,7 @@ export default function DataExportPage() {
                 <button
                   onClick={() => handleDownload('json')}
                   disabled={downloading !== null}
-                  className="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition flex items-center justify-center gap-2"
+                  className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition flex items-center justify-center gap-2"
                 >
                   {downloading === 'json' ? (
                     <>
@@ -299,8 +305,12 @@ export default function DataExportPage() {
               </div>
 
               {/* CSV */}
-              <div className="bg-white rounded-lg shadow-sm p-6">
-                <div className="text-3xl mb-3">📊</div>
+              <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+                <div className="mb-3">
+                  <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </div>
                 <h3 className="font-semibold text-gray-900 mb-1">CSV</h3>
                 <p className="text-sm text-gray-500 mb-4">
                   Komma-gescheiden waarden voor Excel, spreadsheets.
@@ -308,7 +318,7 @@ export default function DataExportPage() {
                 <button
                   onClick={() => handleDownload('csv')}
                   disabled={downloading !== null}
-                  className="w-full px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition flex items-center justify-center gap-2"
+                  className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition flex items-center justify-center gap-2"
                 >
                   {downloading === 'csv' ? (
                     <>
@@ -432,7 +442,9 @@ export default function DataExportPage() {
                           </td>
                           <td className="py-3 px-4">
                             <div className="flex items-center gap-2">
-                              <span className="text-xl">{priority.icon}</span>
+                              <svg className="w-5 h-5" style={{ color: priority.color }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={priority.svgPath} />
+                              </svg>
                               <span className="text-sm font-medium text-gray-900">{priority.label}</span>
                             </div>
                           </td>
@@ -577,10 +589,10 @@ export default function DataExportPage() {
               </p>
               {history?.metadata && (
                 <div className="flex flex-wrap gap-4 text-sm">
-                  <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full">
+                  <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full">
                     Tracking sinds: {new Date(history.metadata.created_at).toLocaleDateString('nl-NL')}
                   </span>
-                  <span className="bg-green-50 text-green-700 px-3 py-1 rounded-full">
+                  <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full">
                     Laatst bijgewerkt: {new Date(history.metadata.last_updated).toLocaleDateString('nl-NL')}
                   </span>
                 </div>
@@ -651,7 +663,11 @@ export default function DataExportPage() {
               </div>
             ) : (
               <div className="bg-white rounded-lg shadow-sm p-8 text-center">
-                <div className="text-4xl mb-4">📊</div>
+                <div className="w-12 h-12 mx-auto mb-4 text-gray-400">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
                 <p className="text-gray-500">
                   Nog geen historische data beschikbaar. De eerste meting wordt opgeslagen na de volgende wekelijkse update.
                 </p>
@@ -699,21 +715,22 @@ export default function DataExportPage() {
                   </p>
                 </div>
                 <div className="p-4 grid grid-cols-2 md:grid-cols-5 gap-4">
-                  {[
-                    { key: 'emergency', label: 'Nooddiensten', icon: '🚨', color: 'red' },
-                    { key: 'road_operator', label: 'Weginspecteur', icon: '🚧', color: 'orange' },
-                    { key: 'public_transport', label: 'OV', icon: '🚌', color: 'blue' },
-                    { key: 'logistics', label: 'Logistiek', icon: '🚛', color: 'green' },
-                    { key: 'agriculture', label: 'Landbouw', icon: '🚜', color: 'yellow' },
-                  ].map(({ key, label, icon, color }) => (
-                    <div key={key} className="bg-gray-50 rounded-lg p-4">
-                      <div className="text-2xl mb-1">{icon}</div>
-                      <div className="text-2xl font-bold text-gray-900">
-                        {(latestWeek.stats.by_priority[key] || 0).toLocaleString('nl-NL')}
+                  {(['emergency', 'road_operator', 'public_transport', 'logistics', 'agriculture'] as PriorityCategory[]).map((key) => {
+                    const info = PRIORITY_INFO[key];
+                    return (
+                      <div key={key} className="bg-gray-50 rounded-lg p-4">
+                        <div className="w-6 h-6 mb-1" style={{ color: info.color }}>
+                          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={info.svgPath} />
+                          </svg>
+                        </div>
+                        <div className="text-2xl font-bold text-gray-900">
+                          {(latestWeek.stats.by_priority[key] || 0).toLocaleString('nl-NL')}
+                        </div>
+                        <div className="text-sm text-gray-500">{info.name.split(' ')[0]}</div>
                       </div>
-                      <div className="text-sm text-gray-500">{label}</div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}

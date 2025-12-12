@@ -20,11 +20,6 @@
     "count": 55
   },
   {
-    "name": "Deventer",
-    "slug": "deventer",
-    "count": 52
-  },
-  {
     "name": "Enschede",
     "slug": "enschede",
     "count": 50
@@ -32,6 +27,11 @@
   {
     "name": "Almere",
     "slug": "almere",
+    "count": 48
+  },
+  {
+    "name": "Deventer",
+    "slug": "deventer",
     "count": 48
   },
   {
@@ -90,13 +90,13 @@
     "count": 28
   },
   {
-    "name": "Nijmegen",
-    "slug": "nijmegen",
-    "count": 25
-  },
-  {
     "name": "Alphen aan den Rijn",
     "slug": "alphen-aan-den-rijn",
+    "count": 24
+  },
+  {
+    "name": "Nijmegen",
+    "slug": "nijmegen",
     "count": 24
   },
   {
@@ -105,13 +105,13 @@
     "count": 22
   },
   {
-    "name": "Rijswijk",
-    "slug": "rijswijk",
-    "count": 19
-  },
-  {
     "name": "Venlo",
     "slug": "venlo",
+    "count": 20
+  },
+  {
+    "name": "Rijswijk",
+    "slug": "rijswijk",
     "count": 19
   },
   {
@@ -180,6 +180,11 @@
     "count": 8
   },
   {
+    "name": "Zeist",
+    "slug": "zeist",
+    "count": 8
+  },
+  {
     "name": "Zoetermeer",
     "slug": "zoetermeer",
     "count": 8
@@ -187,11 +192,6 @@
   {
     "name": "Haarlemmermeer",
     "slug": "haarlemmermeer",
-    "count": 7
-  },
-  {
-    "name": "Zeist",
-    "slug": "zeist",
     "count": 7
   },
   {

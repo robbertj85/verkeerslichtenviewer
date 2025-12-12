@@ -144,6 +144,9 @@ def get_traffic_lights_gdf(use_cache: bool = True) -> gpd.GeoDataFrame:
     # Filter out rows without coordinates
     df = df.dropna(subset=['latitude', 'longitude'])
 
+    # Filter to only include iVRIs (exclude iFBAs and other subject types)
+    df = df[df['subjectTypeName'] == 'iVRI']
+
     # Create geometry
     geometry = [Point(row['longitude'], row['latitude']) for _, row in df.iterrows()]
     gdf = gpd.GeoDataFrame(df, geometry=geometry, crs='EPSG:4326')

@@ -87,7 +87,6 @@ export interface Filters {
   // TLC Organization filter
   tlcOrganizations: string[];
   // Display options
-  useSimpleMarkers: boolean;
   showLabels: boolean;
   // Boundary layers
   showBoundaries: boolean;
@@ -138,7 +137,6 @@ export const DEFAULT_FILTERS: Filters = {
   authorities: [],
   priorities: ['emergency', 'road_operator', 'public_transport', 'logistics', 'agriculture'],
   tlcOrganizations: [],
-  useSimpleMarkers: false,
   showLabels: false,
   showBoundaries: false,
 };

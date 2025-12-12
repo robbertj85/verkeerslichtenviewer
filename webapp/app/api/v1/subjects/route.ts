@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 import path from 'path';
+import { rateLimit, getClientIdentifier, rateLimitConfigs } from '@/lib/rate-limit';
 
 interface Feature {
   type: string;
@@ -15,9 +16,68 @@ interface Feature {
   };
 }
 
+// Valid priority values for validation
+const VALID_PRIORITIES = ['emergency', 'road_operator', 'public_transport', 'logistics', 'agriculture'];
+
 export async function GET(request: NextRequest) {
   try {
+    // Rate limiting
+    const clientId = getClientIdentifier(request);
+    const rateLimitResult = rateLimit(`subjects:${clientId}`, rateLimitConfigs.dataApi);
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'Retry-After': String(Math.ceil((rateLimitResult.reset - Date.now()) / 1000)),
+            'X-RateLimit-Limit': String(rateLimitConfigs.dataApi.limit),
+            'X-RateLimit-Remaining': '0',
+            'X-RateLimit-Reset': String(rateLimitResult.reset),
+          },
+        }
+      );
+    }
+
     const searchParams = request.nextUrl.searchParams;
+
+    // Input validation
+    const pageParam = searchParams.get('page');
+    const limitParam = searchParams.get('limit');
+    const priority = searchParams.get('priority');
+
+    // Validate page parameter
+    let page = 1;
+    if (pageParam) {
+      page = parseInt(pageParam, 10);
+      if (isNaN(page) || page < 1 || page > 10000) {
+        return NextResponse.json(
+          { error: 'Invalid page parameter. Must be a positive integer between 1 and 10000.' },
+          { status: 400 }
+        );
+      }
+    }
+
+    // Validate limit parameter
+    let limit = 100;
+    if (limitParam) {
+      limit = parseInt(limitParam, 10);
+      if (isNaN(limit) || limit < 1 || limit > 1000) {
+        return NextResponse.json(
+          { error: 'Invalid limit parameter. Must be between 1 and 1000.' },
+          { status: 400 }
+        );
+      }
+    }
+
+    // Validate priority parameter
+    if (priority && !VALID_PRIORITIES.includes(priority)) {
+      return NextResponse.json(
+        { error: `Invalid priority parameter. Must be one of: ${VALID_PRIORITIES.join(', ')}` },
+          { status: 400 }
+      );
+    }
 
     // Read the GeoJSON file
     const dataPath = path.join(process.cwd(), 'public', 'data', 'traffic_lights.geojson');
@@ -29,7 +89,6 @@ export async function GET(request: NextRequest) {
 
     // Apply filters from query params
     const authority = searchParams.get('authority');
-    const priority = searchParams.get('priority');
     const tlcOrganization = searchParams.get('tlc_organization');
 
     if (authority) {
@@ -52,10 +111,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Pagination
-    const page = parseInt(searchParams.get('page') || '1');
-    const limit = Math.min(parseInt(searchParams.get('limit') || '100'), 1000);
     const offset = (page - 1) * limit;
-
     const paginatedFeatures = features.slice(offset, offset + limit);
 
     // Build response
@@ -73,12 +129,16 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(response, {
       headers: {
         'Cache-Control': 'public, max-age=3600',
-        'Access-Control-Allow-Origin': '*',
+        'X-RateLimit-Limit': String(rateLimitConfigs.dataApi.limit),
+        'X-RateLimit-Remaining': String(rateLimitResult.remaining),
       }
     });
 
   } catch (error) {
-    console.error('API error:', error);
+    // Log error without exposing details in production
+    if (process.env.NODE_ENV === 'development') {
+      console.error('API error:', error);
+    }
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
