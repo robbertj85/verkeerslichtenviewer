@@ -98,7 +98,7 @@ export default function FilterPanel({ data, filters, onChange }: FilterPanelProp
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-4 space-y-4 custom-scrollbar overflow-y-auto max-h-[calc(100vh-400px)]">
+    <div className="bg-white rounded-lg shadow-sm p-4 space-y-4 custom-scrollbar overflow-y-auto max-h-[calc(100vh-280px)] md:max-h-[calc(100vh-400px)]">
       {/* Header with reset button */}
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-semibold text-gray-700">Filters</h3>
@@ -121,22 +121,22 @@ export default function FilterPanel({ data, filters, onChange }: FilterPanelProp
           {/* All option */}
           <button
             onClick={() => handlePrioritySelect('all')}
-            className={`w-full flex items-center gap-2 p-1.5 rounded text-left transition ${
+            className={`w-full flex items-center gap-2 p-2 md:p-1.5 rounded text-left transition min-h-[44px] md:min-h-0 ${
               filters.priorities.length === 5
                 ? 'bg-blue-50 text-blue-700'
                 : 'hover:bg-gray-50 text-gray-700'
             }`}
           >
-            <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+            <div className={`w-5 h-5 md:w-4 md:h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
               filters.priorities.length === 5 ? 'border-blue-600 bg-blue-600' : 'border-gray-300'
             }`}>
               {filters.priorities.length === 5 && (
-                <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-3 h-3 md:w-2.5 md:h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
               )}
             </div>
-            <span className="text-xs font-medium">Alle verkeerslichten</span>
+            <span className="text-sm md:text-xs font-medium">Alle verkeerslichten</span>
           </button>
 
           {/* Individual priorities */}
@@ -146,23 +146,23 @@ export default function FilterPanel({ data, filters, onChange }: FilterPanelProp
               <button
                 key={key}
                 onClick={() => handlePrioritySelect(key)}
-                className={`w-full flex items-center gap-2 p-1.5 rounded text-left transition ${
+                className={`w-full flex items-center gap-2 p-2 md:p-1.5 rounded text-left transition min-h-[44px] md:min-h-0 ${
                   isSelected
                     ? 'bg-gray-100'
                     : 'hover:bg-gray-50'
                 }`}
               >
-                <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                <div className={`w-5 h-5 md:w-4 md:h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
                   isSelected ? 'border-gray-600 bg-gray-600' : 'border-gray-300'
                 }`}>
                   {isSelected && (
-                    <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-3 h-3 md:w-2.5 md:h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   )}
                 </div>
                 <svg
-                  className="w-4 h-4 flex-shrink-0"
+                  className="w-5 h-5 md:w-4 md:h-4 flex-shrink-0"
                   fill="none"
                   stroke={info.color}
                   strokeWidth={1.5}
@@ -170,7 +170,7 @@ export default function FilterPanel({ data, filters, onChange }: FilterPanelProp
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d={info.svgPath} />
                 </svg>
-                <span className="text-xs text-gray-700">{info.name}</span>
+                <span className="text-sm md:text-xs text-gray-700">{info.name}</span>
               </button>
             );
           })}
@@ -184,26 +184,16 @@ export default function FilterPanel({ data, filters, onChange }: FilterPanelProp
         </h4>
         <div className="space-y-0.5">
           {/* Boundaries toggle */}
-          <label className="flex items-center gap-2 p-1 rounded hover:bg-gray-50 cursor-pointer">
+          <label className="flex items-center gap-2 p-2 md:p-1 rounded hover:bg-gray-50 cursor-pointer min-h-[44px] md:min-h-0">
             <input
               type="checkbox"
               checked={filters.showBoundaries}
               onChange={() => onChange({ ...filters, showBoundaries: !filters.showBoundaries })}
-              className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 w-3.5 h-3.5"
+              className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 w-4 h-4 md:w-3.5 md:h-3.5"
             />
-            <span className="text-xs text-gray-700">Gemeentegrenzen</span>
+            <span className="text-sm md:text-xs text-gray-700">Gemeentegrenzen</span>
           </label>
 
-          {/* Simple markers toggle */}
-          <label className="flex items-center gap-2 p-1 rounded hover:bg-gray-50 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={filters.useSimpleMarkers}
-              onChange={() => onChange({ ...filters, useSimpleMarkers: !filters.useSimpleMarkers })}
-              className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 w-3.5 h-3.5"
-            />
-            <span className="text-xs text-gray-700">Snelle weergave</span>
-          </label>
         </div>
       </div>
 
@@ -219,16 +209,16 @@ export default function FilterPanel({ data, filters, onChange }: FilterPanelProp
           {availableTlcOrgs.map(({ name, count }) => (
             <label
               key={name}
-              className="flex items-center gap-2 p-1 rounded hover:bg-gray-50 cursor-pointer"
+              className="flex items-center gap-2 p-2 md:p-1 rounded hover:bg-gray-50 cursor-pointer min-h-[44px] md:min-h-0"
             >
               <input
                 type="checkbox"
                 checked={filters.tlcOrganizations.includes(name)}
                 onChange={() => handleTlcOrgToggle(name)}
-                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 w-3.5 h-3.5"
+                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 w-4 h-4 md:w-3.5 md:h-3.5"
               />
-              <span className="text-xs text-gray-700 flex-1 truncate">{name}</span>
-              <span className="text-[10px] text-gray-400">{count}</span>
+              <span className="text-sm md:text-xs text-gray-700 flex-1 truncate">{name}</span>
+              <span className="text-xs md:text-[10px] text-gray-400">{count}</span>
             </label>
           ))}
         </div>
@@ -242,27 +232,27 @@ export default function FilterPanel({ data, filters, onChange }: FilterPanelProp
             <span className="ml-1 text-blue-600 normal-case">({filters.authorities.length})</span>
           )}
         </h4>
-        <div className="space-y-0.5 max-h-40 overflow-y-auto custom-scrollbar">
+        <div className="space-y-0.5 max-h-48 md:max-h-40 overflow-y-auto custom-scrollbar">
           {displayedAuthorities.map(({ name, count }) => (
             <label
               key={name}
-              className="flex items-center gap-2 p-1 rounded hover:bg-gray-50 cursor-pointer"
+              className="flex items-center gap-2 p-2 md:p-1 rounded hover:bg-gray-50 cursor-pointer min-h-[44px] md:min-h-0"
             >
               <input
                 type="checkbox"
                 checked={filters.authorities.includes(name)}
                 onChange={() => handleAuthorityToggle(name)}
-                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 w-3.5 h-3.5"
+                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 w-4 h-4 md:w-3.5 md:h-3.5"
               />
-              <span className="text-xs text-gray-700 flex-1 truncate">{name}</span>
-              <span className="text-[10px] text-gray-400">{count}</span>
+              <span className="text-sm md:text-xs text-gray-700 flex-1 truncate">{name}</span>
+              <span className="text-xs md:text-[10px] text-gray-400">{count}</span>
             </label>
           ))}
         </div>
         {availableAuthorities.length > 10 && (
           <button
             onClick={() => setShowAllAuthorities(!showAllAuthorities)}
-            className="mt-1.5 text-[10px] text-blue-600 hover:text-blue-800 hover:underline"
+            className="mt-2 md:mt-1.5 text-xs md:text-[10px] text-blue-600 hover:text-blue-800 hover:underline p-1"
           >
             {showAllAuthorities
               ? 'Minder'

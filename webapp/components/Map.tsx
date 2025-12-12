@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
+import { useEffect, useMemo, useRef, useState, useCallback, useId } from 'react';
 import L from 'leaflet';
 import { MapContainer, TileLayer, CircleMarker, Marker, Popup, useMap, GeoJSON } from 'react-leaflet';
 import {
   TrafficLightData,
   TrafficLightProperties,
+  TrafficLightFeature,
   Filters,
   PRIORITY_INFO,
   PriorityCategory
@@ -70,10 +71,13 @@ const TLC_INFO: Record<string, { color: string }> = {
 function createTlcLogoIcon(
   tlcOrg: string,
   priorityColor: string,
-  size: number = 32
+  size: number = 32,
+  greyed: boolean = false
 ): L.DivIcon {
   const tlcLogo = getTlcLogo(tlcOrg);
-  const bgColor = TLC_INFO[tlcOrg]?.color || '#6b7280';
+  const bgColor = greyed ? '#9ca3af' : (TLC_INFO[tlcOrg]?.color || '#6b7280');
+  const borderColor = greyed ? '#d1d5db' : priorityColor;
+  const filterStyle = greyed ? 'filter: grayscale(100%) opacity(0.5);' : '';
 
   let content: string;
 
@@ -83,13 +87,14 @@ function createTlcLogoIcon(
         width: ${size}px;
         height: ${size}px;
         border-radius: 50%;
-        border: 3px solid ${priorityColor};
+        border: 3px solid ${borderColor};
         background: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        box-shadow: 0 2px 6px rgba(0,0,0,${greyed ? '0.1' : '0.3'});
         overflow: hidden;
+        ${filterStyle}
       ">
         <img
           src="${tlcLogo}"
@@ -117,15 +122,16 @@ function createTlcLogoIcon(
         width: ${size}px;
         height: ${size}px;
         border-radius: 50%;
-        border: 3px solid ${priorityColor};
+        border: 3px solid ${borderColor};
         background: ${bgColor};
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        box-shadow: 0 2px 6px rgba(0,0,0,${greyed ? '0.1' : '0.3'});
         color: white;
         font-weight: bold;
         font-size: ${size / 3}px;
+        ${filterStyle}
       ">${tlcOrg.substring(0, 2).toUpperCase()}</div>
     `;
   }
@@ -152,7 +158,7 @@ function PopupContent({
   const tlcLogo = getTlcLogo(props.tlc_organization);
 
   return (
-    <div className="min-w-[280px]">
+    <div className="min-w-[200px] max-w-[calc(100vw-60px)] sm:min-w-[280px]">
       {/* Header */}
       <div className="mb-2">
         <h3 className="font-semibold text-gray-900">{props.name}</h3>
@@ -208,6 +214,7 @@ function PopupContent({
 }
 
 export default function Map({ data, filters }: MapProps) {
+  const mapId = useId();
   const mapRef = useRef<L.Map | null>(null);
   const [boundaryData, setBoundaryData] = useState<BoundaryData | null>(null);
   const [boundaryLoading, setBoundaryLoading] = useState(false);
@@ -233,41 +240,44 @@ export default function Map({ data, filters }: MapProps) {
     }
   }, [filters.showBoundaries, boundaryData, boundaryLoading]);
 
-  // Filter traffic lights based on current filters
+  // Check if priority filter matches a feature
+  const checkPriorityMatch = useCallback((props: TrafficLightProperties) => {
+    if (filters.priorities.length === 0 || filters.priorities.length >= 5) {
+      return true; // No filter active, all match
+    }
+    return filters.priorities.some(p => {
+      switch (p) {
+        case 'emergency': return props.has_emergency;
+        case 'road_operator': return props.has_road_operator;
+        case 'public_transport': return props.has_public_transport;
+        case 'logistics': return props.has_logistics;
+        case 'agriculture': return props.has_agriculture;
+        default: return false;
+      }
+    });
+  }, [filters.priorities]);
+
+  // Filter traffic lights based on current filters (authority and TLC only)
+  // Priority filter no longer hides, just marks for greying out
   const filteredFeatures = useMemo(() => {
     if (!data) return [];
 
     return data.features.filter((feature) => {
       const props = feature.properties as TrafficLightProperties;
 
-      // Authority filter
+      // Authority filter - still completely hides non-matching
       if (filters.authorities.length > 0 && !filters.authorities.includes(props.roadRegulatorName)) {
         return false;
       }
 
-      // TLC Organization filter
+      // TLC Organization filter - still completely hides non-matching
       if (filters.tlcOrganizations.length > 0 && !filters.tlcOrganizations.includes(props.tlc_organization)) {
         return false;
       }
 
-      // Priority filter - show if ANY of the selected priorities match
-      if (filters.priorities.length > 0 && filters.priorities.length < 5) {
-        const hasPriority = filters.priorities.some(p => {
-          switch (p) {
-            case 'emergency': return props.has_emergency;
-            case 'road_operator': return props.has_road_operator;
-            case 'public_transport': return props.has_public_transport;
-            case 'logistics': return props.has_logistics;
-            case 'agriculture': return props.has_agriculture;
-            default: return false;
-          }
-        });
-        if (!hasPriority) return false;
-      }
-
       return true;
     });
-  }, [data, filters]);
+  }, [data, filters.authorities, filters.tlcOrganizations]);
 
   // Get bounds for initial view
   const bounds = useMemo(() => {
@@ -306,11 +316,11 @@ export default function Map({ data, filters }: MapProps) {
   return (
     <div className="relative w-full h-full">
       <MapContainer
+        key={mapId}
         center={defaultCenter}
         zoom={defaultZoom}
         className="w-full h-full"
         ref={mapRef}
-        preferCanvas={filters.useSimpleMarkers}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
@@ -332,38 +342,22 @@ export default function Map({ data, filters }: MapProps) {
         {filteredFeatures.map((feature) => {
           const props = feature.properties as TrafficLightProperties;
           const [lng, lat] = feature.geometry.coordinates;
-          const color = getMarkerColor(props);
+          const matchesPriorityFilter = checkPriorityMatch(props);
 
-          if (filters.useSimpleMarkers) {
-            // Simple mode: colored circle markers (fast, canvas-rendered)
-            return (
-              <CircleMarker
-                key={props.id}
-                center={[lat, lng]}
-                radius={5}
-                pathOptions={{
-                  fillColor: color,
-                  fillOpacity: 0.9,
-                  color: '#fff',
-                  weight: 1.5,
-                  opacity: 1,
-                }}
-              >
-                <Popup>
-                  <PopupContent props={props} lat={lat} lng={lng} />
-                </Popup>
-              </CircleMarker>
-            );
-          }
+          // Use actual color if matches, grey if not
+          const color = matchesPriorityFilter ? getMarkerColor(props) : '#9ca3af';
+          const fillOpacity = matchesPriorityFilter ? 0.9 : 0.3;
+          const strokeOpacity = matchesPriorityFilter ? 1 : 0.4;
 
-          // Detailed mode: show TLC logo only when TLC filter is active
+          // Show TLC logo only when TLC filter is active
           if (hasTlcFilter && props.tlc_organization) {
-            const icon = createTlcLogoIcon(props.tlc_organization, color, 32);
+            const icon = createTlcLogoIcon(props.tlc_organization, color, 32, !matchesPriorityFilter);
             return (
               <Marker
                 key={props.id}
                 position={[lat, lng]}
                 icon={icon}
+                opacity={matchesPriorityFilter ? 1 : 0.4}
               >
                 <Popup>
                   <PopupContent props={props} lat={lat} lng={lng} />
@@ -380,10 +374,10 @@ export default function Map({ data, filters }: MapProps) {
               radius={7}
               pathOptions={{
                 fillColor: color,
-                fillOpacity: 0.9,
+                fillOpacity: fillOpacity,
                 color: '#fff',
                 weight: 2,
-                opacity: 1,
+                opacity: strokeOpacity,
               }}
             >
               <Popup>

@@ -69,6 +69,40 @@
   min-width: 200px;
 }
 
+/* Mobile-specific popup styles */
+@media (max-width: 640px) {
+  .leaflet-popup-content-wrapper {
+    max-width: calc(100vw - 40px);
+  }
+
+  .leaflet-popup-content {
+    margin: 10px;
+    min-width: unset;
+    font-size: 14px;
+  }
+
+  .leaflet-popup-close-button {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 24px !important;
+    padding: 4px !important;
+  }
+
+  /* Larger zoom controls for touch */
+  .leaflet-control-zoom a {
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    font-size: 20px !important;
+  }
+
+  /* Better touch targets for attribution */
+  .leaflet-control-attribution {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+}
+
 /* Stats panel gradient */
 .stats-gradient {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
