@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-12-12T15:51:33.540252",
-  "total_traffic_lights": 1214,
+  "generated_at": "2025-12-15T07:53:05.240615",
+  "total_traffic_lights": 1215,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 41,
@@ -40,7 +40,7 @@
     "Provincie Gelderland": 22,
     "Provincie Groningen": 5,
     "Provincie Limburg": 10,
-    "Provincie Noord-Brabant": 62,
+    "Provincie Noord-Brabant": 63,
     "Provincie Overijssel": 18,
     "Provincie Utrecht": 43,
     "Provincie Zeeland": 13,
@@ -81,13 +81,13 @@
     "Ko Hartog": 21,
     "Swarco": 355,
     "Swarco - Peek Traffic": 325,
-    "Vialis": 427
+    "Vialis": 428
   },
   "priority_stats": {
-    "emergency": 1200,
-    "road_operator": 1191,
-    "public_transport": 466,
-    "logistics": 452,
+    "emergency": 1201,
+    "road_operator": 1192,
+    "public_transport": 467,
+    "logistics": 453,
     "agriculture": 14
   },
   "source": "UDAP (Urban Data Access Platform)",

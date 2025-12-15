@@ -4,8 +4,8 @@
     "description": "Weekly statistics history for UDAP traffic lights",
     "source": "UDAP",
     "source_url": "https://map.udap.nl",
-    "last_updated": "2025-12-12T13:00:55.988651",
-    "total_weeks": 1
+    "last_updated": "2025-12-15T07:53:07.717473",
+    "total_weeks": 2
   },
   "weeks": [
     {
@@ -116,6 +116,108 @@
             "previous": 25,
             "current": 24,
             "change": -1
+          }
+        }
+      }
+    },
+    {
+      "week": "2025-W51",
+      "date": "2025-12-15",
+      "timestamp": "2025-12-15T07:53:07.717473",
+      "stats": {
+        "total": 1219,
+        "by_authority": {
+          "Provincie Zuid-Holland": 68,
+          "Provincie Noord-Brabant": 63,
+          "Helmond": 59,
+          "Apeldoorn": 55,
+          "Deventer": 52,
+          "Enschede": 50,
+          "Almere": 48,
+          "Zwolle": 48,
+          "Breda": 46,
+          "s-Hertogenbosch": 44,
+          "Delft": 44,
+          "Provincie Utrecht": 43,
+          "Almelo": 41,
+          "Rotterdam": 41,
+          "Tilburg": 41,
+          "Hengelo": 33,
+          "Amersfoort": 30,
+          "Leeuwarden": 28,
+          "Alphen aan den Rijn": 24,
+          "Nijmegen": 24,
+          "Provincie Gelderland": 22,
+          "Venlo": 20,
+          "Rijswijk": 19,
+          "Provincie Overijssel": 18,
+          "Amstelveen": 16,
+          "Leidschendam-Voorburg": 13,
+          "Provincie Zeeland": 13,
+          "Eindhoven": 12,
+          "Groningen": 12,
+          "Den Haag": 11,
+          "Maastricht": 10,
+          "Nissewaard": 10,
+          "Provincie Limburg": 10,
+          "Capelle aan den IJssel": 9,
+          "Wassenaar": 9,
+          "Zeist": 8,
+          "Zoetermeer": 8,
+          "RWS West-Nederland Zuid District Noord": 8,
+          "Haarlemmermeer": 7,
+          "Arnhem": 6,
+          "Dordrecht": 6,
+          "Nieuwegein": 6,
+          "Port of Moerdijk": 6,
+          "Emmen": 5,
+          "Hilversum": 5,
+          "Soest": 5,
+          "Woerden": 5,
+          "Provincie Groningen": 5,
+          "Gouda": 4,
+          "Utrecht": 4,
+          "Vlaardingen": 4,
+          "Leiden": 3,
+          "Leusden": 3,
+          "Velsen": 3,
+          "Westland": 3,
+          "RWS Zee en Delta District Noord": 3,
+          "RWS Zuid-Nederland District Midden": 3,
+          "Pijnacker-Nootdorp": 2,
+          "Rheden": 2,
+          "Veldhoven": 2,
+          "Waalre": 2,
+          "Zaanstad": 2,
+          "Provincie Drenthe": 2,
+          "RWS Zuid-Nederland District West": 2,
+          "Alkmaar": 1,
+          "Oosterhout": 1,
+          "Schiedam": 1,
+          "Terneuzen": 1,
+          "Teylingen": 1,
+          "Valkenswaard": 1,
+          "Zutphen": 1,
+          "RWS Oost-Nederland District Noord": 1,
+          "RWS Oost-Nederland District Zuid": 1
+        },
+        "by_tlc_organization": {},
+        "by_priority": {
+          "emergency": 0,
+          "road_operator": 0,
+          "public_transport": 0,
+          "logistics": 0,
+          "agriculture": 0
+        }
+      },
+      "changes": {
+        "total_change": 1,
+        "is_first_week": false,
+        "authority_changes": {
+          "Provincie Noord-Brabant": {
+            "previous": 62,
+            "current": 63,
+            "change": 1
           }
         }
       }

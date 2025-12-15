@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2025-12-12T15:51:33.540252",
-    "total_traffic_lights": 1214,
+    "generated_at": "2025-12-15T07:53:05.240615",
+    "total_traffic_lights": 1215,
     "bounds": [
       3.587233,
       50.840837,
@@ -35457,6 +35457,42 @@
         "tlc_organization": "Swarco",
         "its_organization": "RHDHV",
         "ris_organization": "RHDHV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.204513,
+          51.361613
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa301ea",
+        "name": "VRI131",
+        "identifier": "7aa301ea",
+        "latitude": 51.361613,
+        "longitude": 5.204513,
+        "roadRegulatorId": 31395,
+        "roadRegulatorName": "Provincie Noord-Brabant",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
+        "has_logistics": true,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport",
+          "logistics"
+        ],
+        "priority_count": 4,
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
+        "ris_organization": "Vialis"
       }
     },
     {
