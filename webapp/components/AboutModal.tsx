@@ -68,8 +68,8 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
             </p>
             <ul className="space-y-1.5">
               {([
-                ['emergency', 'Ambulance, brandweer, politie'],
-                ['road_operator', 'Strooiwagens, bergingsvoertuigen'],
+                ['emergency', 'Ambulance, brandweer'],
+                ['road_operator', 'Weginspecteurs, bergingsvoertuigen'],
                 ['public_transport', 'Bussen, trams'],
                 ['logistics', 'Logistiek transport'],
                 ['agriculture', 'Tractoren, landbouwmachines'],

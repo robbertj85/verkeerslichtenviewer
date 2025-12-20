@@ -18,7 +18,7 @@ info:
 
     | Klasse | Beschrijving |
     |--------|--------------|
-    | `emergency` | Nood- en hulpdiensten (brandweer, ambulance, politie) |
+    | `emergency` | Nood- en hulpdiensten (brandweer, ambulance) |
     | `road_operator` | Weginspecteur & berging |
     | `public_transport` | Openbaar vervoer (bus, tram) |
     | `logistics` | Vrachtverkeer |
