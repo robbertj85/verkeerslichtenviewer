@@ -2,7 +2,7 @@
   {
     "name": "Provincie Zuid-Holland",
     "slug": "provincie-zuid-holland",
-    "count": 68
+    "count": 71
   },
   {
     "name": "Provincie Noord-Brabant",
@@ -18,6 +18,11 @@
     "name": "Apeldoorn",
     "slug": "apeldoorn",
     "count": 55
+  },
+  {
+    "name": "Rotterdam",
+    "slug": "rotterdam",
+    "count": 53
   },
   {
     "name": "Enschede",
@@ -65,11 +70,6 @@
     "count": 41
   },
   {
-    "name": "Rotterdam",
-    "slug": "rotterdam",
-    "count": 41
-  },
-  {
     "name": "Tilburg",
     "slug": "tilburg",
     "count": 41
@@ -102,12 +102,12 @@
   {
     "name": "Provincie Gelderland",
     "slug": "provincie-gelderland",
-    "count": 22
+    "count": 24
   },
   {
     "name": "Venlo",
     "slug": "venlo",
-    "count": 20
+    "count": 22
   },
   {
     "name": "Rijswijk",
@@ -175,6 +175,11 @@
     "count": 9
   },
   {
+    "name": "Nieuwegein",
+    "slug": "nieuwegein",
+    "count": 8
+  },
+  {
     "name": "RWS West-Nederland Zuid District Noord",
     "slug": "rws-west-nederland-zuid-district-noord",
     "count": 8
@@ -202,11 +207,6 @@
   {
     "name": "Dordrecht",
     "slug": "dordrecht",
-    "count": 6
-  },
-  {
-    "name": "Nieuwegein",
-    "slug": "nieuwegein",
     "count": 6
   },
   {
