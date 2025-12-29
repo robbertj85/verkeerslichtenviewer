@@ -93,6 +93,7 @@
           "Vialis": 427,
           "Swarco": 355,
           "Swarco - Peek Traffic": 325,
+          "Onbekend": 86,
           "Ko Hartog": 21
         },
         "by_priority": {
@@ -210,6 +211,7 @@
           "Vialis": 428,
           "Swarco": 355,
           "Swarco - Peek Traffic": 325,
+          "Onbekend": 86,
           "Ko Hartog": 21
         },
         "by_priority": {
@@ -317,6 +319,7 @@
           "Vialis": 438,
           "Swarco": 363,
           "Swarco - Peek Traffic": 329,
+          "Onbekend": 85,
           "Ko Hartog": 21
         },
         "by_priority": {
@@ -442,13 +445,14 @@
         },
         "by_tlc_organization": {
           "Vialis": 437,
-          "Swarco": 368,
+          "Swarco": 364,
           "Swarco - Peek Traffic": 330,
+          "Onbekend": 86,
           "Ko Hartog": 22
         },
         "by_priority": {
-          "emergency": 1228,
-          "road_operator": 1214,
+          "emergency": 1224,
+          "road_operator": 1210,
           "public_transport": 473,
           "logistics": 455,
           "agriculture": 14

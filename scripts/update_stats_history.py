@@ -52,14 +52,19 @@ def calculate_stats(data: list) -> dict:
         stats["by_authority"][authority] = stats["by_authority"].get(authority, 0) + 1
 
         # Count by TLC organization
+        tlc_found = False
         for component in item.get("subjectComponents", []):
             if component.get("typeName") == "TLC":
-                org = component.get("organizationName", "Unknown")
-                if org:
-                    stats["by_tlc_organization"][org] = (
-                        stats["by_tlc_organization"].get(org, 0) + 1
-                    )
+                org = component.get("organizationName") or "Onbekend"
+                stats["by_tlc_organization"][org] = (
+                    stats["by_tlc_organization"].get(org, 0) + 1
+                )
+                tlc_found = True
                 break
+        if not tlc_found:
+            stats["by_tlc_organization"]["Onbekend"] = (
+                stats["by_tlc_organization"].get("Onbekend", 0) + 1
+            )
 
         # Count by priority (using correct API category IDs)
         for category in item.get("categories", []):

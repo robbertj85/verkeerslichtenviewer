@@ -49,9 +49,8 @@ def calculate_stats_from_geojson(geojson):
         props = feature.get('properties', {})
         
         # TLC organization
-        tlc = props.get('tlc_organization', '')
-        if tlc:
-            tlc_counts[tlc] = tlc_counts.get(tlc, 0) + 1
+        tlc = props.get('tlc_organization') or 'Onbekend'
+        tlc_counts[tlc] = tlc_counts.get(tlc, 0) + 1
         
         # Priority flags
         if props.get('has_emergency'):
