@@ -40,6 +40,8 @@ export default function DataExportPage() {
   const [showAllItems, setShowAllItems] = useState(false);
   const [activeTab, setActiveTab] = useState<'download' | 'statistics' | 'history'>('download');
   const [statsView, setStatsView] = useState<'authority' | 'tlc' | 'priority'>('authority');
+  const [expandedTlc, setExpandedTlc] = useState(false);
+  const [expandedPriority, setExpandedPriority] = useState(false);
 
   useEffect(() => {
     Promise.all([
@@ -701,61 +703,188 @@ export default function DataExportPage() {
             {/* TLC Organization stats */}
             {latestWeek && (
               <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <div className="p-4 border-b border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    TLC Leveranciers
-                  </h3>
-                  <p className="text-sm text-gray-500">
-                    Verdeling per Traffic Light Controller leverancier
-                  </p>
-                </div>
-                <div className="p-4 grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {Object.entries(latestWeek.stats.by_tlc_organization).map(([name, count]) => (
-                    <div key={name} className="bg-gray-50 rounded-lg p-4">
-                      <div className="text-2xl font-bold text-gray-900">
-                        {count.toLocaleString('nl-NL')}
+                <button
+                  onClick={() => setExpandedTlc(!expandedTlc)}
+                  className="w-full p-4 border-b border-gray-200 flex items-center justify-between hover:bg-gray-50 transition"
+                >
+                  <div className="text-left">
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      TLC Leveranciers
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      {expandedTlc ? 'Wekelijkse ontwikkeling per leverancier' : 'Klik om wekelijkse ontwikkeling te zien'}
+                    </p>
+                  </div>
+                  <svg
+                    className={`w-5 h-5 text-gray-400 transition-transform ${expandedTlc ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {!expandedTlc ? (
+                  <div className="p-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {Object.entries(latestWeek.stats.by_tlc_organization).map(([name, count]) => (
+                      <div key={name} className="bg-gray-50 rounded-lg p-4">
+                        <div className="text-2xl font-bold text-gray-900">
+                          {count.toLocaleString('nl-NL')}
+                        </div>
+                        <div className="text-sm text-gray-500 truncate" title={name}>
+                          {name}
+                        </div>
+                        <div className="text-xs text-gray-400">
+                          {((count / latestWeek.stats.total) * 100).toFixed(1)}%
+                        </div>
                       </div>
-                      <div className="text-sm text-gray-500 truncate" title={name}>
-                        {name}
-                      </div>
-                      <div className="text-xs text-gray-400">
-                        {((count / latestWeek.stats.total) * 100).toFixed(1)}%
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="bg-gray-50 border-b border-gray-200">
+                          <th className="text-left py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Week
+                          </th>
+                          {Object.keys(latestWeek.stats.by_tlc_organization).map((name) => (
+                            <th key={name} className="text-right py-3 px-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              {name.length > 12 ? name.substring(0, 10) + '...' : name}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        {history?.weeks && [...history.weeks].reverse().map((week, weekIndex) => {
+                          const prevWeek = history.weeks[history.weeks.length - 1 - weekIndex - 1];
+                          return (
+                            <tr key={week.week} className="hover:bg-gray-50">
+                              <td className="py-3 px-4 text-sm font-medium text-gray-900">
+                                {week.week}
+                              </td>
+                              {Object.keys(latestWeek.stats.by_tlc_organization).map((name) => {
+                                const count = week.stats.by_tlc_organization?.[name] || 0;
+                                const prevCount = prevWeek?.stats.by_tlc_organization?.[name] || 0;
+                                const change = prevWeek ? count - prevCount : 0;
+                                return (
+                                  <td key={name} className="py-3 px-3 text-right">
+                                    <span className="text-sm text-gray-900 tabular-nums">
+                                      {count.toLocaleString('nl-NL')}
+                                    </span>
+                                    {prevWeek && change !== 0 && (
+                                      <span className={`ml-1 text-xs ${change > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                        {change > 0 ? '+' : ''}{change}
+                                      </span>
+                                    )}
+                                  </td>
+                                );
+                              })}
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
               </div>
             )}
 
             {/* Priority stats */}
             {latestWeek && (
               <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <div className="p-4 border-b border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    Prioriteitsklassen
-                  </h3>
-                  <p className="text-sm text-gray-500">
-                    Aantal verkeerslichten per prioriteitsklasse
-                  </p>
-                </div>
-                <div className="p-4 grid grid-cols-2 md:grid-cols-5 gap-4">
-                  {(['emergency', 'road_operator', 'public_transport', 'logistics', 'agriculture'] as PriorityCategory[]).map((key) => {
-                    const info = PRIORITY_INFO[key];
-                    return (
-                      <div key={key} className="bg-gray-50 rounded-lg p-4">
-                        <div className="w-6 h-6 mb-1" style={{ color: info.color }}>
-                          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={info.svgPath} />
-                          </svg>
+                <button
+                  onClick={() => setExpandedPriority(!expandedPriority)}
+                  className="w-full p-4 border-b border-gray-200 flex items-center justify-between hover:bg-gray-50 transition"
+                >
+                  <div className="text-left">
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      Prioriteitsklassen
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      {expandedPriority ? 'Wekelijkse ontwikkeling per prioriteitsklasse' : 'Klik om wekelijkse ontwikkeling te zien'}
+                    </p>
+                  </div>
+                  <svg
+                    className={`w-5 h-5 text-gray-400 transition-transform ${expandedPriority ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {!expandedPriority ? (
+                  <div className="p-4 grid grid-cols-2 md:grid-cols-5 gap-4">
+                    {(['emergency', 'road_operator', 'public_transport', 'logistics', 'agriculture'] as PriorityCategory[]).map((key) => {
+                      const info = PRIORITY_INFO[key];
+                      return (
+                        <div key={key} className="bg-gray-50 rounded-lg p-4">
+                          <div className="w-6 h-6 mb-1" style={{ color: info.color }}>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={info.svgPath} />
+                            </svg>
+                          </div>
+                          <div className="text-2xl font-bold text-gray-900">
+                            {(latestWeek.stats.by_priority[key] || 0).toLocaleString('nl-NL')}
+                          </div>
+                          <div className="text-sm text-gray-500">{info.name.split(' ')[0]}</div>
                         </div>
-                        <div className="text-2xl font-bold text-gray-900">
-                          {(latestWeek.stats.by_priority[key] || 0).toLocaleString('nl-NL')}
-                        </div>
-                        <div className="text-sm text-gray-500">{info.name.split(' ')[0]}</div>
-                      </div>
-                    );
-                  })}
-                </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="bg-gray-50 border-b border-gray-200">
+                          <th className="text-left py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Week
+                          </th>
+                          {(['emergency', 'road_operator', 'public_transport', 'logistics', 'agriculture'] as PriorityCategory[]).map((key) => {
+                            const info = PRIORITY_INFO[key];
+                            return (
+                              <th key={key} className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: info.color }}>
+                                {info.name.split(' ')[0]}
+                              </th>
+                            );
+                          })}
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        {history?.weeks && [...history.weeks].reverse().map((week, weekIndex) => {
+                          const prevWeek = history.weeks[history.weeks.length - 1 - weekIndex - 1];
+                          return (
+                            <tr key={week.week} className="hover:bg-gray-50">
+                              <td className="py-3 px-4 text-sm font-medium text-gray-900">
+                                {week.week}
+                              </td>
+                              {(['emergency', 'road_operator', 'public_transport', 'logistics', 'agriculture'] as PriorityCategory[]).map((key) => {
+                                const count = week.stats.by_priority?.[key] || 0;
+                                const prevCount = prevWeek?.stats.by_priority?.[key] || 0;
+                                const change = prevWeek ? count - prevCount : 0;
+                                return (
+                                  <td key={key} className="py-3 px-2 text-right">
+                                    <span className="text-sm text-gray-900 tabular-nums">
+                                      {count.toLocaleString('nl-NL')}
+                                    </span>
+                                    {prevWeek && change !== 0 && (
+                                      <span className={`ml-1 text-xs ${change > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                        {change > 0 ? '+' : ''}{change}
+                                      </span>
+                                    )}
+                                  </td>
+                                );
+                              })}
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
               </div>
             )}
           </div>
