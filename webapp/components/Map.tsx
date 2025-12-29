@@ -242,9 +242,15 @@ export default function Map({ data, filters }: MapProps) {
 
   // Check if priority filter matches a feature
   const checkPriorityMatch = useCallback((props: TrafficLightProperties) => {
-    if (filters.priorities.length === 0 || filters.priorities.length >= 5) {
-      return true; // No filter active, all match
+    // When all 5 priorities are selected, show all traffic lights
+    if (filters.priorities.length >= 5) {
+      return true;
     }
+    // When no priorities selected (empty array), show only traffic lights with no priorities
+    if (filters.priorities.length === 0) {
+      return !props.has_emergency && !props.has_road_operator && !props.has_public_transport && !props.has_logistics && !props.has_agriculture;
+    }
+    // Single priority filter - show traffic lights that have this priority
     return filters.priorities.some(p => {
       switch (p) {
         case 'emergency': return props.has_emergency;

@@ -35,8 +35,14 @@ export default function StatsPanel({ data, filters }: StatsPanelProps) {
       }
 
       // Priority filter - when "all" (5 priorities), show everything
+      // When empty array, show only traffic lights with no priorities
       // When single priority selected, only show those with that priority
-      if (filters.priorities.length > 0 && filters.priorities.length < 5) {
+      if (filters.priorities.length === 0) {
+        // "No priority" filter - only show traffic lights with no priorities
+        if (props.priorities.length > 0) {
+          return false;
+        }
+      } else if (filters.priorities.length > 0 && filters.priorities.length < 5) {
         const hasPriority = filters.priorities.some(p => props.priorities.includes(p));
         if (!hasPriority) {
           return false;

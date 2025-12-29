@@ -53,7 +53,7 @@ def calculate_stats(data: list) -> dict:
 
         # Count by TLC organization
         for component in item.get("subjectComponents", []):
-            if component.get("componentTypeName") == "TLC":
+            if component.get("typeName") == "TLC":
                 org = component.get("organizationName", "Unknown")
                 if org:
                     stats["by_tlc_organization"][org] = (
@@ -61,18 +61,18 @@ def calculate_stats(data: list) -> dict:
                     )
                 break
 
-        # Count by priority
+        # Count by priority (using correct API category IDs)
         for category in item.get("categories", []):
-            cat_id = category.get("categoryId", "")
+            cat_id = category.get("id", "")
             if cat_id == "PBC:EMERGENCY":
                 stats["by_priority"]["emergency"] += 1
             elif cat_id == "PBC:ROAD_OPERATOR":
                 stats["by_priority"]["road_operator"] += 1
-            elif cat_id == "PBC:PUBLIC_TRANSPORT":
+            elif cat_id == "PBC:PUBLIC":
                 stats["by_priority"]["public_transport"] += 1
             elif cat_id == "PBC:LOGISTICS":
                 stats["by_priority"]["logistics"] += 1
-            elif cat_id == "PBC:AGRICULTURE":
+            elif cat_id == "PBC:MACHINERY":
                 stats["by_priority"]["agriculture"] += 1
 
     # Sort authorities by count

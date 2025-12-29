@@ -4,7 +4,7 @@
     "description": "Weekly statistics history for UDAP traffic lights",
     "source": "UDAP",
     "source_url": "https://map.udap.nl",
-    "last_updated": "2025-12-29T03:28:55.345019",
+    "last_updated": "2025-12-29T11:41:44.293013",
     "total_weeks": 4
   },
   "weeks": [
@@ -347,7 +347,7 @@
     {
       "week": "2026-W01",
       "date": "2025-12-29",
-      "timestamp": "2025-12-29T03:28:55.345019",
+      "timestamp": "2025-12-29T11:41:44.293013",
       "stats": {
         "total": 1243,
         "by_authority": {
@@ -425,25 +425,24 @@
           "RWS Oost-Nederland District Noord": 1,
           "RWS Oost-Nederland District Zuid": 1
         },
-        "by_tlc_organization": {},
+        "by_tlc_organization": {
+          "Vialis": 437,
+          "Swarco": 368,
+          "Swarco - Peek Traffic": 330,
+          "Ko Hartog": 22
+        },
         "by_priority": {
-          "emergency": 0,
-          "road_operator": 0,
-          "public_transport": 0,
-          "logistics": 0,
-          "agriculture": 0
+          "emergency": 1228,
+          "road_operator": 1214,
+          "public_transport": 473,
+          "logistics": 455,
+          "agriculture": 14
         }
       },
       "changes": {
-        "total_change": 3,
+        "total_change": 0,
         "is_first_week": false,
-        "authority_changes": {
-          "Rotterdam": {
-            "previous": 53,
-            "current": 56,
-            "change": 3
-          }
-        }
+        "authority_changes": {}
       }
     }
   ]

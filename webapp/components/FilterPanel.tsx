@@ -48,10 +48,13 @@ export default function FilterPanel({ data, filters, onChange }: FilterPanelProp
     ? availableAuthorities
     : availableAuthorities.slice(0, 10);
 
-  const handlePrioritySelect = (priority: PriorityCategory | 'all') => {
+  const handlePrioritySelect = (priority: PriorityCategory | 'all' | 'none') => {
     if (priority === 'all') {
       // Show all - set all priorities
       onChange({ ...filters, priorities: ['emergency', 'road_operator', 'public_transport', 'logistics', 'agriculture'] });
+    } else if (priority === 'none') {
+      // Show only traffic lights with no priorities - use empty array as special marker
+      onChange({ ...filters, priorities: [] });
     } else {
       // Single priority filter
       onChange({ ...filters, priorities: [priority] });
@@ -82,6 +85,7 @@ export default function FilterPanel({ data, filters, onChange }: FilterPanelProp
   const hasActiveFilters =
     filters.authorities.length > 0 ||
     filters.tlcOrganizations.length > 0 ||
+    filters.priorities.length === 0 || // 'none' filter active
     (filters.priorities.length > 0 && filters.priorities.length < 5) ||
     filters.showBoundaries;
 
@@ -174,6 +178,36 @@ export default function FilterPanel({ data, filters, onChange }: FilterPanelProp
               </button>
             );
           })}
+
+          {/* No priority option */}
+          <button
+            onClick={() => handlePrioritySelect('none')}
+            className={`w-full flex items-center gap-2 p-2 md:p-1.5 rounded text-left transition min-h-[44px] md:min-h-0 ${
+              filters.priorities.length === 0
+                ? 'bg-gray-100'
+                : 'hover:bg-gray-50'
+            }`}
+          >
+            <div className={`w-5 h-5 md:w-4 md:h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
+              filters.priorities.length === 0 ? 'border-gray-600 bg-gray-600' : 'border-gray-300'
+            }`}>
+              {filters.priorities.length === 0 && (
+                <svg className="w-3 h-3 md:w-2.5 md:h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              )}
+            </div>
+            <svg
+              className="w-5 h-5 md:w-4 md:h-4 flex-shrink-0"
+              fill="none"
+              stroke="#6b7280"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+            </svg>
+            <span className="text-sm md:text-xs text-gray-700">Geen prioriteit</span>
+          </button>
         </div>
       </div>
 

@@ -600,7 +600,7 @@ export default function DataExportPage() {
             </div>
 
             {history?.weeks && history.weeks.length > 0 ? (
-              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden overflow-x-auto">
                 <table className="w-full">
                   <thead>
                     <tr className="bg-gray-50 border-b border-gray-200">
@@ -614,10 +614,22 @@ export default function DataExportPage() {
                         Totaal
                       </th>
                       <th className="text-right py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Verandering
+                        +/-
                       </th>
-                      <th className="text-right py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Wegbeheerders
+                      <th className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: PRIORITY_INFO.emergency.color }} title="Nooddiensten">
+                        Nood
+                      </th>
+                      <th className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: PRIORITY_INFO.road_operator.color }} title="Weginspecteurs">
+                        Weg
+                      </th>
+                      <th className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: PRIORITY_INFO.public_transport.color }} title="Openbaar Vervoer">
+                        OV
+                      </th>
+                      <th className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: PRIORITY_INFO.logistics.color }} title="Vrachtverkeer">
+                        Vracht
+                      </th>
+                      <th className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: PRIORITY_INFO.agriculture.color }} title="Landbouwverkeer">
+                        Agri
                       </th>
                     </tr>
                   </thead>
@@ -653,8 +665,20 @@ export default function DataExportPage() {
                             </span>
                           )}
                         </td>
-                        <td className="py-3 px-4 text-sm text-gray-600 text-right tabular-nums">
-                          {Object.keys(week.stats.by_authority).length}
+                        <td className="py-3 px-2 text-sm text-gray-600 text-right tabular-nums">
+                          {(week.stats.by_priority?.emergency || 0).toLocaleString('nl-NL')}
+                        </td>
+                        <td className="py-3 px-2 text-sm text-gray-600 text-right tabular-nums">
+                          {(week.stats.by_priority?.road_operator || 0).toLocaleString('nl-NL')}
+                        </td>
+                        <td className="py-3 px-2 text-sm text-gray-600 text-right tabular-nums">
+                          {(week.stats.by_priority?.public_transport || 0).toLocaleString('nl-NL')}
+                        </td>
+                        <td className="py-3 px-2 text-sm text-gray-600 text-right tabular-nums">
+                          {(week.stats.by_priority?.logistics || 0).toLocaleString('nl-NL')}
+                        </td>
+                        <td className="py-3 px-2 text-sm text-gray-600 text-right tabular-nums">
+                          {(week.stats.by_priority?.agriculture || 0).toLocaleString('nl-NL')}
                         </td>
                       </tr>
                     ))}
