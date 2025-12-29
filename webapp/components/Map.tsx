@@ -213,12 +213,39 @@ function PopupContent({
   );
 }
 
+// Base map options
+const BASE_MAPS = {
+  carto: {
+    name: 'CartoDB Light',
+    url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  },
+  osm: {
+    name: 'OpenStreetMap',
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  },
+  transport: {
+    name: 'Transport',
+    url: 'https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=6170aad10dfd42a38d4d8c709a536f38',
+    attribution: '&copy; <a href="https://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  },
+  shortbread: {
+    name: 'Shortbread',
+    url: 'https://tile.openstreetmap.de/{z}/{x}/{y}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  },
+} as const;
+
+type BaseMapKey = keyof typeof BASE_MAPS;
+
 export default function Map({ data, filters }: MapProps) {
   const mapId = useId();
   const mapRef = useRef<L.Map | null>(null);
   const [boundaryData, setBoundaryData] = useState<BoundaryData | null>(null);
   const [boundaryLoading, setBoundaryLoading] = useState(false);
   const [boundaryProgress, setBoundaryProgress] = useState<BoundaryLoadProgress | null>(null);
+  const [baseMap, setBaseMap] = useState<BaseMapKey>('carto');
 
   // Load boundaries when showBoundaries is enabled
   useEffect(() => {
@@ -329,8 +356,9 @@ export default function Map({ data, filters }: MapProps) {
         ref={mapRef}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          key={baseMap}
+          attribution={BASE_MAPS[baseMap].attribution}
+          url={BASE_MAPS[baseMap].url}
         />
 
         <FitBounds bounds={bounds} />
@@ -393,6 +421,21 @@ export default function Map({ data, filters }: MapProps) {
           );
         })}
       </MapContainer>
+
+      {/* Base map selector - bottom right */}
+      <div className="absolute bottom-6 right-2 z-[1000]">
+        <select
+          value={baseMap}
+          onChange={(e) => setBaseMap(e.target.value as BaseMapKey)}
+          className="bg-white border border-gray-300 rounded-md shadow-sm px-2 py-1 text-xs text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
+        >
+          {(Object.entries(BASE_MAPS) as [BaseMapKey, typeof BASE_MAPS[BaseMapKey]][]).map(([key, map]) => (
+            <option key={key} value={key}>
+              {map.name}
+            </option>
+          ))}
+        </select>
+      </div>
 
       {/* Boundary loading indicator */}
       {boundaryLoading && boundaryProgress && (
