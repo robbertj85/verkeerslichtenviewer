@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-12-22T03:23:37.706778",
-  "total_traffic_lights": 1236,
+  "generated_at": "2025-12-29T03:28:52.999818",
+  "total_traffic_lights": 1239,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 41,
@@ -53,7 +53,7 @@
     "RWS Zuid-Nederland District West": 2,
     "Rheden": 2,
     "Rijswijk": 19,
-    "Rotterdam": 53,
+    "Rotterdam": 56,
     "Schiedam": 1,
     "Soest": 5,
     "Terneuzen": 1,
@@ -77,15 +77,15 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 85,
-    "Ko Hartog": 21,
-    "Swarco": 363,
-    "Swarco - Peek Traffic": 329,
-    "Vialis": 438
+    "": 86,
+    "Ko Hartog": 22,
+    "Swarco": 364,
+    "Swarco - Peek Traffic": 330,
+    "Vialis": 437
   },
   "priority_stats": {
-    "emergency": 1221,
-    "road_operator": 1207,
+    "emergency": 1224,
+    "road_operator": 1210,
     "public_transport": 473,
     "logistics": 455,
     "agriculture": 14
