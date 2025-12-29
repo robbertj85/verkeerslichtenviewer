@@ -89,13 +89,18 @@
           "RWS Oost-Nederland District Noord": 1,
           "RWS Oost-Nederland District Zuid": 1
         },
-        "by_tlc_organization": {},
+        "by_tlc_organization": {
+          "Vialis": 427,
+          "Swarco": 355,
+          "Swarco - Peek Traffic": 325,
+          "Ko Hartog": 21
+        },
         "by_priority": {
-          "emergency": 0,
-          "road_operator": 0,
-          "public_transport": 0,
-          "logistics": 0,
-          "agriculture": 0
+          "emergency": 1200,
+          "road_operator": 1191,
+          "public_transport": 466,
+          "logistics": 452,
+          "agriculture": 14
         }
       },
       "changes": {
@@ -201,13 +206,18 @@
           "RWS Oost-Nederland District Noord": 1,
           "RWS Oost-Nederland District Zuid": 1
         },
-        "by_tlc_organization": {},
+        "by_tlc_organization": {
+          "Vialis": 428,
+          "Swarco": 355,
+          "Swarco - Peek Traffic": 325,
+          "Ko Hartog": 21
+        },
         "by_priority": {
-          "emergency": 0,
-          "road_operator": 0,
-          "public_transport": 0,
-          "logistics": 0,
-          "agriculture": 0
+          "emergency": 1201,
+          "road_operator": 1192,
+          "public_transport": 467,
+          "logistics": 453,
+          "agriculture": 14
         }
       },
       "changes": {
@@ -303,13 +313,18 @@
           "RWS Oost-Nederland District Noord": 1,
           "RWS Oost-Nederland District Zuid": 1
         },
-        "by_tlc_organization": {},
+        "by_tlc_organization": {
+          "Vialis": 438,
+          "Swarco": 363,
+          "Swarco - Peek Traffic": 329,
+          "Ko Hartog": 21
+        },
         "by_priority": {
-          "emergency": 0,
-          "road_operator": 0,
-          "public_transport": 0,
-          "logistics": 0,
-          "agriculture": 0
+          "emergency": 1221,
+          "road_operator": 1207,
+          "public_transport": 473,
+          "logistics": 455,
+          "agriculture": 14
         }
       },
       "changes": {
