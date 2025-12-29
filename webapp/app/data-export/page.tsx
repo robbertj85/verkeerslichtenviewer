@@ -617,77 +617,51 @@ export default function DataExportPage() {
                         Datum
                       </th>
                       <th className="text-right py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Totaal
-                      </th>
-                      <th className="text-right py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
                         +/-
                       </th>
-                      <th className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: PRIORITY_INFO.emergency.color }} title="Nooddiensten">
-                        Nood
-                      </th>
-                      <th className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: PRIORITY_INFO.road_operator.color }} title="Weginspecteurs">
-                        Weg
-                      </th>
-                      <th className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: PRIORITY_INFO.public_transport.color }} title="Openbaar Vervoer">
-                        OV
-                      </th>
-                      <th className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: PRIORITY_INFO.logistics.color }} title="Vrachtverkeer">
-                        Vracht
-                      </th>
-                      <th className="text-right py-3 px-2 text-xs font-medium uppercase tracking-wider" style={{ color: PRIORITY_INFO.agriculture.color }} title="Landbouwverkeer">
-                        Agri
+                      <th className="text-right py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Totaal
                       </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100">
-                    {[...history.weeks].reverse().map((week) => (
-                      <tr key={week.week} className="hover:bg-gray-50">
-                        <td className="py-3 px-4 text-sm font-medium text-gray-900">
-                          {week.week}
-                        </td>
-                        <td className="py-3 px-4 text-sm text-gray-600">
-                          {new Date(week.date).toLocaleDateString('nl-NL', {
-                            day: 'numeric',
-                            month: 'short',
-                            year: 'numeric',
-                          })}
-                        </td>
-                        <td className="py-3 px-4 text-sm text-gray-900 text-right tabular-nums font-medium">
-                          {week.stats.total.toLocaleString('nl-NL')}
-                        </td>
-                        <td className="py-3 px-4 text-right">
-                          {week.changes.is_first_week ? (
-                            <span className="text-sm text-gray-400">-</span>
-                          ) : (
-                            <span className={`text-sm font-medium ${
-                              week.changes.total_change > 0
-                                ? 'text-green-600'
-                                : week.changes.total_change < 0
-                                  ? 'text-red-600'
-                                  : 'text-gray-400'
-                            }`}>
-                              {week.changes.total_change > 0 ? '+' : ''}
-                              {week.changes.total_change}
-                            </span>
-                          )}
-                        </td>
-                        <td className="py-3 px-2 text-sm text-gray-600 text-right tabular-nums">
-                          {(week.stats.by_priority?.emergency || 0).toLocaleString('nl-NL')}
-                        </td>
-                        <td className="py-3 px-2 text-sm text-gray-600 text-right tabular-nums">
-                          {(week.stats.by_priority?.road_operator || 0).toLocaleString('nl-NL')}
-                        </td>
-                        <td className="py-3 px-2 text-sm text-gray-600 text-right tabular-nums">
-                          {(week.stats.by_priority?.public_transport || 0).toLocaleString('nl-NL')}
-                        </td>
-                        <td className="py-3 px-2 text-sm text-gray-600 text-right tabular-nums">
-                          {(week.stats.by_priority?.logistics || 0).toLocaleString('nl-NL')}
-                        </td>
-                        <td className="py-3 px-2 text-sm text-gray-600 text-right tabular-nums">
-                          {(week.stats.by_priority?.agriculture || 0).toLocaleString('nl-NL')}
-                        </td>
-                      </tr>
-                    ))}
+                    {[...history.weeks].reverse().map((week, weekIndex) => {
+                      const prevWeek = history.weeks[history.weeks.length - 1 - weekIndex - 1];
+                      const change = prevWeek ? week.stats.total - prevWeek.stats.total : null;
+                      return (
+                        <tr key={week.week} className="hover:bg-gray-50">
+                          <td className="py-3 px-4 text-sm font-medium text-gray-900">
+                            {week.week}
+                          </td>
+                          <td className="py-3 px-4 text-sm text-gray-600">
+                            {new Date(week.date).toLocaleDateString('nl-NL', {
+                              day: 'numeric',
+                              month: 'short',
+                              year: 'numeric',
+                            })}
+                          </td>
+                          <td className="py-3 px-4 text-right">
+                            {change === null ? (
+                              <span className="text-sm text-gray-400">-</span>
+                            ) : (
+                              <span className={`text-sm font-medium ${
+                                change > 0
+                                  ? 'text-green-600'
+                                  : change < 0
+                                    ? 'text-red-600'
+                                    : 'text-gray-400'
+                              }`}>
+                                {change > 0 ? '+' : ''}
+                                {change}
+                              </span>
+                            )}
+                          </td>
+                          <td className="py-3 px-4 text-sm text-gray-900 text-right tabular-nums font-medium">
+                            {week.stats.total.toLocaleString('nl-NL')}
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
