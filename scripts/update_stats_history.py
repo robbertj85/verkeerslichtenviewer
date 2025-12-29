@@ -37,6 +37,8 @@ def calculate_stats(data: list) -> dict:
         "total": len(data),
         "by_authority": {},
         "by_tlc_organization": {},
+        "by_its_organization": {},
+        "by_ris_organization": {},
         "by_priority": {
             "emergency": 0,
             "road_operator": 0,
@@ -51,20 +53,31 @@ def calculate_stats(data: list) -> dict:
         authority = item.get("roadRegulatorName", "Unknown")
         stats["by_authority"][authority] = stats["by_authority"].get(authority, 0) + 1
 
-        # Count by TLC organization
+        # Count by component organizations (TLC, ITS, RIS)
         tlc_found = False
+        its_found = False
+        ris_found = False
         for component in item.get("subjectComponents", []):
-            if component.get("typeName") == "TLC":
-                org = component.get("organizationName") or "Onbekend"
-                stats["by_tlc_organization"][org] = (
-                    stats["by_tlc_organization"].get(org, 0) + 1
-                )
+            type_name = component.get("typeName")
+            org = component.get("organizationName") or "Onbekend"
+
+            if type_name == "TLC" and not tlc_found:
+                stats["by_tlc_organization"][org] = stats["by_tlc_organization"].get(org, 0) + 1
                 tlc_found = True
-                break
+            elif type_name == "ITS-applicatie" and not its_found:
+                stats["by_its_organization"][org] = stats["by_its_organization"].get(org, 0) + 1
+                its_found = True
+            elif type_name == "RIS" and not ris_found:
+                stats["by_ris_organization"][org] = stats["by_ris_organization"].get(org, 0) + 1
+                ris_found = True
+
+        # Count as "Onbekend" if not found
         if not tlc_found:
-            stats["by_tlc_organization"]["Onbekend"] = (
-                stats["by_tlc_organization"].get("Onbekend", 0) + 1
-            )
+            stats["by_tlc_organization"]["Onbekend"] = stats["by_tlc_organization"].get("Onbekend", 0) + 1
+        if not its_found:
+            stats["by_its_organization"]["Onbekend"] = stats["by_its_organization"].get("Onbekend", 0) + 1
+        if not ris_found:
+            stats["by_ris_organization"]["Onbekend"] = stats["by_ris_organization"].get("Onbekend", 0) + 1
 
         # Count by priority (using correct API category IDs)
         for category in item.get("categories", []):
@@ -80,12 +93,18 @@ def calculate_stats(data: list) -> dict:
             elif cat_id == "PBC:MACHINERY":
                 stats["by_priority"]["agriculture"] += 1
 
-    # Sort authorities by count
+    # Sort by count
     stats["by_authority"] = dict(
         sorted(stats["by_authority"].items(), key=lambda x: x[1], reverse=True)
     )
     stats["by_tlc_organization"] = dict(
         sorted(stats["by_tlc_organization"].items(), key=lambda x: x[1], reverse=True)
+    )
+    stats["by_its_organization"] = dict(
+        sorted(stats["by_its_organization"].items(), key=lambda x: x[1], reverse=True)
+    )
+    stats["by_ris_organization"] = dict(
+        sorted(stats["by_ris_organization"].items(), key=lambda x: x[1], reverse=True)
     )
 
     return stats

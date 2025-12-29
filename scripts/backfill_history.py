@@ -35,8 +35,10 @@ def get_geojson_at_commit(commit_hash):
     return None
 
 def calculate_stats_from_geojson(geojson):
-    """Calculate TLC and priority stats from geojson."""
+    """Calculate TLC, ITS, RIS and priority stats from geojson."""
     tlc_counts = {}
+    its_counts = {}
+    ris_counts = {}
     priority_counts = {
         'emergency': 0,
         'road_operator': 0,
@@ -44,14 +46,19 @@ def calculate_stats_from_geojson(geojson):
         'logistics': 0,
         'agriculture': 0,
     }
-    
+
     for feature in geojson.get('features', []):
         props = feature.get('properties', {})
-        
-        # TLC organization
+
+        # TLC, ITS, RIS organizations
         tlc = props.get('tlc_organization') or 'Onbekend'
+        its = props.get('its_organization') or 'Onbekend'
+        ris = props.get('ris_organization') or 'Onbekend'
+
         tlc_counts[tlc] = tlc_counts.get(tlc, 0) + 1
-        
+        its_counts[its] = its_counts.get(its, 0) + 1
+        ris_counts[ris] = ris_counts.get(ris, 0) + 1
+
         # Priority flags
         if props.get('has_emergency'):
             priority_counts['emergency'] += 1
@@ -63,11 +70,13 @@ def calculate_stats_from_geojson(geojson):
             priority_counts['logistics'] += 1
         if props.get('has_agriculture'):
             priority_counts['agriculture'] += 1
-    
-    # Sort TLC by count
+
+    # Sort by count
     tlc_counts = dict(sorted(tlc_counts.items(), key=lambda x: x[1], reverse=True))
-    
-    return tlc_counts, priority_counts
+    its_counts = dict(sorted(its_counts.items(), key=lambda x: x[1], reverse=True))
+    ris_counts = dict(sorted(ris_counts.items(), key=lambda x: x[1], reverse=True))
+
+    return tlc_counts, its_counts, ris_counts, priority_counts
 
 def main():
     # Load current history
@@ -108,12 +117,15 @@ def main():
             print(f"Backfilling {week_key}...")
             geojson = get_geojson_at_commit(week_commits[week_key])
             if geojson:
-                tlc_counts, priority_counts = calculate_stats_from_geojson(geojson)
+                tlc_counts, its_counts, ris_counts, priority_counts = calculate_stats_from_geojson(geojson)
                 week_entry['stats']['by_tlc_organization'] = tlc_counts
+                week_entry['stats']['by_its_organization'] = its_counts
+                week_entry['stats']['by_ris_organization'] = ris_counts
                 week_entry['stats']['by_priority'] = priority_counts
                 updated += 1
                 print(f"  TLC: {tlc_counts}")
-                print(f"  Priorities: {priority_counts}")
+                print(f"  ITS: {its_counts}")
+                print(f"  RIS: {ris_counts}")
     
     # Save updated history
     with open(STATS_HISTORY_FILE, 'w') as f:

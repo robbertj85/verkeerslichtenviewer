@@ -102,6 +102,23 @@
           "public_transport": 466,
           "logistics": 452,
           "agriculture": 14
+        },
+        "by_its_organization": {
+          "Vialis": 426,
+          "Swarco - Peek Traffic": 236,
+          "Gemeente Rotterdam": 216,
+          "RHDHV": 158,
+          "Onbekend": 83,
+          "Provincie Noord-Holland": 55,
+          "Goudappel Coffeng": 27,
+          "Huijskes VRT": 13
+        },
+        "by_ris_organization": {
+          "Vialis": 460,
+          "Swarco": 342,
+          "Swarco - Peek Traffic": 263,
+          "RHDHV": 124,
+          "Onbekend": 25
         }
       },
       "changes": {
@@ -220,6 +237,23 @@
           "public_transport": 467,
           "logistics": 453,
           "agriculture": 14
+        },
+        "by_its_organization": {
+          "Vialis": 427,
+          "Swarco - Peek Traffic": 236,
+          "Gemeente Rotterdam": 216,
+          "RHDHV": 158,
+          "Onbekend": 83,
+          "Provincie Noord-Holland": 55,
+          "Goudappel Coffeng": 27,
+          "Huijskes VRT": 13
+        },
+        "by_ris_organization": {
+          "Vialis": 461,
+          "Swarco": 342,
+          "Swarco - Peek Traffic": 263,
+          "RHDHV": 124,
+          "Onbekend": 25
         }
       },
       "changes": {
@@ -328,6 +362,23 @@
           "public_transport": 473,
           "logistics": 455,
           "agriculture": 14
+        },
+        "by_its_organization": {
+          "Vialis": 426,
+          "Swarco - Peek Traffic": 242,
+          "Gemeente Rotterdam": 230,
+          "RHDHV": 162,
+          "Onbekend": 81,
+          "Provincie Noord-Holland": 55,
+          "Goudappel Coffeng": 27,
+          "Huijskes VRT": 13
+        },
+        "by_ris_organization": {
+          "Vialis": 469,
+          "Swarco": 355,
+          "Swarco - Peek Traffic": 263,
+          "RHDHV": 124,
+          "Onbekend": 25
         }
       },
       "changes": {
@@ -456,6 +507,23 @@
           "public_transport": 473,
           "logistics": 455,
           "agriculture": 14
+        },
+        "by_its_organization": {
+          "Vialis": 426,
+          "Swarco - Peek Traffic": 243,
+          "Gemeente Rotterdam": 232,
+          "RHDHV": 162,
+          "Onbekend": 81,
+          "Provincie Noord-Holland": 55,
+          "Goudappel Coffeng": 27,
+          "Huijskes VRT": 13
+        },
+        "by_ris_organization": {
+          "Vialis": 469,
+          "Swarco": 357,
+          "Swarco - Peek Traffic": 264,
+          "RHDHV": 124,
+          "Onbekend": 25
         }
       },
       "changes": {
