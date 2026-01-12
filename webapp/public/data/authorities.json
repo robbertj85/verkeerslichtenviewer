@@ -2,7 +2,7 @@
   {
     "name": "Provincie Zuid-Holland",
     "slug": "provincie-zuid-holland",
-    "count": 71
+    "count": 75
   },
   {
     "name": "Provincie Noord-Brabant",
@@ -17,7 +17,7 @@
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 56
+    "count": 57
   },
   {
     "name": "Apeldoorn",
@@ -357,6 +357,11 @@
   {
     "name": "Valkenswaard",
     "slug": "valkenswaard",
+    "count": 1
+  },
+  {
+    "name": "Veenendaal",
+    "slug": "veenendaal",
     "count": 1
   },
   {
