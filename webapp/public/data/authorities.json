@@ -55,14 +55,14 @@
     "count": 44
   },
   {
-    "name": "Provincie Utrecht",
-    "slug": "provincie-utrecht",
-    "count": 44
-  },
-  {
     "name": "s-Hertogenbosch",
     "slug": "s-hertogenbosch",
     "count": 44
+  },
+  {
+    "name": "Provincie Utrecht",
+    "slug": "provincie-utrecht",
+    "count": 43
   },
   {
     "name": "Almelo",
@@ -185,6 +185,11 @@
     "count": 8
   },
   {
+    "name": "Vlaardingen",
+    "slug": "vlaardingen",
+    "count": 8
+  },
+  {
     "name": "Zeist",
     "slug": "zeist",
     "count": 8
@@ -247,11 +252,6 @@
   {
     "name": "Utrecht",
     "slug": "utrecht",
-    "count": 4
-  },
-  {
-    "name": "Vlaardingen",
-    "slug": "vlaardingen",
     "count": 4
   },
   {
