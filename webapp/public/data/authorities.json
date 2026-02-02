@@ -7,7 +7,7 @@
   {
     "name": "Provincie Noord-Brabant",
     "slug": "provincie-noord-brabant",
-    "count": 63
+    "count": 64
   },
   {
     "name": "Helmond",
@@ -17,7 +17,7 @@
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 57
+    "count": 58
   },
   {
     "name": "Apeldoorn",
@@ -62,7 +62,7 @@
   {
     "name": "Provincie Utrecht",
     "slug": "provincie-utrecht",
-    "count": 43
+    "count": 42
   },
   {
     "name": "Almelo",
@@ -145,6 +145,11 @@
     "count": 12
   },
   {
+    "name": "Zeist",
+    "slug": "zeist",
+    "count": 12
+  },
+  {
     "name": "Den Haag",
     "slug": "den-haag",
     "count": 11
@@ -187,11 +192,6 @@
   {
     "name": "Vlaardingen",
     "slug": "vlaardingen",
-    "count": 8
-  },
-  {
-    "name": "Zeist",
-    "slug": "zeist",
     "count": 8
   },
   {
