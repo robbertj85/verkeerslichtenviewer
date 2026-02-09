@@ -7,17 +7,17 @@
   {
     "name": "Provincie Noord-Brabant",
     "slug": "provincie-noord-brabant",
-    "count": 64
+    "count": 65
+  },
+  {
+    "name": "Rotterdam",
+    "slug": "rotterdam",
+    "count": 62
   },
   {
     "name": "Helmond",
     "slug": "helmond",
     "count": 59
-  },
-  {
-    "name": "Rotterdam",
-    "slug": "rotterdam",
-    "count": 58
   },
   {
     "name": "Apeldoorn",
@@ -28,11 +28,6 @@
     "name": "Enschede",
     "slug": "enschede",
     "count": 50
-  },
-  {
-    "name": "Almere",
-    "slug": "almere",
-    "count": 48
   },
   {
     "name": "Deventer",
@@ -48,6 +43,11 @@
     "name": "Breda",
     "slug": "breda",
     "count": 46
+  },
+  {
+    "name": "Almere",
+    "slug": "almere",
+    "count": 45
   },
   {
     "name": "Delft",
