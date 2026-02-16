@@ -7,12 +7,12 @@
   {
     "name": "Provincie Noord-Brabant",
     "slug": "provincie-noord-brabant",
-    "count": 65
+    "count": 67
   },
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 62
+    "count": 63
   },
   {
     "name": "Helmond",
@@ -32,6 +32,11 @@
   {
     "name": "Deventer",
     "slug": "deventer",
+    "count": 48
+  },
+  {
+    "name": "Provincie Utrecht",
+    "slug": "provincie-utrecht",
     "count": 48
   },
   {
@@ -58,11 +63,6 @@
     "name": "s-Hertogenbosch",
     "slug": "s-hertogenbosch",
     "count": 44
-  },
-  {
-    "name": "Provincie Utrecht",
-    "slug": "provincie-utrecht",
-    "count": 42
   },
   {
     "name": "Almelo",

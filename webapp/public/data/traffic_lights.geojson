@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-02-09T04:13:23.723396",
-    "total_traffic_lights": 1256,
+    "generated_at": "2026-02-16T04:10:38.053279",
+    "total_traffic_lights": 1265,
     "bounds": [
       3.587233,
       50.840837,
@@ -11402,8 +11402,8 @@
           "public_transport"
         ],
         "priority_count": 3,
-        "tlc_organization": "",
-        "its_organization": "",
+        "tlc_organization": "Swarco",
+        "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
     },
@@ -27135,6 +27135,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          4.54393,
+          51.9479
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a32076c",
+        "name": "67030",
+        "identifier": "7a32076c",
+        "latitude": 51.9479,
+        "longitude": 4.54393,
+        "roadRegulatorId": 31282,
+        "roadRegulatorName": "Rotterdam",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Ko Hartog",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.53415,
           51.94622
         ]
@@ -27672,8 +27706,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          4.148286,
-          51.933809
+          4.179091,
+          51.921701
         ]
       },
       "properties": {
@@ -27681,8 +27715,8 @@
         "id": "7a320a28",
         "name": "97170",
         "identifier": "7a320a28",
-        "latitude": 51.933809,
-        "longitude": 4.148286,
+        "latitude": 51.921701,
+        "longitude": 4.179091,
         "roadRegulatorId": 31282,
         "roadRegulatorName": "Rotterdam",
         "subjectTypeName": "iVRI",
@@ -36692,6 +36726,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          4.291563,
+          51.543444
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa3021c",
+        "name": "VRI537",
+        "identifier": "7aa3021c",
+        "latitude": 51.543444,
+        "longitude": 4.291563,
+        "roadRegulatorId": 31395,
+        "roadRegulatorName": "Provincie Noord-Brabant",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
+        "has_logistics": true,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport",
+          "logistics"
+        ],
+        "priority_count": 4,
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.285177,
           51.543352
         ]
@@ -37088,6 +37158,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.321698,
+          51.372425
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa302c6",
+        "name": "VRI493",
+        "identifier": "7aa302c6",
+        "latitude": 51.372425,
+        "longitude": 5.321698,
+        "roadRegulatorId": 31395,
+        "roadRegulatorName": "Provincie Noord-Brabant",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
+        "has_logistics": true,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport",
+          "logistics"
+        ],
+        "priority_count": 4,
+        "tlc_organization": "",
+        "its_organization": "",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.643061,
           51.529768
         ]
@@ -37294,8 +37400,8 @@
           "logistics"
         ],
         "priority_count": 4,
-        "tlc_organization": "",
-        "its_organization": "",
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
         "ris_organization": "Vialis"
       }
     },
@@ -39456,6 +39562,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.241636,
+          52.168443
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa60244",
+        "name": "PRU-K0028",
+        "identifier": "7aa60244",
+        "latitude": 52.168443,
+        "longitude": 5.241636,
+        "roadRegulatorId": 31398,
+        "roadRegulatorName": "Provincie Utrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Swarco - Peek Traffic",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.361886,
           52.092203
         ]
@@ -39630,6 +39770,108 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.357138,
+          52.065569
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa602da",
+        "name": "PRU-K0035",
+        "identifier": "7aa602da",
+        "latitude": 52.065569,
+        "longitude": 5.357138,
+        "roadRegulatorId": 31398,
+        "roadRegulatorName": "Provincie Utrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Swarco - Peek Traffic",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.357195,
+          52.067627
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa602e4",
+        "name": "PRU-K0036",
+        "identifier": "7aa602e4",
+        "latitude": 52.067627,
+        "longitude": 5.357195,
+        "roadRegulatorId": 31398,
+        "roadRegulatorName": "Provincie Utrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Swarco - Peek Traffic",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.977372,
+          51.979868
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa60302",
+        "name": "PRU-K0064",
+        "identifier": "7aa60302",
+        "latitude": 51.979868,
+        "longitude": 4.977372,
+        "roadRegulatorId": 31398,
+        "roadRegulatorName": "Provincie Utrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Swarco - Peek Traffic",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.962686,
           52.005689
         ]
@@ -39723,6 +39965,75 @@
           "road_operator"
         ],
         "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Swarco - Peek Traffic",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.943055,
+          51.969919
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa6032a",
+        "name": "PRU-K0120",
+        "identifier": "7aa6032a",
+        "latitude": 51.969919,
+        "longitude": 4.943055,
+        "roadRegulatorId": 31398,
+        "roadRegulatorName": "Provincie Utrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Swarco - Peek Traffic",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.425354,
+          52.074743
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa60334",
+        "name": "PRU-K0122",
+        "identifier": "7aa60334",
+        "latitude": 52.074743,
+        "longitude": 5.425354,
+        "roadRegulatorId": 31398,
+        "roadRegulatorName": "Provincie Utrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": true,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "logistics"
+        ],
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
