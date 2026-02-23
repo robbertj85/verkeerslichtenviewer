@@ -1,5 +1,10 @@
 [
   {
+    "name": "Rotterdam",
+    "slug": "rotterdam",
+    "count": 89
+  },
+  {
     "name": "Provincie Zuid-Holland",
     "slug": "provincie-zuid-holland",
     "count": 75
@@ -8,11 +13,6 @@
     "name": "Provincie Noord-Brabant",
     "slug": "provincie-noord-brabant",
     "count": 67
-  },
-  {
-    "name": "Rotterdam",
-    "slug": "rotterdam",
-    "count": 63
   },
   {
     "name": "Helmond",
@@ -30,13 +30,13 @@
     "count": 50
   },
   {
-    "name": "Deventer",
-    "slug": "deventer",
-    "count": 48
-  },
-  {
     "name": "Provincie Utrecht",
     "slug": "provincie-utrecht",
+    "count": 49
+  },
+  {
+    "name": "Deventer",
+    "slug": "deventer",
     "count": 48
   },
   {
@@ -165,13 +165,13 @@
     "count": 10
   },
   {
-    "name": "Provincie Limburg",
-    "slug": "provincie-limburg",
-    "count": 10
-  },
-  {
     "name": "Capelle aan den IJssel",
     "slug": "capelle-aan-den-ijssel",
+    "count": 9
+  },
+  {
+    "name": "Provincie Limburg",
+    "slug": "provincie-limburg",
     "count": 9
   },
   {

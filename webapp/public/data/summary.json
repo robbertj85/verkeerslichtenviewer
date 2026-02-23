@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-02-16T04:10:38.053279",
-  "total_traffic_lights": 1265,
+  "generated_at": "2026-02-23T04:10:10.810381",
+  "total_traffic_lights": 1291,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 41,
@@ -39,10 +39,10 @@
     "Provincie Drenthe": 2,
     "Provincie Gelderland": 24,
     "Provincie Groningen": 5,
-    "Provincie Limburg": 10,
+    "Provincie Limburg": 9,
     "Provincie Noord-Brabant": 67,
     "Provincie Overijssel": 18,
-    "Provincie Utrecht": 48,
+    "Provincie Utrecht": 49,
     "Provincie Zeeland": 13,
     "Provincie Zuid-Holland": 75,
     "RWS Oost-Nederland District Noord": 1,
@@ -53,7 +53,7 @@
     "RWS Zuid-Nederland District West": 2,
     "Rheden": 2,
     "Rijswijk": 19,
-    "Rotterdam": 63,
+    "Rotterdam": 89,
     "Schiedam": 1,
     "Soest": 5,
     "Terneuzen": 1,
@@ -78,15 +78,15 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 91,
-    "Ko Hartog": 23,
-    "Swarco": 375,
-    "Swarco - Peek Traffic": 332,
-    "Vialis": 444
+    "": 93,
+    "Ko Hartog": 24,
+    "Swarco": 389,
+    "Swarco - Peek Traffic": 336,
+    "Vialis": 449
   },
   "priority_stats": {
-    "emergency": 1249,
-    "road_operator": 1235,
+    "emergency": 1275,
+    "road_operator": 1261,
     "public_transport": 476,
     "logistics": 468,
     "agriculture": 14
