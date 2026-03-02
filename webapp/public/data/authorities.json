@@ -17,7 +17,7 @@
   {
     "name": "Helmond",
     "slug": "helmond",
-    "count": 59
+    "count": 58
   },
   {
     "name": "Apeldoorn",
@@ -47,7 +47,7 @@
   {
     "name": "Breda",
     "slug": "breda",
-    "count": 46
+    "count": 47
   },
   {
     "name": "Almere",
@@ -320,6 +320,11 @@
     "count": 2
   },
   {
+    "name": "Zutphen",
+    "slug": "zutphen",
+    "count": 2
+  },
+  {
     "name": "Alkmaar",
     "slug": "alkmaar",
     "count": 1
@@ -362,11 +367,6 @@
   {
     "name": "Veenendaal",
     "slug": "veenendaal",
-    "count": 1
-  },
-  {
-    "name": "Zutphen",
-    "slug": "zutphen",
     "count": 1
   }
 ]
