@@ -5,7 +5,7 @@ import { rateLimit, getClientIdentifier, rateLimitConfigs } from '@/lib/rate-lim
 // Pricing constants
 const FREE_TIER_MAX_ROUTES = 10;
 const PRICE_PER_TRIP = 0.05; // €0.05 per trip above free tier
-const MAX_ROUTES_PER_ANALYSIS = 1750;
+
 
 // Production domain - enforce HTTPS
 const PRODUCTION_BASE_URL = 'https://verkeerslichtenviewer.nl';
@@ -61,13 +61,6 @@ export async function POST(request: NextRequest) {
     // Check if within supported range
     if (tripCount <= FREE_TIER_MAX_ROUTES) {
       return NextResponse.json({ error: 'Trip count is within free tier' }, { status: 400 });
-    }
-
-    if (tripCount > MAX_ROUTES_PER_ANALYSIS) {
-      return NextResponse.json({
-        error: 'Trip count exceeds maximum supported',
-        requiresContact: true
-      }, { status: 400 });
     }
 
     // Calculate price: €0.05 per trip above 10

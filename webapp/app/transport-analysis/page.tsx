@@ -611,43 +611,41 @@ function decodePolyline(encoded: string, precision: number = 6): [number, number
   return coordinates;
 }
 
-// Get route from OpenRouteService with fallback to OSRM
+// Get route from self-hosted ORS (HGV profile) with fallback to OSRM
 async function getRoute(
   origin: RoutePoint,
   destination: RoutePoint,
   vehicleType: VehicleType = 'heavy'
 ): Promise<{ geometry: [number, number][]; distance: number; duration: number } | null> {
+  // Try self-hosted ORS first (has proper truck/HGV profiles)
   const orsApiKey = process.env.NEXT_PUBLIC_ORS_API_KEY;
+  try {
+    // Always use driving-hgv (heavy goods vehicle) for all truck types
+    const profile = 'driving-hgv';
 
-  // Try OpenRouteService first (has proper truck profiles)
-  if (orsApiKey && orsApiKey !== 'your_api_key_here') {
-    try {
-      // Always use driving-hgv (heavy goods vehicle) for all truck types
-      const profile = 'driving-hgv';
+    const orsResponse = await fetch(
+      `https://ors.transportbeat.nl/ors/v2/directions/${profile}?start=${origin.lng},${origin.lat}&end=${destination.lng},${destination.lat}`,
+      orsApiKey ? { headers: { 'X-API-Key': orsApiKey } } : undefined
+    );
 
-      const orsResponse = await fetch(
-        `https://api.openrouteservice.org/v2/directions/${profile}?api_key=${orsApiKey}&start=${origin.lng},${origin.lat}&end=${destination.lng},${destination.lat}`
-      );
-
-      if (orsResponse.ok) {
-        const data = await orsResponse.json();
-        if (data.features && data.features.length > 0) {
-          const route = data.features[0];
-          const geometry = route.geometry.coordinates as [number, number][];
-          const summary = route.properties.summary;
-          return {
-            geometry,
-            distance: summary.distance / 1000, // Convert meters to km
-            duration: summary.duration / 60, // Convert seconds to minutes
-          };
-        }
-      } else {
-        const errorData = await orsResponse.json().catch(() => ({}));
-        console.warn('OpenRouteService error:', orsResponse.status, errorData);
+    if (orsResponse.ok) {
+      const data = await orsResponse.json();
+      if (data.features && data.features.length > 0) {
+        const route = data.features[0];
+        const geometry = route.geometry.coordinates as [number, number][];
+        const summary = route.properties.summary;
+        return {
+          geometry,
+          distance: summary.distance / 1000, // Convert meters to km
+          duration: summary.duration / 60, // Convert seconds to minutes
+        };
       }
-    } catch (error) {
-      console.warn('OpenRouteService error, trying fallback...', error);
+    } else {
+      const errorData = await orsResponse.json().catch(() => ({}));
+      console.warn('ORS error:', orsResponse.status, errorData);
     }
+  } catch (error) {
+    console.warn('ORS error, trying fallback...', error);
   }
 
   // Fallback: Try OSRM demo server
@@ -947,6 +945,211 @@ function rdwInfoToDetails(rdwInfo: RDWVehicleInfo): RDWVehicleDetails {
   };
 }
 
+// Parse OTM v5 JSON content (Open Trip Model)
+// Spec: https://github.com/opentripmodel/otm5-change-requests
+// Supports both single trip objects and arrays of trips, as well as
+// the OTM API response format with nested entities.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function parseOTMContent(content: string): BulkAnalysisRow[] {
+  let data: unknown;
+  try {
+    data = JSON.parse(content);
+  } catch {
+    throw new Error('Ongeldig JSON bestand');
+  }
+
+  const rows: BulkAnalysisRow[] = [];
+
+  // Helper to extract coordinates from an OTM geoReference
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const extractCoords = (geoRef: any): { lat: number; lng: number } | null => {
+    if (!geoRef) return null;
+    // GeoJSON point: { type: "Point", coordinates: [lng, lat] }
+    if (geoRef.type === 'Point' && Array.isArray(geoRef.coordinates)) {
+      return { lat: geoRef.coordinates[1], lng: geoRef.coordinates[0] };
+    }
+    // Direct lat/lng on geoReference
+    if (geoRef.lat !== undefined && geoRef.lng !== undefined) {
+      return { lat: Number(geoRef.lat), lng: Number(geoRef.lng) };
+    }
+    if (geoRef.latitude !== undefined && geoRef.longitude !== undefined) {
+      return { lat: Number(geoRef.latitude), lng: Number(geoRef.longitude) };
+    }
+    return null;
+  };
+
+  // Helper to extract location info from an OTM location entity
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const extractLocation = (loc: any): {
+    name: string;
+    lat?: number;
+    lng?: number;
+    postalCode?: string;
+  } | null => {
+    if (!loc) return null;
+
+    let name = loc.name || '';
+    let lat: number | undefined;
+    let lng: number | undefined;
+    let postalCode: string | undefined;
+
+    // Extract coordinates from geoReference (OTM v5 uses singular)
+    const geoRef = loc.geoReference || loc.geoReferences;
+    if (geoRef) {
+      const coords = extractCoords(geoRef);
+      if (coords) {
+        lat = coords.lat;
+        lng = coords.lng;
+      }
+    }
+
+    // Extract address info
+    const addr = loc.administrativeReference || loc.address;
+    if (addr) {
+      postalCode = addr.postalCode || addr.postcode;
+      if (!name) {
+        const parts = [addr.street, addr.houseNumber, addr.city].filter(Boolean);
+        name = parts.join(' ');
+      }
+    }
+
+    if (!name && postalCode) name = postalCode;
+    if (!name && lat !== undefined && lng !== undefined) name = `${lat}, ${lng}`;
+    if (!name) return null;
+
+    return { name, lat, lng, postalCode };
+  };
+
+  // Helper to extract vehicle type from OTM vehicle entity
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const extractVehicleType = (vehicle: any): VehicleType => {
+    if (!vehicle) return 'heavy';
+    // Check fuel type, transport mode, or vehicle properties
+    const gvw = vehicle.grossVehicleWeight || vehicle.maximumWeight;
+    if (gvw && Number(gvw) <= 3500) return 'light';
+    // OTM vehicle may have licensePlate for RDW lookup later
+    return 'heavy';
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const extractLicensePlate = (vehicle: any): string | undefined => {
+    if (!vehicle) return undefined;
+    return vehicle.licensePlate || vehicle.licenseNumber || undefined;
+  };
+
+  // Process a single OTM trip
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const processTrip = (trip: any) => {
+    if (!trip) return;
+
+    const stops = trip.stops || trip.actions || [];
+    if (stops.length < 2) return;
+
+    // Extract vehicle info
+    const vehicle = trip.vehicle;
+    const vehicleType = extractVehicleType(vehicle);
+    const licenseNumber = extractLicensePlate(vehicle);
+
+    // Find origin (first stop) and destination (last stop)
+    const firstStop = stops[0];
+    const lastStop = stops[stops.length - 1];
+
+    // OTM stops have a location entity
+    const originLoc = extractLocation(
+      firstStop?.location || firstStop?.stopLocation || firstStop
+    );
+    const destLoc = extractLocation(
+      lastStop?.location || lastStop?.stopLocation || lastStop
+    );
+
+    if (!originLoc || !destLoc) return;
+
+    // Extract timestamp from first stop action
+    const timestamp =
+      firstStop?.arrivalTime ||
+      firstStop?.departureTime ||
+      trip.startTime ||
+      trip.creationDate;
+
+    rows.push({
+      origin: originLoc.name,
+      destination: destLoc.name,
+      originLat: originLoc.lat,
+      originLng: originLoc.lng,
+      destinationLat: destLoc.lat,
+      destinationLng: destLoc.lng,
+      originPostalCode: originLoc.postalCode,
+      destinationPostalCode: destLoc.postalCode,
+      vehicleType,
+      tripsPerDay: 1,
+      licenseNumber,
+      timestamp: timestamp || undefined,
+    });
+  };
+
+  // Process a single OTM consignment (extract origin/destination from consignor/consignee)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const processConsignment = (consignment: any) => {
+    if (!consignment) return;
+
+    const originLoc = extractLocation(
+      consignment.loadingLocation ||
+        consignment.consignor?.location ||
+        consignment.pickupLocation
+    );
+    const destLoc = extractLocation(
+      consignment.unloadingLocation ||
+        consignment.consignee?.location ||
+        consignment.deliveryLocation
+    );
+
+    if (!originLoc || !destLoc) return;
+
+    rows.push({
+      origin: originLoc.name,
+      destination: destLoc.name,
+      originLat: originLoc.lat,
+      originLng: originLoc.lng,
+      destinationLat: destLoc.lat,
+      destinationLng: destLoc.lng,
+      originPostalCode: originLoc.postalCode,
+      destinationPostalCode: destLoc.postalCode,
+      vehicleType: 'heavy',
+      tripsPerDay: 1,
+    });
+  };
+
+  // Normalize to array
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const items: any[] = Array.isArray(data) ? data : [data];
+
+  for (const item of items) {
+    // Detect what kind of OTM entity this is
+    if (item.stops || item.actions) {
+      // It's a trip
+      processTrip(item);
+    } else if (item.trips) {
+      // Container with trips array
+      const trips = Array.isArray(item.trips) ? item.trips : [item.trips];
+      trips.forEach(processTrip);
+    } else if (item.consignments) {
+      // Container with consignments
+      const consignments = Array.isArray(item.consignments)
+        ? item.consignments
+        : [item.consignments];
+      consignments.forEach(processConsignment);
+    } else if (item.loadingLocation || item.consignor || item.pickupLocation) {
+      // It's a consignment
+      processConsignment(item);
+    } else if (item.vehicle && item.stop) {
+      // Single trip-like structure
+      processTrip(item);
+    }
+  }
+
+  return rows;
+}
+
 // Parse CBS Wegvervoer XML content (realised trips)
 // Schema: https://www.cbs.nl/-/media/cbsvooruwbedrijf/xml-vanuit-transportmanagementsysteem/
 function parseCBSXmlContent(content: string): BulkAnalysisRow[] {
@@ -1064,6 +1267,8 @@ function parseUploadedFile(content: string, fileName: string): BulkAnalysisRow[]
 
   if (lowerFileName.endsWith('.xml')) {
     return parseCBSXmlContent(content);
+  } else if (lowerFileName.endsWith('.json')) {
+    return parseOTMContent(content);
   } else {
     // CSV, TXT, or other text formats
     return parseCSVContent(content);
@@ -1104,7 +1309,7 @@ export default function TransportAnalysisPage() {
   // Bulk analysis limits and pricing tiers
   const FREE_TIER_MAX_ROUTES = 10; // Free tier: up to 10 routes
   const PRICE_PER_TRIP = 0.05; // €0.05 per trip above free tier
-  const MAX_ROUTES_PER_ANALYSIS = 1750; // Max supported per analysis
+
   const MAX_BULK_ANALYSES_PER_DAY = 3;
   const BULK_USAGE_STORAGE_KEY = 'bulk_analysis_usage';
   const PAID_SESSIONS_STORAGE_KEY = 'paid_analysis_sessions';
@@ -1115,7 +1320,7 @@ export default function TransportAnalysisPage() {
   const [pendingTripCount, setPendingTripCount] = useState(0);
   const [paymentSessionId, setPaymentSessionId] = useState<string>('');
   const [paymentProcessing, setPaymentProcessing] = useState(false);
-  const [showContactModal, setShowContactModal] = useState(false);
+
 
   // Get bulk usage from localStorage
   const getBulkUsage = useCallback((): { count: number; resetTime: number } => {
@@ -1197,7 +1402,7 @@ export default function TransportAnalysisPage() {
   // Get price for trip count (pay per use: €0.05 per trip above 10)
   const getPriceForTripCount = useCallback((tripCount: number): { price: number; paidTrips: number } | null => {
     if (tripCount <= FREE_TIER_MAX_ROUTES) return null; // Free
-    if (tripCount > MAX_ROUTES_PER_ANALYSIS) return null; // Too many, needs contact
+
     const paidTrips = tripCount - FREE_TIER_MAX_ROUTES;
     const price = Math.round(paidTrips * PRICE_PER_TRIP * 100) / 100; // Round to 2 decimals
     return { price, paidTrips };
@@ -1574,8 +1779,7 @@ export default function TransportAnalysisPage() {
             });
           }
 
-          // Small delay to avoid rate limiting
-          await new Promise((resolve) => setTimeout(resolve, 500));
+
         }
 
         setBulkResults(results);
@@ -1670,7 +1874,7 @@ export default function TransportAnalysisPage() {
     hasLicensePlate: boolean;
     hasTripsPerDay: boolean;
     hasTimestamp: boolean;
-    fileType: 'csv' | 'xml' | 'unknown';
+    fileType: 'csv' | 'xml' | 'otm' | 'unknown';
   } | null>(null);
 
   // Handle file processing - show preview first
@@ -1685,7 +1889,7 @@ export default function TransportAnalysisPage() {
       try {
         // Parse all files and combine rows
         const allRows: BulkAnalysisRow[] = [];
-        let detectedFileType: 'csv' | 'xml' | 'unknown' = 'unknown';
+        let detectedFileType: 'csv' | 'xml' | 'otm' | 'unknown' = 'unknown';
 
         for (const file of fileArray) {
           const content = await file.text();
@@ -1696,8 +1900,10 @@ export default function TransportAnalysisPage() {
           const ext = file.name.toLowerCase().split('.').pop();
           if (ext === 'xml') {
             detectedFileType = 'xml';
+          } else if (ext === 'json') {
+            detectedFileType = 'otm';
           } else if (['csv', 'txt', 'xlsx'].includes(ext || '')) {
-            detectedFileType = detectedFileType === 'xml' ? 'xml' : 'csv';
+            detectedFileType = detectedFileType === 'xml' ? 'xml' : detectedFileType === 'otm' ? 'otm' : 'csv';
           }
         }
 
@@ -1744,12 +1950,6 @@ export default function TransportAnalysisPage() {
   const handlePreviewConfirm = useCallback(async () => {
     setShowColumnPreview(false);
     const tripCount = parsedRowsCache.length;
-
-    // Check if trip count exceeds maximum (needs contact)
-    if (tripCount > MAX_ROUTES_PER_ANALYSIS) {
-      setShowContactModal(true);
-      return;
-    }
 
     // Check if payment is required (> 10 trips)
     if (tripCount > FREE_TIER_MAX_ROUTES) {
@@ -1820,7 +2020,7 @@ export default function TransportAnalysisPage() {
         // Filter for accepted file types
         const acceptedFiles = Array.from(files).filter((file) => {
           const ext = file.name.toLowerCase().split('.').pop();
-          return ['csv', 'txt', 'xlsx', 'xml'].includes(ext || '');
+          return ['csv', 'txt', 'xlsx', 'xml', 'json'].includes(ext || '');
         });
         if (acceptedFiles.length > 0) {
           processFiles(acceptedFiles);
@@ -2055,6 +2255,41 @@ export default function TransportAnalysisPage() {
         6: { cellWidth: 22 },
         7: { cellWidth: 22 },
         8: { cellWidth: 22 },
+      },
+    });
+
+    // Assumptions & Limitations page
+    doc.addPage();
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(0);
+    doc.text('Aannames & beperkingen', 14, 20);
+
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'normal');
+    const limitations = [
+      ['Routering', 'Routes worden berekend met OpenRouteService (HGV-profiel). Er wordt geen rekening gehouden met real-time verkeersinformatie, wegafzettingen of actuele wegwerkzaamheden.'],
+      ['Verkeerslichtdata', 'De verkeerslichtlocaties en prioriteitsconfiguraties zijn een momentopname van het UDAP-platform en worden niet real-time bijgewerkt. Nieuwe of verwijderde verkeerslichten zijn mogelijk nog niet verwerkt.'],
+      ['Detectieradius', 'Verkeerslichten worden meegeteld wanneer ze zich binnen een vaste afstand van de berekende route bevinden. Dit kan ertoe leiden dat verkeerslichten langs een snelweg (waar geen verkeerslichten staan) onterecht worden meegeteld, bijvoorbeeld wanneer een parallel lopend kruispunt binnen de detectieradius valt.'],
+      ['Prioriteit slagingspercentage', 'Er wordt uitgegaan van een slagingspercentage van 60% voor prioriteitsverzoeken, gebaseerd op TNO-onderzoek. In de praktijk kan dit percentage afwijken per kruispunt en per tijdstip.'],
+      ['Jaarlijkse projecties', 'Jaarlijkse besparingen zijn gebaseerd op 250 werkdagen per jaar, vermenigvuldigd met het opgegeven aantal ritten per dag.'],
+      ['Brandstofprijs', `De brandstofprijs is vastgesteld op EUR ${MONETARY_VALUES.dieselPricePerLiter.toFixed(2)}/L diesel (2024). Actuele prijzen kunnen afwijken.`],
+      ['CO2-kosten', `De maatschappelijke CO2-kosten zijn gebaseerd op EUR ${MONETARY_VALUES.co2PricePerTonne}/ton (EU ETS 2024). De emissiefactor is ${CO2_PER_LITER_DIESEL} kg CO2 per liter diesel.`],
+      ['NOx-kosten', `De maatschappelijke NOx-schadekosten zijn gebaseerd op EUR ${MONETARY_VALUES.noxDamageCostPerKg.toFixed(2)}/kg (eco-kosten 2024).`],
+      ['Logistiek-prioriteit', 'Alleen verkeerslichten met een actieve logistiek-prioriteitsconfiguratie (PBC:LOGISTICS) worden meegeteld voor de besparingsberekening. Niet alle verkeerslichten op een route hebben deze configuratie.'],
+      ['Brongegevens', 'De drie databronnen (TNO conservatief, TNO scenario, Transportbedrijven) geven een bandbreedte weer. De werkelijke besparing per voertuig hangt af van voertuigtype, rijstijl, belading en verkeerssituatie.'],
+    ];
+
+    autoTable(doc, {
+      startY: 26,
+      head: [['Onderwerp', 'Toelichting']],
+      body: limitations,
+      theme: 'striped',
+      styles: { fontSize: 8, cellPadding: 3 },
+      headStyles: { fillColor: [75, 85, 99], textColor: 255, fontStyle: 'bold', fontSize: 8 },
+      columnStyles: {
+        0: { cellWidth: 35, fontStyle: 'bold' },
+        1: { cellWidth: 145 },
       },
     });
 
@@ -2930,14 +3165,14 @@ export default function TransportAnalysisPage() {
                 Bulk analyse uploaden
               </h2>
               <p className="text-gray-600 mb-4">
-                Upload een CSV bestand of CBS Wegvervoer XML bestand met gerealiseerde ritten.
+                Upload een CSV, OTM v5 (JSON) of CBS Wegvervoer XML bestand met gerealiseerde ritten.
                 Lukt het niet? <a href="https://calendly.com/robbertjanssen" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Neem contact op</a>
               </p>
 
               {/* Format tabs */}
               <div className="mb-4">
                 <div className="text-sm font-medium text-gray-700 mb-2">Ondersteunde formaten:</div>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-3 gap-4">
                   {/* CSV Format */}
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center gap-2 mb-2">
@@ -2952,6 +3187,34 @@ export default function TransportAnalysisPage() {
                       <div className="text-gray-400 mt-1">Voorbeeld:</div>
                       <div>Rotterdam;Amsterdam;heavy;2</div>
                     </div>
+                  </div>
+
+                  {/* OTM v5 JSON Format */}
+                  <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+                    <div className="flex items-center gap-2 mb-2">
+                      <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                      </svg>
+                      <span className="font-medium text-gray-900">OTM v5 (JSON)</span>
+                    </div>
+                    <div className="text-xs text-gray-600 space-y-1">
+                      <div className="text-gray-500">Open Trip Model standaard</div>
+                      <div>Trips met stops en locaties</div>
+                      <div>Of consignments met laad/loslocaties</div>
+                      <ul className="list-disc list-inside text-gray-500 ml-2">
+                        <li>GeoJSON coordinaten</li>
+                        <li>Adressen en postcodes</li>
+                        <li>Voertuig en kenteken</li>
+                      </ul>
+                    </div>
+                    <a
+                      href="https://opentripmodel.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-green-600 hover:underline mt-2 inline-block"
+                    >
+                      OTM standaard info →
+                    </a>
                   </div>
 
                   {/* CBS XML Format */}
@@ -2982,6 +3245,17 @@ export default function TransportAnalysisPage() {
                     </a>
                   </div>
                 </div>
+                <a
+                  href="/transport-analysis/docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline mt-3"
+                >
+                  Meer info over upload formaten
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
               </div>
 
               {/* Dropzone */}
@@ -3000,7 +3274,7 @@ export default function TransportAnalysisPage() {
                 <input
                   ref={fileInputRef}
                   type="file"
-                  accept=".csv,.txt,.xlsx,.xml"
+                  accept=".csv,.txt,.xlsx,.xml,.json"
                   multiple
                   onChange={handleFileUpload}
                   className="hidden"
@@ -3023,7 +3297,7 @@ export default function TransportAnalysisPage() {
                       <span className="text-blue-600 font-medium">Klik om bestanden te selecteren</span>
                       <span className="text-gray-500"> of sleep ze hierheen</span>
                     </div>
-                    <p className="text-xs text-gray-400">CSV, TXT, XLSX of XML (meerdere bestanden mogelijk)</p>
+                    <p className="text-xs text-gray-400">CSV, TXT, XLSX, JSON (OTM) of XML (meerdere bestanden mogelijk)</p>
                   </div>
                 )}
               </div>
@@ -3078,7 +3352,7 @@ export default function TransportAnalysisPage() {
 
               {/* Usage info */}
               <div className="mt-3 text-sm text-gray-500">
-                Gratis: tot {FREE_TIER_MAX_ROUTES} ritten | Daarboven: &euro;0,05 per rit (max {MAX_ROUTES_PER_ANALYSIS.toLocaleString('nl-NL')} ritten)
+                Gratis: tot {FREE_TIER_MAX_ROUTES} ritten | Daarboven: &euro;0,05 per rit
               </div>
 
               {/* Limit error messages */}
@@ -3428,7 +3702,7 @@ export default function TransportAnalysisPage() {
             {' | '}
             Routing:{' '}
             <a
-              href="https://openrouteservice.org"
+              href="https://ors.transportbeat.nl/ors"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
@@ -3757,72 +4031,6 @@ export default function TransportAnalysisPage() {
         </div>
       )}
 
-      {/* Contact Modal (for > 1950 trips) */}
-      {showContactModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-bold text-gray-900">Enterprise analyse</h3>
-              <button
-                onClick={() => {
-                  setShowContactModal(false);
-                  setPendingTripCount(0);
-                }}
-                className="text-gray-400 hover:text-gray-600"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="space-y-4">
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                  <div>
-                    <p className="text-amber-800 font-medium">
-                      Uw bestand bevat {pendingTripCount.toLocaleString('nl-NL')} ritten
-                    </p>
-                    <p className="text-amber-700 text-sm mt-1">
-                      Voor analyses met meer dan 1.750 ritten bieden wij enterprise oplossingen met professionele PTV routering.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-gray-600">
-                Plan een vrijblijvend gesprek om uw analyse requirements te bespreken:
-              </p>
-
-              <div className="flex gap-3">
-                <button
-                  onClick={() => {
-                    setShowContactModal(false);
-                    setPendingTripCount(0);
-                  }}
-                  className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition"
-                >
-                  Sluiten
-                </button>
-                <a
-                  href="https://calendly.com/robbertjanssen"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  Plan gesprek
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
