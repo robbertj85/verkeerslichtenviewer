@@ -17,7 +17,7 @@
   {
     "name": "Helmond",
     "slug": "helmond",
-    "count": 58
+    "count": 59
   },
   {
     "name": "Apeldoorn",
@@ -25,14 +25,14 @@
     "count": 55
   },
   {
+    "name": "Provincie Utrecht",
+    "slug": "provincie-utrecht",
+    "count": 51
+  },
+  {
     "name": "Enschede",
     "slug": "enschede",
     "count": 50
-  },
-  {
-    "name": "Provincie Utrecht",
-    "slug": "provincie-utrecht",
-    "count": 49
   },
   {
     "name": "Deventer",

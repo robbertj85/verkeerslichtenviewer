@@ -4,8 +4,8 @@
     "description": "Weekly statistics history for UDAP traffic lights",
     "source": "UDAP",
     "source_url": "https://map.udap.nl",
-    "last_updated": "2026-03-02T04:01:07.621924",
-    "total_weeks": 13
+    "last_updated": "2026-03-09T04:04:11.804497",
+    "total_weeks": 14
   },
   "weeks": [
     {
@@ -1725,6 +1725,137 @@
             "previous": 59,
             "current": 58,
             "change": -1
+          }
+        }
+      }
+    },
+    {
+      "week": "2026-W11",
+      "date": "2026-03-09",
+      "timestamp": "2026-03-09T04:04:11.804497",
+      "stats": {
+        "total": 1299,
+        "by_authority": {
+          "Rotterdam": 89,
+          "Provincie Zuid-Holland": 75,
+          "Provincie Noord-Brabant": 67,
+          "Helmond": 59,
+          "Apeldoorn": 55,
+          "Deventer": 52,
+          "Provincie Utrecht": 51,
+          "Enschede": 50,
+          "Zwolle": 48,
+          "Breda": 47,
+          "Almere": 45,
+          "s-Hertogenbosch": 44,
+          "Delft": 44,
+          "Almelo": 41,
+          "Tilburg": 41,
+          "Hengelo": 33,
+          "Amersfoort": 30,
+          "Leeuwarden": 28,
+          "Alphen aan den Rijn": 24,
+          "Nijmegen": 24,
+          "Provincie Gelderland": 24,
+          "Venlo": 22,
+          "Rijswijk": 19,
+          "Provincie Overijssel": 18,
+          "Amstelveen": 16,
+          "Leidschendam-Voorburg": 13,
+          "Provincie Zeeland": 13,
+          "Eindhoven": 12,
+          "Groningen": 12,
+          "Zeist": 12,
+          "Den Haag": 11,
+          "Maastricht": 10,
+          "Nissewaard": 10,
+          "Capelle aan den IJssel": 9,
+          "Wassenaar": 9,
+          "Provincie Limburg": 9,
+          "Nieuwegein": 8,
+          "Vlaardingen": 8,
+          "Zoetermeer": 8,
+          "RWS West-Nederland Zuid District Noord": 8,
+          "Haarlemmermeer": 7,
+          "Arnhem": 6,
+          "Dordrecht": 6,
+          "Port of Moerdijk": 6,
+          "Emmen": 5,
+          "Hilversum": 5,
+          "Soest": 5,
+          "Woerden": 5,
+          "Provincie Groningen": 5,
+          "Gouda": 4,
+          "Utrecht": 4,
+          "Leiden": 3,
+          "Leusden": 3,
+          "Velsen": 3,
+          "Westland": 3,
+          "RWS Zee en Delta District Noord": 3,
+          "RWS Zuid-Nederland District Midden": 3,
+          "Pijnacker-Nootdorp": 2,
+          "Rheden": 2,
+          "Veldhoven": 2,
+          "Waalre": 2,
+          "Zaanstad": 2,
+          "Zutphen": 2,
+          "Provincie Drenthe": 2,
+          "RWS Zuid-Nederland District West": 2,
+          "Alkmaar": 1,
+          "Oosterhout": 1,
+          "Schiedam": 1,
+          "Terneuzen": 1,
+          "Teylingen": 1,
+          "Valkenswaard": 1,
+          "Veenendaal": 1,
+          "RWS Oost-Nederland District Noord": 1,
+          "RWS Oost-Nederland District Zuid": 1
+        },
+        "by_tlc_organization": {
+          "Vialis": 448,
+          "Swarco": 399,
+          "Swarco - Peek Traffic": 337,
+          "Onbekend": 88,
+          "Ko Hartog": 27
+        },
+        "by_its_organization": {
+          "Vialis": 426,
+          "Gemeente Rotterdam": 266,
+          "Swarco - Peek Traffic": 261,
+          "RHDHV": 175,
+          "Onbekend": 78,
+          "Provincie Noord-Holland": 53,
+          "Goudappel Coffeng": 27,
+          "Huijskes VRT": 13
+        },
+        "by_ris_organization": {
+          "Vialis": 481,
+          "Swarco": 398,
+          "Swarco - Peek Traffic": 266,
+          "RHDHV": 129,
+          "Onbekend": 25
+        },
+        "by_priority": {
+          "emergency": 1283,
+          "road_operator": 1269,
+          "public_transport": 477,
+          "logistics": 470,
+          "agriculture": 14
+        }
+      },
+      "changes": {
+        "total_change": 3,
+        "is_first_week": false,
+        "authority_changes": {
+          "Provincie Utrecht": {
+            "previous": 49,
+            "current": 51,
+            "change": 2
+          },
+          "Helmond": {
+            "previous": 58,
+            "current": 59,
+            "change": 1
           }
         }
       }
