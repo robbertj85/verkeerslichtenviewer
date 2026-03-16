@@ -22,7 +22,7 @@
   {
     "name": "Apeldoorn",
     "slug": "apeldoorn",
-    "count": 55
+    "count": 56
   },
   {
     "name": "Provincie Utrecht",
@@ -35,6 +35,16 @@
     "count": 50
   },
   {
+    "name": "Almere",
+    "slug": "almere",
+    "count": 48
+  },
+  {
+    "name": "Breda",
+    "slug": "breda",
+    "count": 48
+  },
+  {
     "name": "Deventer",
     "slug": "deventer",
     "count": 48
@@ -43,16 +53,6 @@
     "name": "Zwolle",
     "slug": "zwolle",
     "count": 48
-  },
-  {
-    "name": "Breda",
-    "slug": "breda",
-    "count": 47
-  },
-  {
-    "name": "Almere",
-    "slug": "almere",
-    "count": 45
   },
   {
     "name": "Delft",
@@ -77,7 +77,7 @@
   {
     "name": "Hengelo",
     "slug": "hengelo",
-    "count": 33
+    "count": 32
   },
   {
     "name": "Amersfoort",
@@ -115,11 +115,6 @@
     "count": 19
   },
   {
-    "name": "Provincie Overijssel",
-    "slug": "provincie-overijssel",
-    "count": 18
-  },
-  {
     "name": "Amstelveen",
     "slug": "amstelveen",
     "count": 16
@@ -152,6 +147,11 @@
   {
     "name": "Den Haag",
     "slug": "den-haag",
+    "count": 11
+  },
+  {
+    "name": "Provincie Overijssel",
+    "slug": "provincie-overijssel",
     "count": 11
   },
   {

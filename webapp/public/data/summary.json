@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-03-09T04:04:09.360993",
-  "total_traffic_lights": 1295,
+  "generated_at": "2026-03-16T04:27:43.672980",
+  "total_traffic_lights": 1292,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 41,
-    "Almere": 45,
+    "Almere": 48,
     "Alphen aan den Rijn": 24,
     "Amersfoort": 30,
     "Amstelveen": 16,
-    "Apeldoorn": 55,
+    "Apeldoorn": 56,
     "Arnhem": 6,
-    "Breda": 47,
+    "Breda": 48,
     "Capelle aan den IJssel": 9,
     "Delft": 44,
     "Den Haag": 11,
@@ -23,7 +23,7 @@
     "Groningen": 12,
     "Haarlemmermeer": 7,
     "Helmond": 59,
-    "Hengelo": 33,
+    "Hengelo": 32,
     "Hilversum": 5,
     "Leeuwarden": 28,
     "Leiden": 3,
@@ -41,7 +41,7 @@
     "Provincie Groningen": 5,
     "Provincie Limburg": 9,
     "Provincie Noord-Brabant": 67,
-    "Provincie Overijssel": 18,
+    "Provincie Overijssel": 11,
     "Provincie Utrecht": 51,
     "Provincie Zeeland": 13,
     "Provincie Zuid-Holland": 75,
@@ -78,15 +78,15 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 88,
+    "": 81,
     "Ko Hartog": 27,
-    "Swarco": 395,
-    "Swarco - Peek Traffic": 337,
-    "Vialis": 448
+    "Swarco": 397,
+    "Swarco - Peek Traffic": 336,
+    "Vialis": 451
   },
   "priority_stats": {
-    "emergency": 1279,
-    "road_operator": 1265,
+    "emergency": 1276,
+    "road_operator": 1262,
     "public_transport": 477,
     "logistics": 470,
     "agriculture": 14
