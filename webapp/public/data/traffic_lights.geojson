@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-03-16T04:27:43.672980",
-    "total_traffic_lights": 1292,
+    "generated_at": "2026-03-23T04:14:05.549887",
+    "total_traffic_lights": 1298,
     "bounds": [
       3.587233,
       50.840837,
@@ -4697,6 +4697,142 @@
         "identifier": "792304e2",
         "latitude": 52.362679,
         "longitude": 5.242243,
+        "roadRegulatorId": 31011,
+        "roadRegulatorName": "Almere",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.192092,
+          52.368164
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "792304ec",
+        "name": "KOBI0102",
+        "identifier": "792304ec",
+        "latitude": 52.368164,
+        "longitude": 5.192092,
+        "roadRegulatorId": 31011,
+        "roadRegulatorName": "Almere",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.198599,
+          52.367473
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "792304f6",
+        "name": "KOBI0105",
+        "identifier": "792304f6",
+        "latitude": 52.367473,
+        "longitude": 5.198599,
+        "roadRegulatorId": 31011,
+        "roadRegulatorName": "Almere",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.281562,
+          52.388382
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79230500",
+        "name": "KOBI0224",
+        "identifier": "79230500",
+        "latitude": 52.388382,
+        "longitude": 5.281562,
+        "roadRegulatorId": 31011,
+        "roadRegulatorName": "Almere",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.274945,
+          52.385753
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7923050a",
+        "name": "KOBI0227",
+        "identifier": "7923050a",
+        "latitude": 52.385753,
+        "longitude": 5.274945,
         "roadRegulatorId": 31011,
         "roadRegulatorName": "Almere",
         "subjectTypeName": "iVRI",
@@ -11396,7 +11532,7 @@
           "public_transport"
         ],
         "priority_count": 3,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
@@ -11641,7 +11777,7 @@
           "public_transport"
         ],
         "priority_count": 3,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
@@ -12849,7 +12985,7 @@
           "public_transport"
         ],
         "priority_count": 3,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
@@ -16087,7 +16223,7 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Swarco",
+        "tlc_organization": "",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
       }
@@ -16121,7 +16257,7 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Swarco",
+        "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
       }
@@ -19602,8 +19738,8 @@
           "logistics"
         ],
         "priority_count": 3,
-        "tlc_organization": "",
-        "its_organization": "",
+        "tlc_organization": "Swarco",
+        "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
       }
     },
@@ -25015,7 +25151,7 @@
         ],
         "priority_count": 2,
         "tlc_organization": "Swarco",
-        "its_organization": "",
+        "its_organization": "Provincie Noord-Holland",
         "ris_organization": "Swarco"
       }
     },
@@ -27057,7 +27193,7 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
@@ -28111,7 +28247,7 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
@@ -28818,7 +28954,7 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
@@ -30557,6 +30693,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.049902,
+          51.557462
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a550212",
+        "name": "TIL018",
+        "identifier": "7a550212",
+        "latitude": 51.557462,
+        "longitude": 5.049902,
+        "roadRegulatorId": 31317,
+        "roadRegulatorName": "Tilburg",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.099315,
           52.128925
         ]
@@ -30752,6 +30922,37 @@
         "tlc_organization": "Swarco",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.557951,
+          52.02325
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a640032",
+        "name": "VND Raadhuisstraat - Boompjesgoed",
+        "identifier": "7a640032",
+        "latitude": 52.02325,
+        "longitude": 5.557951,
+        "roadRegulatorId": 31332,
+        "roadRegulatorName": "Veenendaal",
+        "subjectTypeName": "iVRI",
+        "has_emergency": false,
+        "has_road_operator": false,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [],
+        "priority_count": 0,
+        "tlc_organization": "",
+        "its_organization": "",
+        "ris_organization": ""
       }
     },
     {
@@ -33435,7 +33636,7 @@
           "public_transport"
         ],
         "priority_count": 3,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
@@ -37556,7 +37757,7 @@
         ],
         "priority_count": 4,
         "tlc_organization": "Swarco",
-        "its_organization": "Gemeente Rotterdam",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -41920,8 +42121,8 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "",
-        "its_organization": "",
+        "tlc_organization": "Swarco",
+        "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
       }
     },

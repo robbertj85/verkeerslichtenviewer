@@ -25,6 +25,11 @@
     "count": 56
   },
   {
+    "name": "Almere",
+    "slug": "almere",
+    "count": 52
+  },
+  {
     "name": "Provincie Utrecht",
     "slug": "provincie-utrecht",
     "count": 51
@@ -33,11 +38,6 @@
     "name": "Enschede",
     "slug": "enschede",
     "count": 50
-  },
-  {
-    "name": "Almere",
-    "slug": "almere",
-    "count": 48
   },
   {
     "name": "Breda",
@@ -65,13 +65,13 @@
     "count": 44
   },
   {
-    "name": "Almelo",
-    "slug": "almelo",
-    "count": 41
-  },
-  {
     "name": "Tilburg",
     "slug": "tilburg",
+    "count": 42
+  },
+  {
+    "name": "Almelo",
+    "slug": "almelo",
     "count": 41
   },
   {
@@ -305,6 +305,11 @@
     "count": 2
   },
   {
+    "name": "Veenendaal",
+    "slug": "veenendaal",
+    "count": 2
+  },
+  {
     "name": "Veldhoven",
     "slug": "veldhoven",
     "count": 2
@@ -362,11 +367,6 @@
   {
     "name": "Valkenswaard",
     "slug": "valkenswaard",
-    "count": 1
-  },
-  {
-    "name": "Veenendaal",
-    "slug": "veenendaal",
     "count": 1
   }
 ]

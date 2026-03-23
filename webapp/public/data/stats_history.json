@@ -4,8 +4,8 @@
     "description": "Weekly statistics history for UDAP traffic lights",
     "source": "UDAP",
     "source_url": "https://map.udap.nl",
-    "last_updated": "2026-03-16T04:27:46.191231",
-    "total_weeks": 15
+    "last_updated": "2026-03-23T04:14:07.802021",
+    "total_weeks": 16
   },
   "weeks": [
     {
@@ -2001,6 +2001,142 @@
           "Breda": {
             "previous": 47,
             "current": 48,
+            "change": 1
+          }
+        }
+      }
+    },
+    {
+      "week": "2026-W13",
+      "date": "2026-03-23",
+      "timestamp": "2026-03-23T04:14:07.802021",
+      "stats": {
+        "total": 1302,
+        "by_authority": {
+          "Rotterdam": 89,
+          "Provincie Zuid-Holland": 75,
+          "Provincie Noord-Brabant": 67,
+          "Helmond": 59,
+          "Apeldoorn": 56,
+          "Almere": 52,
+          "Deventer": 52,
+          "Provincie Utrecht": 51,
+          "Enschede": 50,
+          "Breda": 48,
+          "Zwolle": 48,
+          "s-Hertogenbosch": 44,
+          "Delft": 44,
+          "Tilburg": 42,
+          "Almelo": 41,
+          "Hengelo": 32,
+          "Amersfoort": 30,
+          "Leeuwarden": 28,
+          "Alphen aan den Rijn": 24,
+          "Nijmegen": 24,
+          "Provincie Gelderland": 24,
+          "Venlo": 22,
+          "Rijswijk": 19,
+          "Amstelveen": 16,
+          "Leidschendam-Voorburg": 13,
+          "Provincie Zeeland": 13,
+          "Eindhoven": 12,
+          "Groningen": 12,
+          "Zeist": 12,
+          "Den Haag": 11,
+          "Provincie Overijssel": 11,
+          "Maastricht": 10,
+          "Nissewaard": 10,
+          "Capelle aan den IJssel": 9,
+          "Wassenaar": 9,
+          "Provincie Limburg": 9,
+          "Nieuwegein": 8,
+          "Vlaardingen": 8,
+          "Zoetermeer": 8,
+          "RWS West-Nederland Zuid District Noord": 8,
+          "Haarlemmermeer": 7,
+          "Arnhem": 6,
+          "Dordrecht": 6,
+          "Port of Moerdijk": 6,
+          "Emmen": 5,
+          "Hilversum": 5,
+          "Soest": 5,
+          "Woerden": 5,
+          "Provincie Groningen": 5,
+          "Gouda": 4,
+          "Utrecht": 4,
+          "Leiden": 3,
+          "Leusden": 3,
+          "Velsen": 3,
+          "Westland": 3,
+          "RWS Zee en Delta District Noord": 3,
+          "RWS Zuid-Nederland District Midden": 3,
+          "Pijnacker-Nootdorp": 2,
+          "Rheden": 2,
+          "Veenendaal": 2,
+          "Veldhoven": 2,
+          "Waalre": 2,
+          "Zaanstad": 2,
+          "Zutphen": 2,
+          "Provincie Drenthe": 2,
+          "RWS Zuid-Nederland District West": 2,
+          "Alkmaar": 1,
+          "Oosterhout": 1,
+          "Schiedam": 1,
+          "Terneuzen": 1,
+          "Teylingen": 1,
+          "Valkenswaard": 1,
+          "RWS Oost-Nederland District Noord": 1,
+          "RWS Oost-Nederland District Zuid": 1
+        },
+        "by_tlc_organization": {
+          "Vialis": 455,
+          "Swarco": 402,
+          "Swarco - Peek Traffic": 337,
+          "Onbekend": 88,
+          "Ko Hartog": 20
+        },
+        "by_its_organization": {
+          "Vialis": 434,
+          "Gemeente Rotterdam": 267,
+          "Swarco - Peek Traffic": 261,
+          "RHDHV": 176,
+          "Onbekend": 70,
+          "Provincie Noord-Holland": 54,
+          "Goudappel Coffeng": 27,
+          "Huijskes VRT": 13
+        },
+        "by_ris_organization": {
+          "Vialis": 488,
+          "Swarco": 399,
+          "Swarco - Peek Traffic": 266,
+          "RHDHV": 130,
+          "Onbekend": 19
+        },
+        "by_priority": {
+          "emergency": 1285,
+          "road_operator": 1271,
+          "public_transport": 477,
+          "logistics": 470,
+          "agriculture": 14
+        }
+      },
+      "changes": {
+        "total_change": 6,
+        "is_first_week": false,
+        "authority_changes": {
+          "Almere": {
+            "previous": 48,
+            "current": 52,
+            "change": 4
+          },
+          "Veenendaal": {
+            "previous": 1,
+            "current": 2,
+            "change": 1
+          },
+          "Tilburg": {
+            "previous": 41,
+            "current": 42,
             "change": 1
           }
         }
