@@ -17,7 +17,7 @@
   {
     "name": "Helmond",
     "slug": "helmond",
-    "count": 59
+    "count": 58
   },
   {
     "name": "Apeldoorn",
@@ -90,6 +90,11 @@
     "count": 28
   },
   {
+    "name": "Provincie Gelderland",
+    "slug": "provincie-gelderland",
+    "count": 25
+  },
+  {
     "name": "Alphen aan den Rijn",
     "slug": "alphen-aan-den-rijn",
     "count": 24
@@ -97,11 +102,6 @@
   {
     "name": "Nijmegen",
     "slug": "nijmegen",
-    "count": 24
-  },
-  {
-    "name": "Provincie Gelderland",
-    "slug": "provincie-gelderland",
     "count": 24
   },
   {
@@ -180,6 +180,11 @@
     "count": 9
   },
   {
+    "name": "Zoetermeer",
+    "slug": "zoetermeer",
+    "count": 9
+  },
+  {
     "name": "Nieuwegein",
     "slug": "nieuwegein",
     "count": 8
@@ -192,11 +197,6 @@
   {
     "name": "Vlaardingen",
     "slug": "vlaardingen",
-    "count": 8
-  },
-  {
-    "name": "Zoetermeer",
-    "slug": "zoetermeer",
     "count": 8
   },
   {

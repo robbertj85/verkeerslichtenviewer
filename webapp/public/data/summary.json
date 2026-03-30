@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-23T04:14:05.549887",
-  "total_traffic_lights": 1298,
+  "generated_at": "2026-03-30T04:33:49.487429",
+  "total_traffic_lights": 1299,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 41,
@@ -22,7 +22,7 @@
     "Gouda": 4,
     "Groningen": 12,
     "Haarlemmermeer": 7,
-    "Helmond": 59,
+    "Helmond": 58,
     "Hengelo": 32,
     "Hilversum": 5,
     "Leeuwarden": 28,
@@ -37,7 +37,7 @@
     "Pijnacker-Nootdorp": 2,
     "Port of Moerdijk": 6,
     "Provincie Drenthe": 2,
-    "Provincie Gelderland": 24,
+    "Provincie Gelderland": 25,
     "Provincie Groningen": 5,
     "Provincie Limburg": 9,
     "Provincie Noord-Brabant": 67,
@@ -72,23 +72,23 @@
     "Woerden": 5,
     "Zaanstad": 2,
     "Zeist": 12,
-    "Zoetermeer": 8,
+    "Zoetermeer": 9,
     "Zutphen": 2,
     "Zwolle": 48,
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 88,
-    "Ko Hartog": 20,
-    "Swarco": 398,
-    "Swarco - Peek Traffic": 337,
-    "Vialis": 455
+    "": 86,
+    "Ko Hartog": 21,
+    "Swarco": 400,
+    "Swarco - Peek Traffic": 336,
+    "Vialis": 456
   },
   "priority_stats": {
     "emergency": 1281,
     "road_operator": 1267,
     "public_transport": 477,
-    "logistics": 470,
+    "logistics": 469,
     "agriculture": 14
   },
   "source": "UDAP (Urban Data Access Platform)",
