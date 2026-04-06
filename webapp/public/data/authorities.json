@@ -2,7 +2,7 @@
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 89
+    "count": 94
   },
   {
     "name": "Provincie Zuid-Holland",
@@ -15,14 +15,14 @@
     "count": 67
   },
   {
-    "name": "Helmond",
-    "slug": "helmond",
-    "count": 58
-  },
-  {
     "name": "Apeldoorn",
     "slug": "apeldoorn",
     "count": 56
+  },
+  {
+    "name": "Helmond",
+    "slug": "helmond",
+    "count": 55
   },
   {
     "name": "Almere",
