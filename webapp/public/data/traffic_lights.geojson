@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-04-06T04:32:26.622575",
-    "total_traffic_lights": 1301,
+    "generated_at": "2026-04-13T04:46:49.903662",
+    "total_traffic_lights": 1303,
     "bounds": [
       3.587233,
       50.840837,
@@ -18780,8 +18780,8 @@
           "logistics"
         ],
         "priority_count": 3,
-        "tlc_organization": "",
-        "its_organization": "",
+        "tlc_organization": "Swarco",
+        "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
       }
     },
@@ -20323,6 +20323,41 @@
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco - Peek Traffic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.792136,
+          52.266959
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79af0014",
+        "name": "XP2001",
+        "identifier": "79af0014",
+        "latitude": 52.266959,
+        "longitude": 6.792136,
+        "roadRegulatorId": 31151,
+        "roadRegulatorName": "Hengelo",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport"
+        ],
+        "priority_count": 3,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Huijskes VRT",
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -40102,6 +40137,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.25421,
+          52.112586
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa600dc",
+        "name": "PRU-K0132",
+        "identifier": "7aa600dc",
+        "latitude": 52.112586,
+        "longitude": 5.25421,
+        "roadRegulatorId": 31398,
+        "roadRegulatorName": "Provincie Utrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
+        "has_logistics": true,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport",
+          "logistics"
+        ],
+        "priority_count": 4,
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
+        "ris_organization": "Swarco - Peek Traffic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.25939,
           52.114023
         ]
@@ -40406,14 +40477,16 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": false,
+        "has_public_transport": true,
+        "has_logistics": true,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport",
+          "logistics"
         ],
-        "priority_count": 2,
+        "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
         "ris_organization": "Vialis"
