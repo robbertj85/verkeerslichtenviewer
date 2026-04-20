@@ -1,10 +1,10 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-04-13T04:46:49.903662",
-    "total_traffic_lights": 1303,
+    "generated_at": "2026-04-20T04:46:38.219417",
+    "total_traffic_lights": 1302,
     "bounds": [
-      3.587233,
+      3.585204,
       50.840837,
       6.963916,
       53.233663
@@ -67,13 +67,13 @@
       "Terneuzen",
       "Teylingen",
       "Tilburg",
-      "Utrecht",
       "Valkenswaard",
       "Veenendaal",
       "Veldhoven",
       "Velsen",
       "Venlo",
       "Vlaardingen",
+      "Vlissingen",
       "Waalre",
       "Wassenaar",
       "Westland",
@@ -20365,108 +20365,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.791913,
-          52.261533
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "79af001e",
-        "name": "XP2015",
-        "identifier": "79af001e",
-        "latitude": 52.261533,
-        "longitude": 6.791913,
-        "roadRegulatorId": 31151,
-        "roadRegulatorName": "Hengelo",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": false,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator"
-        ],
-        "priority_count": 2,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Swarco - Peek Traffic",
-        "ris_organization": "Swarco - Peek Traffic"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.792179,
-          52.262347
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "79af0028",
-        "name": "XP2025",
-        "identifier": "79af0028",
-        "latitude": 52.262347,
-        "longitude": 6.792179,
-        "roadRegulatorId": 31151,
-        "roadRegulatorName": "Hengelo",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": false,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator"
-        ],
-        "priority_count": 2,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Swarco - Peek Traffic",
-        "ris_organization": "Swarco - Peek Traffic"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.793729,
-          52.260338
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "79af0032",
-        "name": "XP2057",
-        "identifier": "79af0032",
-        "latitude": 52.260338,
-        "longitude": 6.793729,
-        "roadRegulatorId": 31151,
-        "roadRegulatorName": "Hengelo",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": false,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator"
-        ],
-        "priority_count": 2,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Swarco - Peek Traffic",
-        "ris_organization": "Swarco - Peek Traffic"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           6.771154,
           52.288374
         ]
@@ -29306,6 +29204,142 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          3.84405,
+          51.31861
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a4f0014",
+        "name": "VRI03",
+        "identifier": "7a4f0014",
+        "latitude": 51.31861,
+        "longitude": 3.84405,
+        "roadRegulatorId": 31311,
+        "roadRegulatorName": "Terneuzen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "RHDHV",
+        "ris_organization": "RHDHV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.83559,
+          51.32773
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a4f001e",
+        "name": "VRI04",
+        "identifier": "7a4f001e",
+        "latitude": 51.32773,
+        "longitude": 3.83559,
+        "roadRegulatorId": 31311,
+        "roadRegulatorName": "Terneuzen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "RHDHV",
+        "ris_organization": "RHDHV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.84008,
+          51.32511
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a4f0028",
+        "name": "VRI05",
+        "identifier": "7a4f0028",
+        "latitude": 51.32511,
+        "longitude": 3.84008,
+        "roadRegulatorId": 31311,
+        "roadRegulatorName": "Terneuzen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "RHDHV",
+        "ris_organization": "RHDHV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.85424,
+          51.30741
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a4f0032",
+        "name": "VRI06",
+        "identifier": "7a4f0032",
+        "latitude": 51.30741,
+        "longitude": 3.85424,
+        "roadRegulatorId": 31311,
+        "roadRegulatorName": "Terneuzen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "RHDHV",
+        "ris_organization": "RHDHV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.49457,
           52.209575
         ]
@@ -30789,146 +30823,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.099315,
-          52.128925
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "7a5e000a",
-        "name": "UTR-K0138",
-        "identifier": "7a5e000a",
-        "latitude": 52.128925,
-        "longitude": 5.099315,
-        "roadRegulatorId": 31326,
-        "roadRegulatorName": "Utrecht",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": true,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator",
-          "logistics"
-        ],
-        "priority_count": 3,
-        "tlc_organization": "Vialis",
-        "its_organization": "Gemeente Rotterdam",
-        "ris_organization": "Vialis"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.116434,
-          52.122499
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "7a5e0014",
-        "name": "UTR-K0076",
-        "identifier": "7a5e0014",
-        "latitude": 52.122499,
-        "longitude": 5.116434,
-        "roadRegulatorId": 31326,
-        "roadRegulatorName": "Utrecht",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": true,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator",
-          "logistics"
-        ],
-        "priority_count": 3,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Gemeente Rotterdam",
-        "ris_organization": "Vialis"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.128408,
-          52.118327
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "7a5e001e",
-        "name": "UTR-K0077",
-        "identifier": "7a5e001e",
-        "latitude": 52.118327,
-        "longitude": 5.128408,
-        "roadRegulatorId": 31326,
-        "roadRegulatorName": "Utrecht",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": true,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator",
-          "logistics"
-        ],
-        "priority_count": 3,
-        "tlc_organization": "Vialis",
-        "its_organization": "Gemeente Rotterdam",
-        "ris_organization": "Vialis"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.134078,
-          52.116962
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "7a5e0028",
-        "name": "UTR-K0069",
-        "identifier": "7a5e0028",
-        "latitude": 52.116962,
-        "longitude": 5.134078,
-        "roadRegulatorId": 31326,
-        "roadRegulatorName": "Utrecht",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": true,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator",
-          "logistics"
-        ],
-        "priority_count": 3,
-        "tlc_organization": "Vialis",
-        "its_organization": "Gemeente Rotterdam",
-        "ris_organization": "Vialis"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           5.455929,
           51.348975
         ]
@@ -32220,6 +32114,40 @@
         ],
         "priority_count": 2,
         "tlc_organization": "Vialis",
+        "its_organization": "RHDHV",
+        "ris_organization": "RHDHV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.585204,
+          51.449604
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a6e000a",
+        "name": "VRI03",
+        "identifier": "7a6e000a",
+        "latitude": 51.449604,
+        "longitude": 3.585204,
+        "roadRegulatorId": 31342,
+        "roadRegulatorName": "Vlissingen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
         "its_organization": "RHDHV",
         "ris_organization": "RHDHV"
       }
@@ -39182,6 +39110,40 @@
         "tlc_organization": "Swarco",
         "its_organization": "Huijskes VRT",
         "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.617632,
+          52.238059
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa500f0",
+        "name": "VRI013",
+        "identifier": "7aa500f0",
+        "latitude": 52.238059,
+        "longitude": 6.617632,
+        "roadRegulatorId": 31397,
+        "roadRegulatorName": "Provincie Overijssel",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "RHDHV",
+        "ris_organization": "RHDHV"
       }
     },
     {

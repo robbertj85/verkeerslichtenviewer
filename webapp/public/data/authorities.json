@@ -75,13 +75,13 @@
     "count": 41
   },
   {
-    "name": "Hengelo",
-    "slug": "hengelo",
-    "count": 33
-  },
-  {
     "name": "Amersfoort",
     "slug": "amersfoort",
+    "count": 30
+  },
+  {
+    "name": "Hengelo",
+    "slug": "hengelo",
     "count": 30
   },
   {
@@ -140,6 +140,11 @@
     "count": 12
   },
   {
+    "name": "Provincie Overijssel",
+    "slug": "provincie-overijssel",
+    "count": 12
+  },
+  {
     "name": "Zeist",
     "slug": "zeist",
     "count": 12
@@ -147,11 +152,6 @@
   {
     "name": "Den Haag",
     "slug": "den-haag",
-    "count": 11
-  },
-  {
-    "name": "Provincie Overijssel",
-    "slug": "provincie-overijssel",
     "count": 11
   },
   {
@@ -240,6 +240,11 @@
     "count": 5
   },
   {
+    "name": "Terneuzen",
+    "slug": "terneuzen",
+    "count": 5
+  },
+  {
     "name": "Woerden",
     "slug": "woerden",
     "count": 5
@@ -247,11 +252,6 @@
   {
     "name": "Gouda",
     "slug": "gouda",
-    "count": 4
-  },
-  {
-    "name": "Utrecht",
-    "slug": "utrecht",
     "count": 4
   },
   {
@@ -355,11 +355,6 @@
     "count": 1
   },
   {
-    "name": "Terneuzen",
-    "slug": "terneuzen",
-    "count": 1
-  },
-  {
     "name": "Teylingen",
     "slug": "teylingen",
     "count": 1
@@ -367,6 +362,11 @@
   {
     "name": "Valkenswaard",
     "slug": "valkenswaard",
+    "count": 1
+  },
+  {
+    "name": "Vlissingen",
+    "slug": "vlissingen",
     "count": 1
   }
 ]
