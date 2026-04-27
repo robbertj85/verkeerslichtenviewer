@@ -65,13 +65,13 @@
     "count": 44
   },
   {
-    "name": "Tilburg",
-    "slug": "tilburg",
-    "count": 42
-  },
-  {
     "name": "Almelo",
     "slug": "almelo",
+    "count": 41
+  },
+  {
+    "name": "Tilburg",
+    "slug": "tilburg",
     "count": 41
   },
   {
@@ -110,14 +110,14 @@
     "count": 22
   },
   {
+    "name": "Amstelveen",
+    "slug": "amstelveen",
+    "count": 21
+  },
+  {
     "name": "Rijswijk",
     "slug": "rijswijk",
     "count": 19
-  },
-  {
-    "name": "Amstelveen",
-    "slug": "amstelveen",
-    "count": 16
   },
   {
     "name": "Leidschendam-Voorburg",
