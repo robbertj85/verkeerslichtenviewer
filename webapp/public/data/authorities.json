@@ -1,10 +1,5 @@
 [
   {
-    "name": "Rotterdam",
-    "slug": "rotterdam",
-    "count": 94
-  },
-  {
     "name": "Provincie Zuid-Holland",
     "slug": "provincie-zuid-holland",
     "count": 75
@@ -13,6 +8,11 @@
     "name": "Provincie Noord-Brabant",
     "slug": "provincie-noord-brabant",
     "count": 67
+  },
+  {
+    "name": "Rotterdam",
+    "slug": "rotterdam",
+    "count": 66
   },
   {
     "name": "Apeldoorn",
@@ -65,13 +65,13 @@
     "count": 44
   },
   {
-    "name": "Almelo",
-    "slug": "almelo",
-    "count": 41
-  },
-  {
     "name": "Tilburg",
     "slug": "tilburg",
+    "count": 43
+  },
+  {
+    "name": "Almelo",
+    "slug": "almelo",
     "count": 41
   },
   {
