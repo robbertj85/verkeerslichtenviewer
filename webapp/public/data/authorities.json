@@ -12,7 +12,7 @@
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 66
+    "count": 65
   },
   {
     "name": "Apeldoorn",
@@ -32,7 +32,7 @@
   {
     "name": "Provincie Utrecht",
     "slug": "provincie-utrecht",
-    "count": 52
+    "count": 51
   },
   {
     "name": "Enschede",
@@ -60,14 +60,14 @@
     "count": 44
   },
   {
-    "name": "s-Hertogenbosch",
-    "slug": "s-hertogenbosch",
+    "name": "Tilburg",
+    "slug": "tilburg",
     "count": 44
   },
   {
-    "name": "Tilburg",
-    "slug": "tilburg",
-    "count": 43
+    "name": "s-Hertogenbosch",
+    "slug": "s-hertogenbosch",
+    "count": 44
   },
   {
     "name": "Almelo",
@@ -90,11 +90,6 @@
     "count": 28
   },
   {
-    "name": "Provincie Gelderland",
-    "slug": "provincie-gelderland",
-    "count": 25
-  },
-  {
     "name": "Alphen aan den Rijn",
     "slug": "alphen-aan-den-rijn",
     "count": 24
@@ -112,6 +107,11 @@
   {
     "name": "Amstelveen",
     "slug": "amstelveen",
+    "count": 21
+  },
+  {
+    "name": "Provincie Gelderland",
+    "slug": "provincie-gelderland",
     "count": 21
   },
   {
