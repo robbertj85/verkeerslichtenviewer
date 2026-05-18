@@ -17,7 +17,7 @@
   {
     "name": "Apeldoorn",
     "slug": "apeldoorn",
-    "count": 56
+    "count": 58
   },
   {
     "name": "Helmond",
@@ -55,13 +55,13 @@
     "count": 48
   },
   {
-    "name": "Delft",
-    "slug": "delft",
-    "count": 44
-  },
-  {
     "name": "Tilburg",
     "slug": "tilburg",
+    "count": 45
+  },
+  {
+    "name": "Delft",
+    "slug": "delft",
     "count": 44
   },
   {

@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-05-11T05:45:55.112180",
-    "total_traffic_lights": 1275,
+    "generated_at": "2026-05-18T06:00:19.262181",
+    "total_traffic_lights": 1278,
     "bounds": [
       3.585204,
       50.840837,
@@ -9051,6 +9051,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.999486,
+          52.165894
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "792a01fe",
+        "name": "x48VRA",
+        "identifier": "792a01fe",
+        "latitude": 52.165894,
+        "longitude": 5.999486,
+        "roadRegulatorId": 31018,
+        "roadRegulatorName": "Apeldoorn",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "",
+        "ris_organization": "RHDHV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.988505,
           52.246015
         ]
@@ -9186,6 +9220,40 @@
         "tlc_organization": "Swarco",
         "its_organization": "Provincie Noord-Holland",
         "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.049636,
+          52.124968
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "792a0230",
+        "name": "x58VRA",
+        "identifier": "792a0230",
+        "latitude": 52.124968,
+        "longitude": 6.049636,
+        "roadRegulatorId": 31018,
+        "roadRegulatorName": "Apeldoorn",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "",
+        "ris_organization": "RHDHV"
       }
     },
     {
@@ -29083,41 +29151,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.07228,
-          51.59806
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "7a5500a0",
-        "name": "TIL124",
-        "identifier": "7a5500a0",
-        "latitude": 51.59806,
-        "longitude": 5.07228,
-        "roadRegulatorId": 31317,
-        "roadRegulatorName": "Tilburg",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": true,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator",
-          "logistics"
-        ],
-        "priority_count": 3,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Swarco - Peek Traffic",
-        "ris_organization": "Swarco - Peek Traffic"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           5.07812,
           51.59732
         ]
@@ -30052,6 +30085,74 @@
         "identifier": "7a550212",
         "latitude": 51.557462,
         "longitude": 5.049902,
+        "roadRegulatorId": 31317,
+        "roadRegulatorName": "Tilburg",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.090667,
+          51.56444
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a55024e",
+        "name": "TIL153",
+        "identifier": "7a55024e",
+        "latitude": 51.56444,
+        "longitude": 5.090667,
+        "roadRegulatorId": 31317,
+        "roadRegulatorName": "Tilburg",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.048968,
+          51.58581
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a550262",
+        "name": "TIL090",
+        "identifier": "7a550262",
+        "latitude": 51.58581,
+        "longitude": 5.048968,
         "roadRegulatorId": 31317,
         "roadRegulatorName": "Tilburg",
         "subjectTypeName": "iVRI",
@@ -32152,14 +32253,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "",
         "its_organization": "",
         "ris_organization": "RHDHV"
@@ -34879,7 +34981,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7aa00136",
-        "name": "361",
+        "name": "k361",
         "identifier": "7aa00136",
         "latitude": 52.226676,
         "longitude": 6.192472,
@@ -35255,7 +35357,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7aa001cc",
-        "name": "K574",
+        "name": "k574",
         "identifier": "7aa001cc",
         "latitude": 51.767348,
         "longitude": 5.866712,
