@@ -4,8 +4,8 @@
     "description": "Weekly statistics history for UDAP traffic lights",
     "source": "UDAP",
     "source_url": "https://map.udap.nl",
-    "last_updated": "2026-05-18T06:00:22.012687",
-    "total_weeks": 24
+    "last_updated": "2026-05-25T06:13:31.148985",
+    "total_weeks": 25
   },
   "weeks": [
     {
@@ -3215,6 +3215,132 @@
           "Tilburg": {
             "previous": 44,
             "current": 45,
+            "change": 1
+          }
+        }
+      }
+    },
+    {
+      "week": "2026-W22",
+      "date": "2026-05-25",
+      "timestamp": "2026-05-25T06:13:31.148985",
+      "stats": {
+        "total": 1283,
+        "by_authority": {
+          "Provincie Zuid-Holland": 75,
+          "Provincie Noord-Brabant": 67,
+          "Rotterdam": 65,
+          "Apeldoorn": 58,
+          "Helmond": 55,
+          "Almere": 52,
+          "Deventer": 52,
+          "Provincie Utrecht": 51,
+          "Enschede": 50,
+          "Breda": 48,
+          "Zwolle": 48,
+          "Tilburg": 45,
+          "s-Hertogenbosch": 44,
+          "Delft": 44,
+          "Almelo": 41,
+          "Amersfoort": 30,
+          "Hengelo": 30,
+          "Leeuwarden": 28,
+          "Alphen aan den Rijn": 24,
+          "Nijmegen": 24,
+          "Venlo": 22,
+          "Provincie Gelderland": 22,
+          "Amstelveen": 21,
+          "Rijswijk": 19,
+          "Leidschendam-Voorburg": 13,
+          "Provincie Zeeland": 13,
+          "Eindhoven": 12,
+          "Groningen": 12,
+          "Zeist": 12,
+          "Provincie Overijssel": 12,
+          "Den Haag": 11,
+          "Maastricht": 10,
+          "Nissewaard": 10,
+          "Capelle aan den IJssel": 9,
+          "Wassenaar": 9,
+          "Zoetermeer": 9,
+          "Provincie Limburg": 9,
+          "Nieuwegein": 8,
+          "Vlaardingen": 8,
+          "RWS West-Nederland Zuid District Noord": 8,
+          "Haarlemmermeer": 7,
+          "Arnhem": 6,
+          "Dordrecht": 6,
+          "Port of Moerdijk": 6,
+          "Emmen": 5,
+          "Hilversum": 5,
+          "Soest": 5,
+          "Terneuzen": 5,
+          "Woerden": 5,
+          "Provincie Groningen": 5,
+          "Gouda": 4,
+          "Leiden": 3,
+          "Leusden": 3,
+          "Velsen": 3,
+          "Westland": 3,
+          "RWS Zee en Delta District Noord": 3,
+          "RWS Zuid-Nederland District Midden": 3,
+          "Pijnacker-Nootdorp": 2,
+          "Rheden": 2,
+          "Veenendaal": 2,
+          "Veldhoven": 2,
+          "Waalre": 2,
+          "Zaanstad": 2,
+          "Zutphen": 2,
+          "Provincie Drenthe": 2,
+          "RWS Zuid-Nederland District West": 2,
+          "Alkmaar": 1,
+          "Oosterhout": 1,
+          "Schiedam": 1,
+          "Teylingen": 1,
+          "Valkenswaard": 1,
+          "Vlissingen": 1,
+          "RWS Oost-Nederland District Noord": 1,
+          "RWS Oost-Nederland District Zuid": 1
+        },
+        "by_tlc_organization": {
+          "Vialis": 453,
+          "Swarco": 410,
+          "Swarco - Peek Traffic": 318,
+          "Onbekend": 85,
+          "Ko Hartog": 17
+        },
+        "by_its_organization": {
+          "Vialis": 436,
+          "Gemeente Rotterdam": 252,
+          "Swarco - Peek Traffic": 250,
+          "RHDHV": 189,
+          "Onbekend": 62,
+          "Provincie Noord-Holland": 53,
+          "Goudappel Coffeng": 27,
+          "Huijskes VRT": 14
+        },
+        "by_ris_organization": {
+          "Swarco": 401,
+          "Onbekend": 267,
+          "Swarco - Peek Traffic": 246,
+          "Vialis": 229,
+          "RHDHV": 140
+        },
+        "by_priority": {
+          "emergency": 1265,
+          "road_operator": 1252,
+          "public_transport": 474,
+          "logistics": 464,
+          "agriculture": 14
+        }
+      },
+      "changes": {
+        "total_change": 1,
+        "is_first_week": false,
+        "authority_changes": {
+          "Provincie Gelderland": {
+            "previous": 21,
+            "current": 22,
             "change": 1
           }
         }
