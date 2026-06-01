@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-05-25T06:13:28.427969",
-    "total_traffic_lights": 1279,
+    "generated_at": "2026-06-01T06:42:41.375271",
+    "total_traffic_lights": 1285,
     "bounds": [
       3.585204,
       50.840837,
@@ -5815,7 +5815,7 @@
           "public_transport"
         ],
         "priority_count": 3,
-        "tlc_organization": "",
+        "tlc_organization": "Vialis",
         "its_organization": "Vialis",
         "ris_organization": ""
       }
@@ -12016,7 +12016,7 @@
         ],
         "priority_count": 3,
         "tlc_organization": "",
-        "its_organization": "Gemeente Rotterdam",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -15514,6 +15514,142 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          4.677929,
+          51.787279
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "796f00dc",
+        "name": "G7",
+        "identifier": "796f00dc",
+        "latitude": 51.787279,
+        "longitude": 4.677929,
+        "roadRegulatorId": 31087,
+        "roadRegulatorName": "Dordrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.709923,
+          51.816694
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "796f0122",
+        "name": "M8",
+        "identifier": "796f0122",
+        "latitude": 51.816694,
+        "longitude": 4.709923,
+        "roadRegulatorId": 31087,
+        "roadRegulatorName": "Dordrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.650173,
+          51.807781
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "796f019a",
+        "name": "D3",
+        "identifier": "796f019a",
+        "latitude": 51.807781,
+        "longitude": 4.650173,
+        "roadRegulatorId": 31087,
+        "roadRegulatorName": "Dordrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.64888,
+          51.806443
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "796f01a4",
+        "name": "D4",
+        "identifier": "796f01a4",
+        "latitude": 51.806443,
+        "longitude": 4.64888,
+        "roadRegulatorId": 31087,
+        "roadRegulatorName": "Dordrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.504188,
           51.441801
         ]
@@ -15763,6 +15899,40 @@
         "identifier": "797c0078",
         "latitude": 51.452335,
         "longitude": 5.48525,
+        "roadRegulatorId": 31100,
+        "roadRegulatorName": "Eindhoven",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.48959,
+          51.452357
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "797c0082",
+        "name": "EIN2007",
+        "identifier": "797c0082",
+        "latitude": 51.452357,
+        "longitude": 5.48959,
         "roadRegulatorId": 31100,
         "roadRegulatorName": "Eindhoven",
         "subjectTypeName": "iVRI",
@@ -16213,14 +16383,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -16317,14 +16488,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -16351,14 +16523,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -16385,14 +16558,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -16419,14 +16593,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -16453,14 +16628,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
@@ -16487,16 +16663,17 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
-        "tlc_organization": "Swarco",
-        "its_organization": "Swarco - Peek Traffic",
+        "priority_count": 3,
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -16521,14 +16698,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
@@ -16555,14 +16733,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "",
         "its_organization": "",
         "ris_organization": ""
@@ -16624,14 +16803,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
@@ -16658,14 +16838,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": ""
@@ -16692,14 +16873,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
@@ -16831,14 +17013,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
@@ -16865,14 +17048,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
@@ -16899,14 +17083,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "",
         "its_organization": "",
         "ris_organization": ""
@@ -16933,14 +17118,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -16967,14 +17153,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17001,14 +17188,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "",
         "ris_organization": ""
@@ -17035,15 +17223,16 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": true,
         "has_agriculture": false,
         "priorities": [
           "emergency",
           "road_operator",
+          "public_transport",
           "logistics"
         ],
-        "priority_count": 3,
+        "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": ""
@@ -17070,15 +17259,16 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": true,
         "has_agriculture": false,
         "priorities": [
           "emergency",
           "road_operator",
+          "public_transport",
           "logistics"
         ],
-        "priority_count": 3,
+        "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "",
         "ris_organization": ""
@@ -17105,15 +17295,16 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": true,
         "has_agriculture": false,
         "priorities": [
           "emergency",
           "road_operator",
+          "public_transport",
           "logistics"
         ],
-        "priority_count": 3,
+        "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "",
         "ris_organization": ""
@@ -17140,15 +17331,16 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": true,
         "has_agriculture": false,
         "priorities": [
           "emergency",
           "road_operator",
+          "public_transport",
           "logistics"
         ],
-        "priority_count": 3,
+        "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "",
         "ris_organization": ""
@@ -17175,15 +17367,16 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": true,
         "has_agriculture": false,
         "priorities": [
           "emergency",
           "road_operator",
+          "public_transport",
           "logistics"
         ],
-        "priority_count": 3,
+        "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "",
         "ris_organization": ""
@@ -17210,15 +17403,16 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": true,
         "has_agriculture": false,
         "priorities": [
           "emergency",
           "road_operator",
+          "public_transport",
           "logistics"
         ],
-        "priority_count": 3,
+        "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": ""
@@ -17245,15 +17439,16 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": true,
         "has_agriculture": false,
         "priorities": [
           "emergency",
           "road_operator",
+          "public_transport",
           "logistics"
         ],
-        "priority_count": 3,
+        "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "",
         "ris_organization": ""
@@ -17280,14 +17475,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17314,14 +17510,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17348,14 +17545,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17382,14 +17580,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17416,14 +17615,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17450,14 +17650,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17484,14 +17685,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17518,14 +17720,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17552,14 +17755,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17586,14 +17790,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17655,15 +17860,16 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": true,
         "has_agriculture": false,
         "priorities": [
           "emergency",
           "road_operator",
+          "public_transport",
           "logistics"
         ],
-        "priority_count": 3,
+        "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": ""
@@ -17690,14 +17896,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17724,14 +17931,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17758,14 +17966,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -17792,14 +18001,15 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport"
         ],
-        "priority_count": 2,
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -29151,41 +29361,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.07812,
-          51.59732
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "7a5500aa",
-        "name": "TIL117",
-        "identifier": "7a5500aa",
-        "latitude": 51.59732,
-        "longitude": 5.07812,
-        "roadRegulatorId": 31317,
-        "roadRegulatorName": "Tilburg",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": true,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator",
-          "logistics"
-        ],
-        "priority_count": 3,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Swarco - Peek Traffic",
-        "ris_organization": "Swarco - Peek Traffic"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           5.11005,
           51.5859
         ]
@@ -30366,6 +30541,37 @@
         "tlc_organization": "Swarco",
         "its_organization": "RHDHV",
         "ris_organization": "RHDHV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.622278,
+          52.45411
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a670028",
+        "name": "VSN003",
+        "identifier": "7a670028",
+        "latitude": 52.45411,
+        "longitude": 4.622278,
+        "roadRegulatorId": 31335,
+        "roadRegulatorName": "Velsen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": false,
+        "has_road_operator": false,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [],
+        "priority_count": 0,
+        "tlc_organization": "",
+        "its_organization": "",
+        "ris_organization": ""
       }
     },
     {
@@ -35418,6 +35624,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.99686,
+          52.33554
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa00226",
+        "name": "169",
+        "identifier": "7aa00226",
+        "latitude": 52.33554,
+        "longitude": 5.99686,
+        "roadRegulatorId": 31392,
+        "roadRegulatorName": "Provincie Gelderland",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           6.209893,
           52.168148
         ]
@@ -35800,8 +36040,8 @@
           "logistics"
         ],
         "priority_count": 4,
-        "tlc_organization": "",
-        "its_organization": "",
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco"
       }
     },

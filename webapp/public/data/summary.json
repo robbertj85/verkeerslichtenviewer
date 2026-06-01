@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-25T06:13:28.427969",
-  "total_traffic_lights": 1279,
+  "generated_at": "2026-06-01T06:42:41.375271",
+  "total_traffic_lights": 1285,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 41,
@@ -15,8 +15,8 @@
     "Delft": 44,
     "Den Haag": 11,
     "Deventer": 48,
-    "Dordrecht": 6,
-    "Eindhoven": 12,
+    "Dordrecht": 10,
+    "Eindhoven": 13,
     "Emmen": 5,
     "Enschede": 50,
     "Gouda": 4,
@@ -37,7 +37,7 @@
     "Pijnacker-Nootdorp": 2,
     "Port of Moerdijk": 6,
     "Provincie Drenthe": 2,
-    "Provincie Gelderland": 22,
+    "Provincie Gelderland": 23,
     "Provincie Groningen": 5,
     "Provincie Limburg": 9,
     "Provincie Noord-Brabant": 67,
@@ -58,11 +58,11 @@
     "Soest": 5,
     "Terneuzen": 5,
     "Teylingen": 1,
-    "Tilburg": 45,
+    "Tilburg": 44,
     "Valkenswaard": 1,
     "Veenendaal": 2,
     "Veldhoven": 2,
-    "Velsen": 3,
+    "Velsen": 4,
     "Venlo": 22,
     "Vlaardingen": 8,
     "Vlissingen": 1,
@@ -78,17 +78,17 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 85,
+    "": 86,
     "Ko Hartog": 17,
     "Swarco": 406,
     "Swarco - Peek Traffic": 318,
-    "Vialis": 453
+    "Vialis": 458
   },
   "priority_stats": {
-    "emergency": 1261,
-    "road_operator": 1248,
-    "public_transport": 474,
-    "logistics": 464,
+    "emergency": 1266,
+    "road_operator": 1253,
+    "public_transport": 514,
+    "logistics": 463,
     "agriculture": 14
   },
   "source": "UDAP (Urban Data Access Platform)",

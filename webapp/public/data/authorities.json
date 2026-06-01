@@ -55,13 +55,13 @@
     "count": 48
   },
   {
-    "name": "Tilburg",
-    "slug": "tilburg",
-    "count": 45
-  },
-  {
     "name": "Delft",
     "slug": "delft",
+    "count": 44
+  },
+  {
+    "name": "Tilburg",
+    "slug": "tilburg",
     "count": 44
   },
   {
@@ -102,7 +102,7 @@
   {
     "name": "Provincie Gelderland",
     "slug": "provincie-gelderland",
-    "count": 22
+    "count": 23
   },
   {
     "name": "Venlo",
@@ -120,6 +120,11 @@
     "count": 19
   },
   {
+    "name": "Eindhoven",
+    "slug": "eindhoven",
+    "count": 13
+  },
+  {
     "name": "Leidschendam-Voorburg",
     "slug": "leidschendam-voorburg",
     "count": 13
@@ -128,11 +133,6 @@
     "name": "Provincie Zeeland",
     "slug": "provincie-zeeland",
     "count": 13
-  },
-  {
-    "name": "Eindhoven",
-    "slug": "eindhoven",
-    "count": 12
   },
   {
     "name": "Groningen",
@@ -153,6 +153,11 @@
     "name": "Den Haag",
     "slug": "den-haag",
     "count": 11
+  },
+  {
+    "name": "Dordrecht",
+    "slug": "dordrecht",
+    "count": 10
   },
   {
     "name": "Maastricht",
@@ -210,11 +215,6 @@
     "count": 6
   },
   {
-    "name": "Dordrecht",
-    "slug": "dordrecht",
-    "count": 6
-  },
-  {
     "name": "Port of Moerdijk",
     "slug": "port-of-moerdijk",
     "count": 6
@@ -255,6 +255,11 @@
     "count": 4
   },
   {
+    "name": "Velsen",
+    "slug": "velsen",
+    "count": 4
+  },
+  {
     "name": "Leiden",
     "slug": "leiden",
     "count": 3
@@ -272,11 +277,6 @@
   {
     "name": "RWS Zuid-Nederland District Midden",
     "slug": "rws-zuid-nederland-district-midden",
-    "count": 3
-  },
-  {
-    "name": "Velsen",
-    "slug": "velsen",
     "count": 3
   },
   {
