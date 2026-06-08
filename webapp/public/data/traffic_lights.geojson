@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-06-01T06:42:41.375271",
-    "total_traffic_lights": 1285,
+    "generated_at": "2026-06-08T06:25:24.465140",
+    "total_traffic_lights": 1287,
     "bounds": [
       3.585204,
       50.840837,
@@ -2280,6 +2280,41 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          6.668402,
+          52.3619
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "792200be",
+        "name": "iV3021",
+        "identifier": "792200be",
+        "latitude": 52.3619,
+        "longitude": 6.668402,
+        "roadRegulatorId": 31010,
+        "roadRegulatorName": "Almelo",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport"
+        ],
+        "priority_count": 3,
+        "tlc_organization": "",
+        "its_organization": "",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           6.664558,
           52.378636
         ]
@@ -3078,8 +3113,8 @@
           "public_transport"
         ],
         "priority_count": 3,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Gemeente Rotterdam",
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -13663,8 +13698,8 @@
           "logistics"
         ],
         "priority_count": 4,
-        "tlc_organization": "Swarco",
-        "its_organization": "RHDHV",
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -14201,8 +14236,8 @@
           "logistics"
         ],
         "priority_count": 4,
-        "tlc_organization": "Swarco",
-        "its_organization": "RHDHV",
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -14308,7 +14343,7 @@
           "public_transport"
         ],
         "priority_count": 3,
-        "tlc_organization": "Swarco",
+        "tlc_organization": "",
         "its_organization": "RHDHV",
         "ris_organization": "Swarco"
       }
@@ -14768,8 +14803,8 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Swarco",
-        "its_organization": "RHDHV",
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -23807,6 +23842,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.717874,
+          50.842735
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79e80154",
+        "name": "S096",
+        "identifier": "79e80154",
+        "latitude": 50.842735,
+        "longitude": 5.717874,
+        "roadRegulatorId": 31208,
+        "roadRegulatorName": "Maastricht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.669551,
           50.850723
         ]
@@ -25186,7 +25255,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": "Vialis"
+        "ris_organization": ""
       }
     },
     {
@@ -25356,7 +25425,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": "Vialis"
+        "ris_organization": ""
       }
     },
     {
