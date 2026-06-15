@@ -4,8 +4,8 @@
     "description": "Weekly statistics history for UDAP traffic lights",
     "source": "UDAP",
     "source_url": "https://map.udap.nl",
-    "last_updated": "2026-06-08T06:25:27.342035",
-    "total_weeks": 27
+    "last_updated": "2026-06-15T07:04:37.298949",
+    "total_weeks": 28
   },
   "weeks": [
     {
@@ -3619,6 +3619,142 @@
             "previous": 10,
             "current": 11,
             "change": 1
+          }
+        }
+      }
+    },
+    {
+      "week": "2026-W25",
+      "date": "2026-06-15",
+      "timestamp": "2026-06-15T07:04:37.298949",
+      "stats": {
+        "total": 1291,
+        "by_authority": {
+          "Provincie Zuid-Holland": 75,
+          "Rotterdam": 67,
+          "Provincie Noord-Brabant": 67,
+          "Apeldoorn": 58,
+          "Helmond": 55,
+          "Almere": 52,
+          "Deventer": 52,
+          "Provincie Utrecht": 51,
+          "Enschede": 50,
+          "Breda": 48,
+          "Zwolle": 48,
+          "s-Hertogenbosch": 44,
+          "Delft": 44,
+          "Tilburg": 43,
+          "Almelo": 42,
+          "Amersfoort": 30,
+          "Hengelo": 30,
+          "Leeuwarden": 28,
+          "Alphen aan den Rijn": 24,
+          "Nijmegen": 24,
+          "Provincie Gelderland": 23,
+          "Venlo": 22,
+          "Amstelveen": 21,
+          "Rijswijk": 19,
+          "Eindhoven": 13,
+          "Leidschendam-Voorburg": 13,
+          "Provincie Zeeland": 13,
+          "Groningen": 12,
+          "Zeist": 12,
+          "Provincie Overijssel": 12,
+          "Den Haag": 11,
+          "Maastricht": 11,
+          "Dordrecht": 10,
+          "Nissewaard": 10,
+          "Capelle aan den IJssel": 9,
+          "Wassenaar": 9,
+          "Provincie Limburg": 9,
+          "Nieuwegein": 8,
+          "Vlaardingen": 8,
+          "Zoetermeer": 8,
+          "RWS West-Nederland Zuid District Noord": 8,
+          "Haarlemmermeer": 7,
+          "Arnhem": 6,
+          "Port of Moerdijk": 6,
+          "Emmen": 5,
+          "Hilversum": 5,
+          "Soest": 5,
+          "Terneuzen": 5,
+          "Woerden": 5,
+          "Provincie Groningen": 5,
+          "Gouda": 4,
+          "Velsen": 4,
+          "Leiden": 3,
+          "Leusden": 3,
+          "Westland": 3,
+          "RWS Zee en Delta District Noord": 3,
+          "RWS Zuid-Nederland District Midden": 3,
+          "Pijnacker-Nootdorp": 2,
+          "Rheden": 2,
+          "Veenendaal": 2,
+          "Veldhoven": 2,
+          "Waalre": 2,
+          "Zaanstad": 2,
+          "Zutphen": 2,
+          "Provincie Drenthe": 2,
+          "RWS Zuid-Nederland District West": 2,
+          "Alkmaar": 1,
+          "Oosterhout": 1,
+          "Schiedam": 1,
+          "Teylingen": 1,
+          "Valkenswaard": 1,
+          "Vlissingen": 1,
+          "RWS Oost-Nederland District Noord": 1,
+          "RWS Oost-Nederland District Zuid": 1
+        },
+        "by_tlc_organization": {
+          "Vialis": 459,
+          "Swarco": 405,
+          "Swarco - Peek Traffic": 316,
+          "Onbekend": 94,
+          "Ko Hartog": 17
+        },
+        "by_its_organization": {
+          "Vialis": 435,
+          "Gemeente Rotterdam": 258,
+          "Swarco - Peek Traffic": 248,
+          "RHDHV": 185,
+          "Onbekend": 71,
+          "Provincie Noord-Holland": 53,
+          "Goudappel Coffeng": 27,
+          "Huijskes VRT": 14
+        },
+        "by_ris_organization": {
+          "Swarco": 406,
+          "Onbekend": 271,
+          "Swarco - Peek Traffic": 244,
+          "Vialis": 230,
+          "RHDHV": 140
+        },
+        "by_priority": {
+          "emergency": 1274,
+          "road_operator": 1260,
+          "public_transport": 517,
+          "logistics": 463,
+          "agriculture": 14
+        }
+      },
+      "changes": {
+        "total_change": 0,
+        "is_first_week": false,
+        "authority_changes": {
+          "Zoetermeer": {
+            "previous": 9,
+            "current": 8,
+            "change": -1
+          },
+          "Rotterdam": {
+            "previous": 65,
+            "current": 67,
+            "change": 2
+          },
+          "Tilburg": {
+            "previous": 44,
+            "current": 43,
+            "change": -1
           }
         }
       }

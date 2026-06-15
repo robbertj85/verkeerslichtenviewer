@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-06-08T06:25:24.465140",
+    "generated_at": "2026-06-15T07:04:34.503979",
     "total_traffic_lights": 1287,
     "bounds": [
       3.585204,
@@ -3001,13 +3001,17 @@
         "roadRegulatorId": 31010,
         "roadRegulatorName": "Almelo",
         "subjectTypeName": "iVRI",
-        "has_emergency": false,
-        "has_road_operator": false,
-        "has_public_transport": false,
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
         "has_logistics": false,
         "has_agriculture": false,
-        "priorities": [],
-        "priority_count": 0,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport"
+        ],
+        "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
         "ris_organization": ""
@@ -23858,14 +23862,16 @@
         "subjectTypeName": "iVRI",
         "has_emergency": true,
         "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": false,
+        "has_public_transport": true,
+        "has_logistics": true,
         "has_agriculture": false,
         "priorities": [
           "emergency",
-          "road_operator"
+          "road_operator",
+          "public_transport",
+          "logistics"
         ],
-        "priority_count": 2,
+        "priority_count": 4,
         "tlc_organization": "",
         "its_organization": "",
         "ris_organization": "Swarco"
@@ -27339,6 +27345,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          4.27811,
+          51.867761
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a320398",
+        "name": "97160",
+        "identifier": "7a320398",
+        "latitude": 51.867761,
+        "longitude": 4.27811,
+        "roadRegulatorId": 31282,
+        "roadRegulatorName": "Rotterdam",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.263609,
           51.870949
         ]
@@ -27638,6 +27678,39 @@
         ],
         "priority_count": 2,
         "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.49621,
+          51.92853
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a3205e6",
+        "name": "31050",
+        "identifier": "7a3205e6",
+        "latitude": 51.92853,
+        "longitude": 4.49621,
+        "roadRegulatorId": 31282,
+        "roadRegulatorName": "Rotterdam",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": false,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency"
+        ],
+        "priority_count": 1,
+        "tlc_organization": "Swarco",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
@@ -29406,41 +29479,6 @@
         "identifier": "7a550096",
         "latitude": 51.59815,
         "longitude": 5.07036,
-        "roadRegulatorId": 31317,
-        "roadRegulatorName": "Tilburg",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": true,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator",
-          "logistics"
-        ],
-        "priority_count": 3,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Swarco - Peek Traffic",
-        "ris_organization": "Swarco - Peek Traffic"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.11005,
-          51.5859
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "7a5500b4",
-        "name": "TIL119",
-        "identifier": "7a5500b4",
-        "latitude": 51.5859,
-        "longitude": 5.11005,
         "roadRegulatorId": 31317,
         "roadRegulatorName": "Tilburg",
         "subjectTypeName": "iVRI",
@@ -33195,37 +33233,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          4.490117,
-          52.046455
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "7a9400aa",
-        "name": "Z70",
-        "identifier": "7a9400aa",
-        "latitude": 52.046455,
-        "longitude": 4.490117,
-        "roadRegulatorId": 31380,
-        "roadRegulatorName": "Zoetermeer",
-        "subjectTypeName": "iVRI",
-        "has_emergency": false,
-        "has_road_operator": false,
-        "has_public_transport": false,
-        "has_logistics": false,
-        "has_agriculture": false,
-        "priorities": [],
-        "priority_count": 0,
-        "tlc_organization": "Swarco",
-        "its_organization": "Vialis",
-        "ris_organization": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           6.19058,
           52.14325
         ]
@@ -33860,7 +33867,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": "Vialis"
+        "ris_organization": ""
       }
     },
     {
@@ -39045,8 +39052,8 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Swarco",
-        "its_organization": "RHDHV",
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": "RHDHV"
       }
     },

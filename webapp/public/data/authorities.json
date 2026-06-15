@@ -12,7 +12,7 @@
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 65
+    "count": 67
   },
   {
     "name": "Apeldoorn",
@@ -60,14 +60,14 @@
     "count": 44
   },
   {
-    "name": "Tilburg",
-    "slug": "tilburg",
-    "count": 44
-  },
-  {
     "name": "s-Hertogenbosch",
     "slug": "s-hertogenbosch",
     "count": 44
+  },
+  {
+    "name": "Tilburg",
+    "slug": "tilburg",
+    "count": 43
   },
   {
     "name": "Almelo",
@@ -185,11 +185,6 @@
     "count": 9
   },
   {
-    "name": "Zoetermeer",
-    "slug": "zoetermeer",
-    "count": 9
-  },
-  {
     "name": "Nieuwegein",
     "slug": "nieuwegein",
     "count": 8
@@ -202,6 +197,11 @@
   {
     "name": "Vlaardingen",
     "slug": "vlaardingen",
+    "count": 8
+  },
+  {
+    "name": "Zoetermeer",
+    "slug": "zoetermeer",
     "count": 8
   },
   {
