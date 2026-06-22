@@ -2,7 +2,7 @@
   {
     "name": "Provincie Zuid-Holland",
     "slug": "provincie-zuid-holland",
-    "count": 75
+    "count": 76
   },
   {
     "name": "Provincie Noord-Brabant",
@@ -42,7 +42,7 @@
   {
     "name": "Breda",
     "slug": "breda",
-    "count": 48
+    "count": 49
   },
   {
     "name": "Deventer",
@@ -60,14 +60,14 @@
     "count": 44
   },
   {
-    "name": "s-Hertogenbosch",
-    "slug": "s-hertogenbosch",
+    "name": "Tilburg",
+    "slug": "tilburg",
     "count": 44
   },
   {
-    "name": "Tilburg",
-    "slug": "tilburg",
-    "count": 43
+    "name": "s-Hertogenbosch",
+    "slug": "s-hertogenbosch",
+    "count": 44
   },
   {
     "name": "Almelo",
@@ -107,7 +107,7 @@
   {
     "name": "Venlo",
     "slug": "venlo",
-    "count": 22
+    "count": 23
   },
   {
     "name": "Amstelveen",
@@ -135,6 +135,11 @@
     "count": 13
   },
   {
+    "name": "Dordrecht",
+    "slug": "dordrecht",
+    "count": 12
+  },
+  {
     "name": "Groningen",
     "slug": "groningen",
     "count": 12
@@ -158,11 +163,6 @@
     "name": "Maastricht",
     "slug": "maastricht",
     "count": 11
-  },
-  {
-    "name": "Dordrecht",
-    "slug": "dordrecht",
-    "count": 10
   },
   {
     "name": "Nissewaard",
