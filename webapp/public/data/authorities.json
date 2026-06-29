@@ -75,6 +75,11 @@
     "count": 42
   },
   {
+    "name": "Nijmegen",
+    "slug": "nijmegen",
+    "count": 38
+  },
+  {
     "name": "Amersfoort",
     "slug": "amersfoort",
     "count": 30
@@ -92,11 +97,6 @@
   {
     "name": "Alphen aan den Rijn",
     "slug": "alphen-aan-den-rijn",
-    "count": 24
-  },
-  {
-    "name": "Nijmegen",
-    "slug": "nijmegen",
     "count": 24
   },
   {
@@ -165,6 +165,11 @@
     "count": 11
   },
   {
+    "name": "Zoetermeer",
+    "slug": "zoetermeer",
+    "count": 11
+  },
+  {
     "name": "Nissewaard",
     "slug": "nissewaard",
     "count": 10
@@ -197,11 +202,6 @@
   {
     "name": "Vlaardingen",
     "slug": "vlaardingen",
-    "count": 8
-  },
-  {
-    "name": "Zoetermeer",
-    "slug": "zoetermeer",
     "count": 8
   },
   {

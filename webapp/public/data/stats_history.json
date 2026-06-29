@@ -4,8 +4,8 @@
     "description": "Weekly statistics history for UDAP traffic lights",
     "source": "UDAP",
     "source_url": "https://map.udap.nl",
-    "last_updated": "2026-06-22T07:07:04.465515",
-    "total_weeks": 29
+    "last_updated": "2026-06-29T06:24:37.662200",
+    "total_weeks": 30
   },
   "weeks": [
     {
@@ -3901,6 +3901,137 @@
             "previous": 22,
             "current": 23,
             "change": 1
+          }
+        }
+      }
+    },
+    {
+      "week": "2026-W27",
+      "date": "2026-06-29",
+      "timestamp": "2026-06-29T06:24:37.662200",
+      "stats": {
+        "total": 1314,
+        "by_authority": {
+          "Provincie Zuid-Holland": 76,
+          "Rotterdam": 67,
+          "Provincie Noord-Brabant": 67,
+          "Apeldoorn": 58,
+          "Helmond": 55,
+          "Almere": 52,
+          "Deventer": 52,
+          "Provincie Utrecht": 51,
+          "Enschede": 50,
+          "Breda": 49,
+          "Zwolle": 48,
+          "s-Hertogenbosch": 44,
+          "Delft": 44,
+          "Tilburg": 44,
+          "Almelo": 42,
+          "Nijmegen": 38,
+          "Amersfoort": 30,
+          "Hengelo": 30,
+          "Leeuwarden": 28,
+          "Alphen aan den Rijn": 24,
+          "Venlo": 23,
+          "Provincie Gelderland": 23,
+          "Amstelveen": 21,
+          "Rijswijk": 19,
+          "Eindhoven": 13,
+          "Leidschendam-Voorburg": 13,
+          "Provincie Zeeland": 13,
+          "Dordrecht": 12,
+          "Groningen": 12,
+          "Zeist": 12,
+          "Provincie Overijssel": 12,
+          "Den Haag": 11,
+          "Maastricht": 11,
+          "Zoetermeer": 11,
+          "Nissewaard": 10,
+          "Capelle aan den IJssel": 9,
+          "Wassenaar": 9,
+          "Provincie Limburg": 9,
+          "Nieuwegein": 8,
+          "Vlaardingen": 8,
+          "RWS West-Nederland Zuid District Noord": 8,
+          "Haarlemmermeer": 7,
+          "Arnhem": 6,
+          "Port of Moerdijk": 6,
+          "Emmen": 5,
+          "Hilversum": 5,
+          "Soest": 5,
+          "Terneuzen": 5,
+          "Woerden": 5,
+          "Provincie Groningen": 5,
+          "Gouda": 4,
+          "Velsen": 4,
+          "Leiden": 3,
+          "Leusden": 3,
+          "Westland": 3,
+          "RWS Zee en Delta District Noord": 3,
+          "RWS Zuid-Nederland District Midden": 3,
+          "Pijnacker-Nootdorp": 2,
+          "Rheden": 2,
+          "Veenendaal": 2,
+          "Veldhoven": 2,
+          "Waalre": 2,
+          "Zaanstad": 2,
+          "Zutphen": 2,
+          "Provincie Drenthe": 2,
+          "RWS Zuid-Nederland District West": 2,
+          "Alkmaar": 1,
+          "Oosterhout": 1,
+          "Schiedam": 1,
+          "Teylingen": 1,
+          "Valkenswaard": 1,
+          "Vlissingen": 1,
+          "RWS Oost-Nederland District Noord": 1,
+          "RWS Oost-Nederland District Zuid": 1
+        },
+        "by_tlc_organization": {
+          "Vialis": 458,
+          "Swarco": 412,
+          "Swarco - Peek Traffic": 329,
+          "Onbekend": 98,
+          "Ko Hartog": 17
+        },
+        "by_its_organization": {
+          "Vialis": 437,
+          "Gemeente Rotterdam": 276,
+          "Swarco - Peek Traffic": 247,
+          "RHDHV": 183,
+          "Onbekend": 76,
+          "Provincie Noord-Holland": 54,
+          "Goudappel Coffeng": 27,
+          "Huijskes VRT": 14
+        },
+        "by_ris_organization": {
+          "Swarco": 428,
+          "Onbekend": 275,
+          "Swarco - Peek Traffic": 243,
+          "Vialis": 227,
+          "RHDHV": 141
+        },
+        "by_priority": {
+          "emergency": 1297,
+          "road_operator": 1283,
+          "public_transport": 519,
+          "logistics": 464,
+          "agriculture": 14
+        }
+      },
+      "changes": {
+        "total_change": 17,
+        "is_first_week": false,
+        "authority_changes": {
+          "Nijmegen": {
+            "previous": 24,
+            "current": 38,
+            "change": 14
+          },
+          "Zoetermeer": {
+            "previous": 8,
+            "current": 11,
+            "change": 3
           }
         }
       }

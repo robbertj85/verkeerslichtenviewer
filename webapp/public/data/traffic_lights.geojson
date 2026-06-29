@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-06-22T07:07:02.109205",
-    "total_traffic_lights": 1293,
+    "generated_at": "2026-06-29T06:24:35.086876",
+    "total_traffic_lights": 1310,
     "bounds": [
       3.585204,
       50.840837,
@@ -1050,8 +1050,8 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Vialis",
-        "its_organization": "Vialis",
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": ""
       }
     },
@@ -7411,7 +7411,7 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "",
+        "tlc_organization": "Swarco",
         "its_organization": "",
         "ris_organization": "Swarco"
       }
@@ -19583,8 +19583,8 @@
           "logistics"
         ],
         "priority_count": 4,
-        "tlc_organization": "Swarco",
-        "its_organization": "Gemeente Rotterdam",
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -23446,7 +23446,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": "Vialis"
+        "ris_organization": ""
       }
     },
     {
@@ -24415,6 +24415,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.819905,
+          51.832068
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff000a",
+        "name": "K206",
+        "identifier": "79ff000a",
+        "latitude": 51.832068,
+        "longitude": 5.819905,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.866034,
           51.842625
         ]
@@ -24687,6 +24721,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.82333,
+          51.82845
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff0064",
+        "name": "K237",
+        "identifier": "79ff0064",
+        "latitude": 51.82845,
+        "longitude": 5.82333,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.831037,
           51.811134
         ]
@@ -24714,6 +24782,75 @@
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco - Peek Traffic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.827521,
+          51.825036
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff0078",
+        "name": "K414",
+        "identifier": "79ff0078",
+        "latitude": 51.825036,
+        "longitude": 5.827521,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.852741,
+          51.808674
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff0082",
+        "name": "K430",
+        "identifier": "79ff0082",
+        "latitude": 51.808674,
+        "longitude": 5.852741,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport"
+        ],
+        "priority_count": 3,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -25228,6 +25365,346 @@
         "tlc_organization": "Swarco",
         "its_organization": "Provincie Noord-Holland",
         "ris_organization": "Swarco - Peek Traffic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.856084,
+          51.820142
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff021c",
+        "name": "K427_428",
+        "identifier": "79ff021c",
+        "latitude": 51.820142,
+        "longitude": 5.856084,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.848393,
+          51.843788
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff0244",
+        "name": "K200",
+        "identifier": "79ff0244",
+        "latitude": 51.843788,
+        "longitude": 5.848393,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.850001,
+          51.843777
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff024e",
+        "name": "K201",
+        "identifier": "79ff024e",
+        "latitude": 51.843777,
+        "longitude": 5.850001,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.816824,
+          51.83078
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff0258",
+        "name": "K207",
+        "identifier": "79ff0258",
+        "latitude": 51.83078,
+        "longitude": 5.816824,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.79519,
+          51.820256
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff0262",
+        "name": "K320",
+        "identifier": "79ff0262",
+        "latitude": 51.820256,
+        "longitude": 5.79519,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.880451,
+          51.820632
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff026c",
+        "name": "K172",
+        "identifier": "79ff026c",
+        "latitude": 51.820632,
+        "longitude": 5.880451,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.803594,
+          51.807031
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff0276",
+        "name": "K332",
+        "identifier": "79ff0276",
+        "latitude": 51.807031,
+        "longitude": 5.803594,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.853708,
+          51.842613
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff0280",
+        "name": "K106",
+        "identifier": "79ff0280",
+        "latitude": 51.842613,
+        "longitude": 5.853708,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.81858,
+          51.82751
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff02a8",
+        "name": "K238",
+        "identifier": "79ff02a8",
+        "latitude": 51.82751,
+        "longitude": 5.81858,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.82794,
+          51.82346
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79ff02b2",
+        "name": "K451",
+        "identifier": "79ff02b2",
+        "latitude": 51.82346,
+        "longitude": 5.82794,
+        "roadRegulatorId": 31231,
+        "roadRegulatorName": "Nijmegen",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -29640,17 +30117,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.11884,
-          51.58005
+          5.11005,
+          51.5859
         ]
       },
       "properties": {
         "type": "traffic_light",
-        "id": "7a5500be",
-        "name": "TIL113",
-        "identifier": "7a5500be",
-        "latitude": 51.58005,
-        "longitude": 5.11884,
+        "id": "7a5500b4",
+        "name": "TIL119",
+        "identifier": "7a5500b4",
+        "latitude": 51.5859,
+        "longitude": 5.11005,
         "roadRegulatorId": 31317,
         "roadRegulatorName": "Tilburg",
         "subjectTypeName": "iVRI",
@@ -29665,9 +30142,9 @@
           "logistics"
         ],
         "priority_count": 3,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Swarco - Peek Traffic",
-        "ris_organization": "Swarco - Peek Traffic"
+        "tlc_organization": "Swarco",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -33302,6 +33779,41 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          4.475706,
+          52.048404
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a940082",
+        "name": "Z18",
+        "identifier": "7a940082",
+        "latitude": 52.048404,
+        "longitude": 4.475706,
+        "roadRegulatorId": 31380,
+        "roadRegulatorName": "Zoetermeer",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport"
+        ],
+        "priority_count": 3,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Vialis",
+        "ris_organization": "Swarco - Peek Traffic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.470883,
           52.063461
         ]
@@ -33397,6 +33909,74 @@
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Huijskes VRT",
         "ris_organization": "Swarco - Peek Traffic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.490117,
+          52.046455
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a9400aa",
+        "name": "Z70",
+        "identifier": "7a9400aa",
+        "latitude": 52.046455,
+        "longitude": 4.490117,
+        "roadRegulatorId": 31380,
+        "roadRegulatorName": "Zoetermeer",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Vialis",
+        "ris_organization": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.484528,
+          52.046488
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a9400b4",
+        "name": "Z71",
+        "identifier": "7a9400b4",
+        "latitude": 52.046488,
+        "longitude": 4.484528,
+        "roadRegulatorId": 31380,
+        "roadRegulatorName": "Zoetermeer",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Vialis",
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -39085,8 +39665,8 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "",
-        "its_organization": "",
+        "tlc_organization": "Swarco",
+        "its_organization": "RHDHV",
         "ris_organization": "RHDHV"
       }
     },
