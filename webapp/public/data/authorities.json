@@ -70,14 +70,14 @@
     "count": 44
   },
   {
+    "name": "Nijmegen",
+    "slug": "nijmegen",
+    "count": 43
+  },
+  {
     "name": "Almelo",
     "slug": "almelo",
     "count": 42
-  },
-  {
-    "name": "Nijmegen",
-    "slug": "nijmegen",
-    "count": 38
   },
   {
     "name": "Amersfoort",
@@ -120,6 +120,11 @@
     "count": 19
   },
   {
+    "name": "Dordrecht",
+    "slug": "dordrecht",
+    "count": 14
+  },
+  {
     "name": "Eindhoven",
     "slug": "eindhoven",
     "count": 13
@@ -135,9 +140,9 @@
     "count": 13
   },
   {
-    "name": "Dordrecht",
-    "slug": "dordrecht",
-    "count": 12
+    "name": "Zoetermeer",
+    "slug": "zoetermeer",
+    "count": 13
   },
   {
     "name": "Groningen",
@@ -162,11 +167,6 @@
   {
     "name": "Maastricht",
     "slug": "maastricht",
-    "count": 11
-  },
-  {
-    "name": "Zoetermeer",
-    "slug": "zoetermeer",
     "count": 11
   },
   {

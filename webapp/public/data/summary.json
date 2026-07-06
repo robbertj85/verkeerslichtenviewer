@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-29T06:24:35.086876",
-  "total_traffic_lights": 1310,
+  "generated_at": "2026-07-06T06:13:03.662282",
+  "total_traffic_lights": 1319,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 42,
@@ -15,7 +15,7 @@
     "Delft": 44,
     "Den Haag": 11,
     "Deventer": 48,
-    "Dordrecht": 12,
+    "Dordrecht": 14,
     "Eindhoven": 13,
     "Emmen": 5,
     "Enschede": 50,
@@ -31,7 +31,7 @@
     "Leusden": 3,
     "Maastricht": 11,
     "Nieuwegein": 8,
-    "Nijmegen": 38,
+    "Nijmegen": 43,
     "Nissewaard": 10,
     "Oosterhout": 1,
     "Pijnacker-Nootdorp": 2,
@@ -72,22 +72,22 @@
     "Woerden": 5,
     "Zaanstad": 2,
     "Zeist": 12,
-    "Zoetermeer": 11,
+    "Zoetermeer": 13,
     "Zutphen": 2,
     "Zwolle": 48,
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 98,
-    "Ko Hartog": 17,
-    "Swarco": 408,
-    "Swarco - Peek Traffic": 329,
-    "Vialis": 458
+    "": 96,
+    "Ko Hartog": 16,
+    "Swarco": 411,
+    "Swarco - Peek Traffic": 337,
+    "Vialis": 459
   },
   "priority_stats": {
-    "emergency": 1293,
-    "road_operator": 1279,
-    "public_transport": 519,
+    "emergency": 1302,
+    "road_operator": 1288,
+    "public_transport": 521,
     "logistics": 464,
     "agriculture": 14
   },
