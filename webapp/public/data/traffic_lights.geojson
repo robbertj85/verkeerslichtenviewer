@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-07-06T06:13:03.662282",
-    "total_traffic_lights": 1319,
+    "generated_at": "2026-07-13T05:20:24.775829",
+    "total_traffic_lights": 1321,
     "bounds": [
       3.585204,
       50.840837,
@@ -67,6 +67,7 @@
       "Terneuzen",
       "Teylingen",
       "Tilburg",
+      "Utrechtse Heuvelrug",
       "Valkenswaard",
       "Veenendaal",
       "Veldhoven",
@@ -1050,8 +1051,8 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "",
-        "its_organization": "",
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
         "ris_organization": ""
       }
     },
@@ -16291,9 +16292,9 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Swarco - Peek Traffic",
+        "tlc_organization": "Swarco",
         "its_organization": "Swarco - Peek Traffic",
-        "ris_organization": "Swarco - Peek Traffic"
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -19651,8 +19652,8 @@
           "logistics"
         ],
         "priority_count": 4,
-        "tlc_organization": "",
-        "its_organization": "",
+        "tlc_organization": "Swarco",
+        "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
     },
@@ -30426,41 +30427,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.10534,
-          51.59334
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "7a5500d2",
-        "name": "TIL145",
-        "identifier": "7a5500d2",
-        "latitude": 51.59334,
-        "longitude": 5.10534,
-        "roadRegulatorId": 31317,
-        "roadRegulatorName": "Tilburg",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": true,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator",
-          "logistics"
-        ],
-        "priority_count": 3,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Swarco - Peek Traffic",
-        "ris_organization": "Swarco - Peek Traffic"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           5.066793,
           51.575244
         ]
@@ -31243,40 +31209,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.090667,
-          51.56444
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "7a55024e",
-        "name": "TIL153",
-        "identifier": "7a55024e",
-        "latitude": 51.56444,
-        "longitude": 5.090667,
-        "roadRegulatorId": 31317,
-        "roadRegulatorName": "Tilburg",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": false,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator"
-        ],
-        "priority_count": 2,
-        "tlc_organization": "Swarco",
-        "its_organization": "Gemeente Rotterdam",
-        "ris_organization": "Swarco"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           5.048968,
           51.58581
         ]
@@ -31304,6 +31236,40 @@
         "tlc_organization": "Swarco",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.278269,
+          52.054486
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a5f000a",
+        "name": "K1005",
+        "identifier": "7a5f000a",
+        "latitude": 52.054486,
+        "longitude": 5.278269,
+        "roadRegulatorId": 31327,
+        "roadRegulatorName": "Utrechtse Heuvelrug",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Ko Hartog",
+        "its_organization": "Huijskes VRT",
+        "ris_organization": "Swarco - Peek Traffic"
       }
     },
     {
@@ -45882,6 +45848,108 @@
         "tlc_organization": "Vialis",
         "its_organization": "",
         "ris_organization": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.65697,
+          51.68376
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7ad90064",
+        "name": "HBM16",
+        "identifier": "7ad90064",
+        "latitude": 51.68376,
+        "longitude": 4.65697,
+        "roadRegulatorId": 31449,
+        "roadRegulatorName": "Port of Moerdijk",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Goudappel Coffeng",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.65987,
+          51.68412
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7ad9006e",
+        "name": "HBM17",
+        "identifier": "7ad9006e",
+        "latitude": 51.68412,
+        "longitude": 4.65987,
+        "roadRegulatorId": 31449,
+        "roadRegulatorName": "Port of Moerdijk",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Goudappel Coffeng",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.66234,
+          51.68521
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7ad90078",
+        "name": "HBM18",
+        "identifier": "7ad90078",
+        "latitude": 51.68521,
+        "longitude": 4.66234,
+        "roadRegulatorId": 31449,
+        "roadRegulatorName": "Port of Moerdijk",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Vialis",
+        "its_organization": "Goudappel Coffeng",
+        "ris_organization": "Vialis"
       }
     }
   ]

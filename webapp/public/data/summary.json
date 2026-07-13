@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T06:13:03.662282",
-  "total_traffic_lights": 1319,
+  "generated_at": "2026-07-13T05:20:24.775829",
+  "total_traffic_lights": 1321,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 42,
@@ -35,7 +35,7 @@
     "Nissewaard": 10,
     "Oosterhout": 1,
     "Pijnacker-Nootdorp": 2,
-    "Port of Moerdijk": 6,
+    "Port of Moerdijk": 9,
     "Provincie Drenthe": 2,
     "Provincie Gelderland": 23,
     "Provincie Groningen": 5,
@@ -58,7 +58,8 @@
     "Soest": 5,
     "Terneuzen": 5,
     "Teylingen": 1,
-    "Tilburg": 44,
+    "Tilburg": 42,
+    "Utrechtse Heuvelrug": 1,
     "Valkenswaard": 1,
     "Veenendaal": 2,
     "Veldhoven": 2,
@@ -78,17 +79,17 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 96,
-    "Ko Hartog": 16,
-    "Swarco": 411,
-    "Swarco - Peek Traffic": 337,
-    "Vialis": 459
+    "": 94,
+    "Ko Hartog": 17,
+    "Swarco": 412,
+    "Swarco - Peek Traffic": 335,
+    "Vialis": 463
   },
   "priority_stats": {
-    "emergency": 1302,
-    "road_operator": 1288,
+    "emergency": 1304,
+    "road_operator": 1290,
     "public_transport": 521,
-    "logistics": 464,
+    "logistics": 463,
     "agriculture": 14
   },
   "source": "UDAP (Urban Data Access Platform)",
