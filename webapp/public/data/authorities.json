@@ -32,17 +32,17 @@
   {
     "name": "Provincie Utrecht",
     "slug": "provincie-utrecht",
-    "count": 51
+    "count": 52
+  },
+  {
+    "name": "Breda",
+    "slug": "breda",
+    "count": 50
   },
   {
     "name": "Enschede",
     "slug": "enschede",
     "count": 50
-  },
-  {
-    "name": "Breda",
-    "slug": "breda",
-    "count": 49
   },
   {
     "name": "Deventer",
@@ -70,13 +70,13 @@
     "count": 43
   },
   {
-    "name": "Almelo",
-    "slug": "almelo",
-    "count": 42
-  },
-  {
     "name": "Tilburg",
     "slug": "tilburg",
+    "count": 43
+  },
+  {
+    "name": "Almelo",
+    "slug": "almelo",
     "count": 42
   },
   {
@@ -122,7 +122,7 @@
   {
     "name": "Dordrecht",
     "slug": "dordrecht",
-    "count": 14
+    "count": 15
   },
   {
     "name": "Eindhoven",
