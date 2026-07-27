@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-20T05:24:13.973303",
-  "total_traffic_lights": 1325,
+  "generated_at": "2026-07-27T05:34:15.351745",
+  "total_traffic_lights": 1329,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 42,
@@ -24,7 +24,7 @@
     "Haarlemmermeer": 7,
     "Helmond": 55,
     "Hengelo": 30,
-    "Hilversum": 5,
+    "Hilversum": 6,
     "Leeuwarden": 28,
     "Leiden": 3,
     "Leidschendam-Voorburg": 13,
@@ -53,12 +53,13 @@
     "RWS Zuid-Nederland District West": 2,
     "Rheden": 2,
     "Rijswijk": 19,
-    "Rotterdam": 67,
+    "Rotterdam": 69,
     "Schiedam": 1,
     "Soest": 5,
     "Terneuzen": 5,
     "Teylingen": 1,
     "Tilburg": 43,
+    "Utrecht": 1,
     "Utrechtse Heuvelrug": 1,
     "Valkenswaard": 1,
     "Veenendaal": 2,
@@ -79,17 +80,17 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 93,
-    "Ko Hartog": 17,
-    "Swarco": 415,
-    "Swarco - Peek Traffic": 335,
-    "Vialis": 465
+    "": 96,
+    "Ko Hartog": 16,
+    "Swarco": 417,
+    "Swarco - Peek Traffic": 334,
+    "Vialis": 466
   },
   "priority_stats": {
-    "emergency": 1308,
-    "road_operator": 1294,
-    "public_transport": 521,
-    "logistics": 464,
+    "emergency": 1312,
+    "road_operator": 1297,
+    "public_transport": 522,
+    "logistics": 465,
     "agriculture": 14
   },
   "source": "UDAP (Urban Data Access Platform)",

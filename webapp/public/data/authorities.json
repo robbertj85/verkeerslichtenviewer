@@ -5,13 +5,13 @@
     "count": 76
   },
   {
-    "name": "Provincie Noord-Brabant",
-    "slug": "provincie-noord-brabant",
-    "count": 67
-  },
-  {
     "name": "Rotterdam",
     "slug": "rotterdam",
+    "count": 69
+  },
+  {
+    "name": "Provincie Noord-Brabant",
+    "slug": "provincie-noord-brabant",
     "count": 67
   },
   {
@@ -220,13 +220,13 @@
     "count": 6
   },
   {
-    "name": "Emmen",
-    "slug": "emmen",
-    "count": 5
-  },
-  {
     "name": "Hilversum",
     "slug": "hilversum",
+    "count": 6
+  },
+  {
+    "name": "Emmen",
+    "slug": "emmen",
     "count": 5
   },
   {
@@ -357,6 +357,11 @@
   {
     "name": "Teylingen",
     "slug": "teylingen",
+    "count": 1
+  },
+  {
+    "name": "Utrecht",
+    "slug": "utrecht",
     "count": 1
   },
   {

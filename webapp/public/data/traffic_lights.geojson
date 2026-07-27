@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-07-20T05:24:13.973303",
-    "total_traffic_lights": 1325,
+    "generated_at": "2026-07-27T05:34:15.351745",
+    "total_traffic_lights": 1329,
     "bounds": [
       3.585204,
       50.840837,
@@ -67,6 +67,7 @@
       "Terneuzen",
       "Teylingen",
       "Tilburg",
+      "Utrecht",
       "Utrechtse Heuvelrug",
       "Valkenswaard",
       "Veenendaal",
@@ -135,7 +136,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -203,7 +204,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -237,7 +238,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -271,7 +272,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -305,7 +306,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -339,7 +340,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -373,7 +374,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -407,7 +408,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -441,7 +442,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -475,7 +476,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -509,7 +510,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -543,7 +544,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -577,7 +578,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -611,7 +612,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -645,7 +646,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -679,7 +680,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -713,7 +714,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -747,7 +748,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -781,7 +782,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -815,7 +816,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -849,7 +850,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -883,7 +884,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -917,7 +918,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -951,7 +952,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -985,7 +986,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1019,7 +1020,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1053,7 +1054,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1087,7 +1088,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1121,7 +1122,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1155,7 +1156,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1189,7 +1190,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1223,7 +1224,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1257,7 +1258,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1291,7 +1292,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1325,7 +1326,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1359,7 +1360,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1393,7 +1394,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1427,7 +1428,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1461,7 +1462,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1495,7 +1496,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1529,7 +1530,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1563,7 +1564,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -1597,7 +1598,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2201,7 +2202,7 @@
         "priority_count": 4,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2666,7 +2667,7 @@
         "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2701,7 +2702,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2736,7 +2737,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2770,7 +2771,7 @@
         "priority_count": 2,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2805,7 +2806,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2840,7 +2841,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2875,7 +2876,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2910,7 +2911,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2945,7 +2946,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -2980,7 +2981,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -3015,7 +3016,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -3050,7 +3051,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -3085,7 +3086,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -3664,7 +3665,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -3766,7 +3767,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -3868,7 +3869,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4480,7 +4481,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4514,7 +4515,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4548,7 +4549,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4616,7 +4617,7 @@
         "priority_count": 2,
         "tlc_organization": "",
         "its_organization": "",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4650,7 +4651,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4684,7 +4685,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4718,7 +4719,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4752,7 +4753,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4786,7 +4787,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4820,7 +4821,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4854,7 +4855,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -4888,7 +4889,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -5822,7 +5823,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -5857,7 +5858,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -5892,7 +5893,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -5927,7 +5928,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -5962,7 +5963,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -5997,7 +5998,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -6067,7 +6068,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -6102,7 +6103,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -6137,7 +6138,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -6172,7 +6173,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -6207,7 +6208,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -6242,7 +6243,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -6557,7 +6558,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -6732,7 +6733,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -6767,7 +6768,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -6802,7 +6803,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -10016,7 +10017,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -11456,7 +11457,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -11526,7 +11527,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Goudappel Coffeng",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -11562,7 +11563,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Goudappel Coffeng",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -11598,7 +11599,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Goudappel Coffeng",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -11634,7 +11635,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Goudappel Coffeng",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -11670,7 +11671,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Goudappel Coffeng",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -12265,7 +12266,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -12335,7 +12336,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -13026,7 +13027,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -13060,7 +13061,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -13094,7 +13095,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -13128,7 +13129,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -13162,7 +13163,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -13196,7 +13197,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -13230,7 +13231,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -13264,7 +13265,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -13298,7 +13299,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -15750,7 +15751,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -15784,7 +15785,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -15818,7 +15819,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -15886,7 +15887,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -15920,7 +15921,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -16054,9 +16055,9 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Swarco - Peek Traffic",
+        "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": "Swarco - Peek Traffic"
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -16602,7 +16603,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -16637,7 +16638,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -16672,7 +16673,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -16777,7 +16778,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -16812,7 +16813,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -16847,7 +16848,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -16882,7 +16883,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -17407,7 +17408,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -17442,7 +17443,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -17477,7 +17478,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -17764,7 +17765,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -17799,7 +17800,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -17834,7 +17835,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -17869,7 +17870,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -17904,7 +17905,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -17939,7 +17940,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -17974,7 +17975,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18009,7 +18010,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18044,7 +18045,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18079,7 +18080,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18185,7 +18186,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18220,7 +18221,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18255,7 +18256,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18290,7 +18291,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18326,7 +18327,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18362,7 +18363,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18398,7 +18399,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18434,7 +18435,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18882,7 +18883,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -18918,7 +18919,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21389,7 +21390,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21423,7 +21424,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21457,7 +21458,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21491,7 +21492,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21525,7 +21526,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21559,7 +21560,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21593,7 +21594,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21763,7 +21764,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21832,7 +21833,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21867,7 +21868,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21902,7 +21903,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21937,7 +21938,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -21971,7 +21972,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22005,7 +22006,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22039,7 +22040,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22092,6 +22093,40 @@
         "identifier": "79b50014",
         "latitude": 52.216519,
         "longitude": 5.19684,
+        "roadRegulatorId": 31157,
+        "roadRegulatorName": "Hilversum",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco - Peek Traffic",
+        "its_organization": "Swarco - Peek Traffic",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.195561,
+          52.211555
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79b5001e",
+        "name": "K0107",
+        "identifier": "79b5001e",
+        "latitude": 52.211555,
+        "longitude": 5.195561,
         "roadRegulatorId": 31157,
         "roadRegulatorName": "Hilversum",
         "subjectTypeName": "iVRI",
@@ -22245,7 +22280,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22281,7 +22316,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22351,7 +22386,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22387,7 +22422,7 @@
         "priority_count": 4,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22423,7 +22458,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22495,7 +22530,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22531,7 +22566,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22566,7 +22601,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -22996,7 +23031,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -23031,7 +23066,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -23066,7 +23101,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -23101,7 +23136,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -23137,7 +23172,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -23583,7 +23618,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -23719,7 +23754,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -24506,8 +24541,8 @@
           "logistics"
         ],
         "priority_count": 4,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Swarco - Peek Traffic",
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -26148,7 +26183,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -26318,7 +26353,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -26421,7 +26456,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -26455,7 +26490,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -27242,7 +27277,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -27481,7 +27516,7 @@
         "priority_count": 3,
         "tlc_organization": "",
         "its_organization": "",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -27717,9 +27752,9 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": "Vialis"
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -28022,7 +28057,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -28055,7 +28090,7 @@
         "priority_count": 1,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -28088,7 +28123,7 @@
         "priority_count": 1,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -28258,7 +28293,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -28327,7 +28362,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -28362,7 +28397,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -28666,7 +28701,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -28878,6 +28913,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          4.55635,
+          51.9406
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a32074e",
+        "name": "66020",
+        "identifier": "7a32074e",
+        "latitude": 51.9406,
+        "longitude": 4.55635,
+        "roadRegulatorId": 31282,
+        "roadRegulatorName": "Rotterdam",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": false,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency"
+        ],
+        "priority_count": 1,
+        "tlc_organization": "Swarco",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.55237,
           51.94947
         ]
@@ -28971,7 +29039,7 @@
         "priority_count": 1,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -29037,7 +29105,7 @@
         "priority_count": 1,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -29104,7 +29172,7 @@
         "priority_count": 1,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -29170,6 +29238,41 @@
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.47843,
+          51.87405
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a3208ca",
+        "name": "85010",
+        "identifier": "7a3208ca",
+        "latitude": 51.87405,
+        "longitude": 4.47843,
+        "roadRegulatorId": 31282,
+        "roadRegulatorName": "Rotterdam",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport"
+        ],
+        "priority_count": 3,
+        "tlc_organization": "",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -29997,7 +30100,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30067,7 +30170,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30102,7 +30205,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30590,7 +30693,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30624,7 +30727,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30658,7 +30761,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30692,7 +30795,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30726,7 +30829,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30760,7 +30863,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30930,7 +31033,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30964,7 +31067,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -30998,7 +31101,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -31032,7 +31135,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -31066,7 +31169,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -31100,7 +31203,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -31134,7 +31237,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -31168,7 +31271,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -31202,7 +31305,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -31339,6 +31442,41 @@
         "tlc_organization": "Swarco",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.128408,
+          52.118327
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a5e001e",
+        "name": "UTR-K0077",
+        "identifier": "7a5e001e",
+        "latitude": 52.118327,
+        "longitude": 5.128408,
+        "roadRegulatorId": 31326,
+        "roadRegulatorName": "Utrecht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": true,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "logistics"
+        ],
+        "priority_count": 3,
+        "tlc_organization": "Vialis",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -33360,7 +33498,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -33395,7 +33533,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -33430,7 +33568,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -34319,7 +34457,7 @@
         "priority_count": 2,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -34491,7 +34629,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -34695,7 +34833,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -34828,7 +34966,7 @@
         "priority_count": 0,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -34859,7 +34997,7 @@
         "priority_count": 0,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -34893,7 +35031,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -34995,7 +35133,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35094,7 +35232,7 @@
         "priority_count": 0,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35125,7 +35263,7 @@
         "priority_count": 0,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35193,7 +35331,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35224,7 +35362,7 @@
         "priority_count": 0,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35258,7 +35396,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35292,7 +35430,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35493,7 +35631,7 @@
         "priority_count": 0,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35527,7 +35665,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35595,7 +35733,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35728,7 +35866,7 @@
         "priority_count": 0,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35762,7 +35900,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35796,7 +35934,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35827,7 +35965,7 @@
         "priority_count": 0,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35861,7 +35999,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35895,7 +36033,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -35997,7 +36135,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -37462,7 +37600,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -37498,7 +37636,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -38650,7 +38788,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -38758,7 +38896,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -39190,7 +39328,7 @@
         "priority_count": 4,
         "tlc_organization": "",
         "its_organization": "",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -39406,7 +39544,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -39442,7 +39580,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -40253,7 +40391,7 @@
         "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -41110,7 +41248,7 @@
         "priority_count": 4,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -41428,7 +41566,7 @@
         "priority_count": 2,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -41462,7 +41600,7 @@
         "priority_count": 2,
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -41565,7 +41703,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -41600,7 +41738,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -41634,7 +41772,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -41669,7 +41807,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -41876,7 +42014,7 @@
         "priority_count": 4,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -43749,7 +43887,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -43819,7 +43957,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -43854,7 +43992,7 @@
         "priority_count": 3,
         "tlc_organization": "Vialis",
         "its_organization": "Vialis",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -45814,7 +45952,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Goudappel Coffeng",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -45848,7 +45986,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Goudappel Coffeng",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -45882,7 +46020,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "Goudappel Coffeng",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -45916,7 +46054,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -45950,7 +46088,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
@@ -45984,7 +46122,7 @@
         "priority_count": 2,
         "tlc_organization": "Vialis",
         "its_organization": "",
-        "ris_organization": ""
+        "ris_organization": "Vialis"
       }
     },
     {
