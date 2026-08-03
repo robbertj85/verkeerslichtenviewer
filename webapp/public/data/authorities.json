@@ -7,7 +7,7 @@
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 69
+    "count": 71
   },
   {
     "name": "Provincie Noord-Brabant",
@@ -27,7 +27,7 @@
   {
     "name": "Almere",
     "slug": "almere",
-    "count": 52
+    "count": 53
   },
   {
     "name": "Provincie Utrecht",
@@ -70,13 +70,13 @@
     "count": 43
   },
   {
-    "name": "Tilburg",
-    "slug": "tilburg",
-    "count": 43
-  },
-  {
     "name": "Almelo",
     "slug": "almelo",
+    "count": 42
+  },
+  {
+    "name": "Tilburg",
+    "slug": "tilburg",
     "count": 42
   },
   {
@@ -95,14 +95,14 @@
     "count": 28
   },
   {
+    "name": "Provincie Gelderland",
+    "slug": "provincie-gelderland",
+    "count": 25
+  },
+  {
     "name": "Alphen aan den Rijn",
     "slug": "alphen-aan-den-rijn",
     "count": 24
-  },
-  {
-    "name": "Provincie Gelderland",
-    "slug": "provincie-gelderland",
-    "count": 23
   },
   {
     "name": "Venlo",
