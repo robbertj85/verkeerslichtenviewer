@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T05:24:53.090094",
+  "generated_at": "2026-08-10T03:40:25.084338",
   "total_traffic_lights": 1333,
   "by_authority": {
     "Alkmaar": 1,
@@ -80,9 +80,9 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 96,
-    "Ko Hartog": 20,
-    "Swarco": 418,
+    "": 100,
+    "Ko Hartog": 17,
+    "Swarco": 417,
     "Swarco - Peek Traffic": 334,
     "Vialis": 465
   },

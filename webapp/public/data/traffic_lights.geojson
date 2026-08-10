@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-08-03T05:24:53.090094",
+    "generated_at": "2026-08-10T03:40:25.084338",
     "total_traffic_lights": 1333,
     "bounds": [
       3.585204,
@@ -28463,9 +28463,9 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": "Vialis"
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -28532,7 +28532,7 @@
           "public_transport"
         ],
         "priority_count": 3,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
@@ -32424,8 +32424,8 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Swarco",
-        "its_organization": "Swarco - Peek Traffic",
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -37159,7 +37159,7 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Ko Hartog",
+        "tlc_organization": "",
         "its_organization": "Gemeente Rotterdam",
         "ris_organization": "Swarco"
       }
