@@ -4,8 +4,8 @@
     "description": "Weekly statistics history for UDAP traffic lights",
     "source": "UDAP",
     "source_url": "https://map.udap.nl",
-    "last_updated": "2026-08-10T03:40:27.791716",
-    "total_weeks": 36
+    "last_updated": "2026-08-17T02:49:16.972232",
+    "total_weeks": 37
   },
   "weeks": [
     {
@@ -4852,6 +4852,139 @@
         "total_change": 0,
         "is_first_week": false,
         "authority_changes": {}
+      }
+    },
+    {
+      "week": "2026-W34",
+      "date": "2026-08-17",
+      "timestamp": "2026-08-17T02:49:16.972232",
+      "stats": {
+        "total": 1338,
+        "by_authority": {
+          "Provincie Zuid-Holland": 76,
+          "Provincie Noord-Brabant": 67,
+          "Rotterdam": 66,
+          "Apeldoorn": 58,
+          "Helmond": 55,
+          "Almere": 53,
+          "Deventer": 52,
+          "Provincie Utrecht": 52,
+          "Breda": 50,
+          "Enschede": 50,
+          "Nijmegen": 49,
+          "Zwolle": 48,
+          "s-Hertogenbosch": 44,
+          "Delft": 44,
+          "Almelo": 42,
+          "Tilburg": 42,
+          "Amersfoort": 30,
+          "Hengelo": 30,
+          "Leeuwarden": 28,
+          "Provincie Gelderland": 25,
+          "Alphen aan den Rijn": 24,
+          "Venlo": 23,
+          "Amstelveen": 21,
+          "Rijswijk": 19,
+          "Dordrecht": 15,
+          "Eindhoven": 13,
+          "Leidschendam-Voorburg": 13,
+          "Zoetermeer": 13,
+          "Provincie Zeeland": 13,
+          "Groningen": 12,
+          "Zeist": 12,
+          "Provincie Overijssel": 12,
+          "Den Haag": 11,
+          "Maastricht": 11,
+          "Nissewaard": 10,
+          "Capelle aan den IJssel": 9,
+          "Wassenaar": 9,
+          "Provincie Limburg": 9,
+          "Port of Moerdijk": 9,
+          "Nieuwegein": 8,
+          "Vlaardingen": 8,
+          "RWS West-Nederland Zuid District Noord": 8,
+          "Haarlemmermeer": 7,
+          "Arnhem": 6,
+          "Hilversum": 6,
+          "Emmen": 5,
+          "Soest": 5,
+          "Terneuzen": 5,
+          "Woerden": 5,
+          "Provincie Groningen": 5,
+          "Gouda": 4,
+          "Velsen": 4,
+          "Leiden": 3,
+          "Leusden": 3,
+          "Westland": 3,
+          "RWS Zee en Delta District Noord": 3,
+          "RWS Zuid-Nederland District Midden": 3,
+          "Pijnacker-Nootdorp": 2,
+          "Rheden": 2,
+          "Veenendaal": 2,
+          "Veldhoven": 2,
+          "Waalre": 2,
+          "Zaanstad": 2,
+          "Zutphen": 2,
+          "Provincie Drenthe": 2,
+          "RWS Zuid-Nederland District West": 2,
+          "Alkmaar": 1,
+          "Oosterhout": 1,
+          "Schiedam": 1,
+          "Teylingen": 1,
+          "Utrecht": 1,
+          "Utrechtse Heuvelrug": 1,
+          "Valkenswaard": 1,
+          "Vlissingen": 1,
+          "RWS Oost-Nederland District Noord": 1,
+          "RWS Oost-Nederland District Zuid": 1
+        },
+        "by_tlc_organization": {
+          "Vialis": 464,
+          "Swarco": 421,
+          "Swarco - Peek Traffic": 340,
+          "Onbekend": 99,
+          "Ko Hartog": 14
+        },
+        "by_its_organization": {
+          "Vialis": 439,
+          "Gemeente Rotterdam": 293,
+          "Swarco - Peek Traffic": 250,
+          "RHDHV": 187,
+          "Onbekend": 71,
+          "Provincie Noord-Holland": 53,
+          "Goudappel Coffeng": 30,
+          "Huijskes VRT": 15
+        },
+        "by_ris_organization": {
+          "Vialis": 484,
+          "Swarco": 444,
+          "Swarco - Peek Traffic": 247,
+          "RHDHV": 141,
+          "Onbekend": 22
+        },
+        "by_priority": {
+          "emergency": 1321,
+          "road_operator": 1304,
+          "public_transport": 528,
+          "logistics": 469,
+          "agriculture": 14
+        }
+      },
+      "changes": {
+        "total_change": 1,
+        "is_first_week": false,
+        "authority_changes": {
+          "Nijmegen": {
+            "previous": 43,
+            "current": 49,
+            "change": 6
+          },
+          "Rotterdam": {
+            "previous": 71,
+            "current": 66,
+            "change": -5
+          }
+        }
       }
     }
   ]

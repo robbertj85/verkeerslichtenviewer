@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-10T03:40:25.084338",
-  "total_traffic_lights": 1333,
+  "generated_at": "2026-08-17T02:49:14.662025",
+  "total_traffic_lights": 1334,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 42,
@@ -31,7 +31,7 @@
     "Leusden": 3,
     "Maastricht": 11,
     "Nieuwegein": 8,
-    "Nijmegen": 43,
+    "Nijmegen": 49,
     "Nissewaard": 10,
     "Oosterhout": 1,
     "Pijnacker-Nootdorp": 2,
@@ -53,7 +53,7 @@
     "RWS Zuid-Nederland District West": 2,
     "Rheden": 2,
     "Rijswijk": 19,
-    "Rotterdam": 71,
+    "Rotterdam": 66,
     "Schiedam": 1,
     "Soest": 5,
     "Terneuzen": 5,
@@ -80,17 +80,17 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 100,
-    "Ko Hartog": 17,
+    "": 99,
+    "Ko Hartog": 14,
     "Swarco": 417,
-    "Swarco - Peek Traffic": 334,
-    "Vialis": 465
+    "Swarco - Peek Traffic": 340,
+    "Vialis": 464
   },
   "priority_stats": {
-    "emergency": 1316,
-    "road_operator": 1301,
-    "public_transport": 524,
-    "logistics": 464,
+    "emergency": 1317,
+    "road_operator": 1300,
+    "public_transport": 528,
+    "logistics": 469,
     "agriculture": 14
   },
   "source": "UDAP (Urban Data Access Platform)",
