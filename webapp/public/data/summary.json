@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-17T02:49:14.662025",
-  "total_traffic_lights": 1334,
+  "generated_at": "2026-08-24T02:52:39.511247",
+  "total_traffic_lights": 1335,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 42,
@@ -29,7 +29,7 @@
     "Leiden": 3,
     "Leidschendam-Voorburg": 13,
     "Leusden": 3,
-    "Maastricht": 11,
+    "Maastricht": 12,
     "Nieuwegein": 8,
     "Nijmegen": 49,
     "Nissewaard": 10,
@@ -82,13 +82,13 @@
   "by_tlc_organization": {
     "": 99,
     "Ko Hartog": 14,
-    "Swarco": 417,
+    "Swarco": 418,
     "Swarco - Peek Traffic": 340,
     "Vialis": 464
   },
   "priority_stats": {
-    "emergency": 1317,
-    "road_operator": 1300,
+    "emergency": 1318,
+    "road_operator": 1301,
     "public_transport": 528,
     "logistics": 469,
     "agriculture": 14

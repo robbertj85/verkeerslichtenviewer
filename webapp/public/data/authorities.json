@@ -150,6 +150,11 @@
     "count": 12
   },
   {
+    "name": "Maastricht",
+    "slug": "maastricht",
+    "count": 12
+  },
+  {
     "name": "Provincie Overijssel",
     "slug": "provincie-overijssel",
     "count": 12
@@ -162,11 +167,6 @@
   {
     "name": "Den Haag",
     "slug": "den-haag",
-    "count": 11
-  },
-  {
-    "name": "Maastricht",
-    "slug": "maastricht",
     "count": 11
   },
   {

@@ -1,11 +1,11 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-08-17T02:49:14.662025",
-    "total_traffic_lights": 1334,
+    "generated_at": "2026-08-24T02:52:39.511247",
+    "total_traffic_lights": 1335,
     "bounds": [
       3.585204,
-      50.840837,
+      50.839454,
       6.963916,
       53.233663
     ],
@@ -24226,6 +24226,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.703428,
+          50.839454
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79e801b8",
+        "name": "T185",
+        "identifier": "79e801b8",
+        "latitude": 50.839454,
+        "longitude": 5.703428,
+        "roadRegulatorId": 31208,
+        "roadRegulatorName": "Maastricht",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "Swarco",
+        "its_organization": "Huijskes VRT",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.702165,
           50.845953
         ]
@@ -34589,7 +34623,7 @@
         "priority_count": 2,
         "tlc_organization": "Swarco",
         "its_organization": "Vialis",
-        "ris_organization": "Swarco"
+        "ris_organization": "Vialis"
       }
     },
     {
