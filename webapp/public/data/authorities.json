@@ -2,7 +2,7 @@
   {
     "name": "Provincie Zuid-Holland",
     "slug": "provincie-zuid-holland",
-    "count": 76
+    "count": 75
   },
   {
     "name": "Provincie Noord-Brabant",
@@ -12,7 +12,7 @@
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 66
+    "count": 67
   },
   {
     "name": "Apeldoorn",
@@ -25,14 +25,14 @@
     "count": 55
   },
   {
+    "name": "Provincie Utrecht",
+    "slug": "provincie-utrecht",
+    "count": 54
+  },
+  {
     "name": "Almere",
     "slug": "almere",
     "count": 53
-  },
-  {
-    "name": "Provincie Utrecht",
-    "slug": "provincie-utrecht",
-    "count": 52
   },
   {
     "name": "Breda",
@@ -115,14 +115,14 @@
     "count": 21
   },
   {
-    "name": "Rijswijk",
-    "slug": "rijswijk",
+    "name": "Dordrecht",
+    "slug": "dordrecht",
     "count": 19
   },
   {
-    "name": "Dordrecht",
-    "slug": "dordrecht",
-    "count": 15
+    "name": "Rijswijk",
+    "slug": "rijswijk",
+    "count": 19
   },
   {
     "name": "Eindhoven",
