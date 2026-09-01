@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useRef, useState, useCallback, useId } from 'react';
 import L from 'leaflet';
 import { MapContainer, TileLayer, CircleMarker, Marker, Popup, useMap, GeoJSON } from 'react-leaflet';
+import { maplibreGL } from '@maplibre/maplibre-gl-leaflet';
+import 'maplibre-gl/dist/maplibre-gl.css';
 import {
   TrafficLightData,
   TrafficLightProperties,
@@ -213,31 +215,104 @@ function PopupContent({
   );
 }
 
-// Base map options
+const OSM_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const CARTO_ATTRIBUTION = `${OSM_ATTRIBUTION} &copy; <a href="https://carto.com/attributions">CARTO</a>`;
+
+// Thunderforest requires a per-account key; supply it via the environment rather
+// than committing one. The layer is hidden when no key is configured.
+const THUNDERFOREST_KEY = process.env.NEXT_PUBLIC_THUNDERFOREST_API_KEY;
+
+type BaseMapConfig =
+  | { name: string; type: 'raster'; url: string; attribution: string }
+  | { name: string; type: 'vector'; style: string; attribution: string };
+
+// Base map options.
+// CARTO's raster endpoint (basemaps.cartocdn.com/{style}/{z}/{x}/{y}.png) started
+// serving an "API KEY REQUIRED" watermark in Aug 2026 and is being retired. Their
+// vector GL styles serve the same cartography and currently need no key, so the
+// CARTO layers below are vector. Raster layers stay as the no-WebGL fallback.
 const BASE_MAPS = {
   carto: {
-    name: 'CartoDB Light',
-    url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    name: 'CARTO Positron',
+    type: 'vector',
+    style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+    attribution: CARTO_ATTRIBUTION,
+  },
+  cartoVoyager: {
+    name: 'CARTO Voyager',
+    type: 'vector',
+    style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
+    attribution: CARTO_ATTRIBUTION,
+  },
+  cartoDark: {
+    name: 'CARTO Dark Matter',
+    type: 'vector',
+    style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+    attribution: CARTO_ATTRIBUTION,
   },
   osm: {
     name: 'OpenStreetMap',
+    type: 'raster',
     url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  },
-  transport: {
-    name: 'Transport',
-    url: 'https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=6170aad10dfd42a38d4d8c709a536f38',
-    attribution: '&copy; <a href="https://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    attribution: OSM_ATTRIBUTION,
   },
   shortbread: {
     name: 'Shortbread',
+    type: 'raster',
     url: 'https://tile.openstreetmap.de/{z}/{x}/{y}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    attribution: OSM_ATTRIBUTION,
   },
-} as const;
+  transport: {
+    name: 'Transport',
+    type: 'raster',
+    url: `https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=${THUNDERFOREST_KEY ?? ''}`,
+    attribution: `&copy; <a href="https://www.thunderforest.com/">Thunderforest</a>, ${OSM_ATTRIBUTION}`,
+  },
+} satisfies Record<string, BaseMapConfig>;
 
 type BaseMapKey = keyof typeof BASE_MAPS;
+
+// MapLibre needs WebGL2; older iOS and some GPUs don't have it.
+function supportsWebGL2(): boolean {
+  try {
+    return Boolean(document.createElement('canvas').getContext('webgl2'));
+  } catch {
+    return false;
+  }
+}
+
+function getAvailableBaseMaps(): BaseMapKey[] {
+  const hasWebGL2 = supportsWebGL2();
+  return (Object.keys(BASE_MAPS) as BaseMapKey[]).filter((key) => {
+    if (key === 'transport' && !THUNDERFOREST_KEY) return false;
+    if (BASE_MAPS[key].type === 'vector' && !hasWebGL2) return false;
+    return true;
+  });
+}
+
+// Renders a MapLibre GL vector style inside the Leaflet map via maplibre-gl-leaflet.
+// maplibre-gl is pinned to v5 in package.json: with v6 the adapter's transform
+// patching leaves the GL map in a state where it never requests tiles, so the
+// style loads but the basemap stays blank.
+function VectorBaseLayer({ styleUrl, attribution }: { styleUrl: string; attribution: string }) {
+  const map = useMap();
+
+  useEffect(() => {
+    const layer = maplibreGL({
+      style: styleUrl,
+      attributionControl: { customAttribution: attribution },
+    });
+    layer.addTo(map);
+    layer.getMaplibreMap().on('error', (e) => {
+      console.error('[basemap]', e.error?.message ?? e);
+    });
+    return () => {
+      map.removeLayer(layer);
+    };
+  }, [map, styleUrl, attribution]);
+
+  return null;
+}
 
 export default function Map({ data, filters }: MapProps) {
   const mapId = useId();
@@ -245,7 +320,12 @@ export default function Map({ data, filters }: MapProps) {
   const [boundaryData, setBoundaryData] = useState<BoundaryData | null>(null);
   const [boundaryLoading, setBoundaryLoading] = useState(false);
   const [boundaryProgress, setBoundaryProgress] = useState<BoundaryLoadProgress | null>(null);
-  const [baseMap, setBaseMap] = useState<BaseMapKey>('carto');
+  // Computed once on the client; falls back to a raster layer without WebGL2.
+  const availableBaseMaps = useMemo(getAvailableBaseMaps, []);
+  const [baseMap, setBaseMap] = useState<BaseMapKey>(() =>
+    availableBaseMaps.includes('carto') ? 'carto' : availableBaseMaps[0]
+  );
+  const activeBaseMap: BaseMapConfig = BASE_MAPS[baseMap];
 
   // Load boundaries when showBoundaries is enabled
   useEffect(() => {
@@ -353,13 +433,27 @@ export default function Map({ data, filters }: MapProps) {
         center={defaultCenter}
         zoom={defaultZoom}
         className="w-full h-full"
+        // Leaflet's animated zoom makes the GL basemap render a single zoom step
+        // four times: it CSS-scales the GL canvas mid-animation, then _zoomEnd and
+        // the transitionEnd handler each re-jump the GL camera. Disabling the
+        // animation makes zooming a single discrete step. Raster layers zoom
+        // without a tween as a result.
+        zoomAnimation={false}
         ref={mapRef}
       >
-        <TileLayer
-          key={baseMap}
-          attribution={BASE_MAPS[baseMap].attribution}
-          url={BASE_MAPS[baseMap].url}
-        />
+        {activeBaseMap.type === 'vector' ? (
+          <VectorBaseLayer
+            key={baseMap}
+            styleUrl={activeBaseMap.style}
+            attribution={activeBaseMap.attribution}
+          />
+        ) : (
+          <TileLayer
+            key={baseMap}
+            attribution={activeBaseMap.attribution}
+            url={activeBaseMap.url}
+          />
+        )}
 
         <FitBounds bounds={bounds} />
 
@@ -429,9 +523,9 @@ export default function Map({ data, filters }: MapProps) {
           onChange={(e) => setBaseMap(e.target.value as BaseMapKey)}
           className="bg-white border border-gray-300 rounded-md shadow-sm px-2 py-1 text-xs text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
         >
-          {(Object.entries(BASE_MAPS) as [BaseMapKey, typeof BASE_MAPS[BaseMapKey]][]).map(([key, map]) => (
+          {availableBaseMaps.map((key) => (
             <option key={key} value={key}>
-              {map.name}
+              {BASE_MAPS[key].name}
             </option>
           ))}
         </select>
