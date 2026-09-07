@@ -5,13 +5,13 @@
     "count": 75
   },
   {
-    "name": "Provincie Noord-Brabant",
-    "slug": "provincie-noord-brabant",
-    "count": 67
-  },
-  {
     "name": "Rotterdam",
     "slug": "rotterdam",
+    "count": 68
+  },
+  {
+    "name": "Provincie Noord-Brabant",
+    "slug": "provincie-noord-brabant",
     "count": 67
   },
   {
@@ -135,6 +135,11 @@
     "count": 13
   },
   {
+    "name": "Maastricht",
+    "slug": "maastricht",
+    "count": 13
+  },
+  {
     "name": "Provincie Zeeland",
     "slug": "provincie-zeeland",
     "count": 13
@@ -147,11 +152,6 @@
   {
     "name": "Groningen",
     "slug": "groningen",
-    "count": 12
-  },
-  {
-    "name": "Maastricht",
-    "slug": "maastricht",
     "count": 12
   },
   {
@@ -180,6 +180,11 @@
     "count": 9
   },
   {
+    "name": "Nieuwegein",
+    "slug": "nieuwegein",
+    "count": 9
+  },
+  {
     "name": "Port of Moerdijk",
     "slug": "port-of-moerdijk",
     "count": 9
@@ -193,11 +198,6 @@
     "name": "Wassenaar",
     "slug": "wassenaar",
     "count": 9
-  },
-  {
-    "name": "Nieuwegein",
-    "slug": "nieuwegein",
-    "count": 8
   },
   {
     "name": "RWS West-Nederland Zuid District Noord",

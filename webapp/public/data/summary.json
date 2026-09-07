@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-31T07:45:08.372317",
-  "total_traffic_lights": 1341,
+  "generated_at": "2026-09-07T06:40:54.686662",
+  "total_traffic_lights": 1344,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 42,
@@ -29,8 +29,8 @@
     "Leiden": 3,
     "Leidschendam-Voorburg": 13,
     "Leusden": 3,
-    "Maastricht": 12,
-    "Nieuwegein": 8,
+    "Maastricht": 13,
+    "Nieuwegein": 9,
     "Nijmegen": 49,
     "Nissewaard": 10,
     "Oosterhout": 1,
@@ -53,7 +53,7 @@
     "RWS Zuid-Nederland District West": 2,
     "Rheden": 2,
     "Rijswijk": 19,
-    "Rotterdam": 67,
+    "Rotterdam": 68,
     "Schiedam": 1,
     "Soest": 5,
     "Terneuzen": 5,
@@ -80,14 +80,14 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 97,
-    "Ko Hartog": 14,
-    "Swarco": 427,
+    "": 100,
+    "Ko Hartog": 12,
+    "Swarco": 429,
     "Swarco - Peek Traffic": 340,
     "Vialis": 463
   },
   "priority_stats": {
-    "emergency": 1324,
+    "emergency": 1326,
     "road_operator": 1306,
     "public_transport": 528,
     "logistics": 468,
