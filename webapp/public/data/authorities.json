@@ -37,7 +37,7 @@
   {
     "name": "Breda",
     "slug": "breda",
-    "count": 50
+    "count": 52
   },
   {
     "name": "Enschede",
@@ -47,7 +47,7 @@
   {
     "name": "Nijmegen",
     "slug": "nijmegen",
-    "count": 49
+    "count": 50
   },
   {
     "name": "Deventer",
@@ -58,6 +58,11 @@
     "name": "Zwolle",
     "slug": "zwolle",
     "count": 48
+  },
+  {
+    "name": "Tilburg",
+    "slug": "tilburg",
+    "count": 45
   },
   {
     "name": "Delft",
@@ -72,11 +77,6 @@
   {
     "name": "Almelo",
     "slug": "almelo",
-    "count": 42
-  },
-  {
-    "name": "Tilburg",
-    "slug": "tilburg",
     "count": 42
   },
   {

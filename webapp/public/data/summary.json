@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-07T06:40:54.686662",
-  "total_traffic_lights": 1344,
+  "generated_at": "2026-09-14T07:14:47.189323",
+  "total_traffic_lights": 1350,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 42,
@@ -10,7 +10,7 @@
     "Amstelveen": 21,
     "Apeldoorn": 58,
     "Arnhem": 6,
-    "Breda": 50,
+    "Breda": 52,
     "Capelle aan den IJssel": 9,
     "Delft": 44,
     "Den Haag": 11,
@@ -31,7 +31,7 @@
     "Leusden": 3,
     "Maastricht": 13,
     "Nieuwegein": 9,
-    "Nijmegen": 49,
+    "Nijmegen": 50,
     "Nissewaard": 10,
     "Oosterhout": 1,
     "Pijnacker-Nootdorp": 2,
@@ -58,7 +58,7 @@
     "Soest": 5,
     "Terneuzen": 5,
     "Teylingen": 1,
-    "Tilburg": 42,
+    "Tilburg": 45,
     "Utrecht": 1,
     "Utrechtse Heuvelrug": 1,
     "Valkenswaard": 1,
@@ -82,13 +82,13 @@
   "by_tlc_organization": {
     "": 100,
     "Ko Hartog": 12,
-    "Swarco": 429,
-    "Swarco - Peek Traffic": 340,
+    "Swarco": 433,
+    "Swarco - Peek Traffic": 342,
     "Vialis": 463
   },
   "priority_stats": {
-    "emergency": 1326,
-    "road_operator": 1306,
+    "emergency": 1332,
+    "road_operator": 1312,
     "public_transport": 528,
     "logistics": 468,
     "agriculture": 14
