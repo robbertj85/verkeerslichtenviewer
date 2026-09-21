@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-09-14T07:14:47.189323",
-  "total_traffic_lights": 1350,
+  "generated_at": "2026-09-21T07:18:06.488342",
+  "total_traffic_lights": 1354,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 42,
     "Almere": 53,
     "Alphen aan den Rijn": 24,
-    "Amersfoort": 30,
+    "Amersfoort": 31,
     "Amstelveen": 21,
     "Apeldoorn": 58,
     "Arnhem": 6,
     "Breda": 52,
-    "Capelle aan den IJssel": 9,
+    "Capelle aan den IJssel": 10,
     "Delft": 44,
     "Den Haag": 11,
     "Deventer": 48,
@@ -37,7 +37,7 @@
     "Pijnacker-Nootdorp": 2,
     "Port of Moerdijk": 9,
     "Provincie Drenthe": 2,
-    "Provincie Gelderland": 25,
+    "Provincie Gelderland": 27,
     "Provincie Groningen": 5,
     "Provincie Limburg": 9,
     "Provincie Noord-Brabant": 67,
@@ -80,17 +80,17 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 100,
+    "": 103,
     "Ko Hartog": 12,
     "Swarco": 433,
     "Swarco - Peek Traffic": 342,
-    "Vialis": 463
+    "Vialis": 464
   },
   "priority_stats": {
-    "emergency": 1332,
-    "road_operator": 1312,
-    "public_transport": 528,
-    "logistics": 468,
+    "emergency": 1336,
+    "road_operator": 1316,
+    "public_transport": 529,
+    "logistics": 469,
     "agriculture": 14
   },
   "source": "UDAP (Urban Data Access Platform)",

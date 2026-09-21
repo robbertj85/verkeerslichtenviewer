@@ -82,7 +82,7 @@
   {
     "name": "Amersfoort",
     "slug": "amersfoort",
-    "count": 30
+    "count": 31
   },
   {
     "name": "Hengelo",
@@ -97,7 +97,7 @@
   {
     "name": "Provincie Gelderland",
     "slug": "provincie-gelderland",
-    "count": 25
+    "count": 27
   },
   {
     "name": "Alphen aan den Rijn",
@@ -170,14 +170,14 @@
     "count": 11
   },
   {
-    "name": "Nissewaard",
-    "slug": "nissewaard",
+    "name": "Capelle aan den IJssel",
+    "slug": "capelle-aan-den-ijssel",
     "count": 10
   },
   {
-    "name": "Capelle aan den IJssel",
-    "slug": "capelle-aan-den-ijssel",
-    "count": 9
+    "name": "Nissewaard",
+    "slug": "nissewaard",
+    "count": 10
   },
   {
     "name": "Nieuwegein",

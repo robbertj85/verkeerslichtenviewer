@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-09-14T07:14:47.189323",
-    "total_traffic_lights": 1350,
+    "generated_at": "2026-09-21T07:18:06.488342",
+    "total_traffic_lights": 1354,
     "bounds": [
       3.585204,
       50.837619,
@@ -6845,6 +6845,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.404603,
+          52.19421
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79270154",
+        "name": "AMF-K0090",
+        "identifier": "79270154",
+        "latitude": 52.19421,
+        "longitude": 5.404603,
+        "roadRegulatorId": 31015,
+        "roadRegulatorName": "Amersfoort",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": true,
+        "has_logistics": true,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "public_transport",
+          "logistics"
+        ],
+        "priority_count": 4,
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
+        "ris_organization": "Vialis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.869146,
           52.29627
         ]
@@ -11921,6 +11957,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          4.568155,
+          51.947815
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79550078",
+        "name": "CAP6",
+        "identifier": "79550078",
+        "latitude": 51.947815,
+        "longitude": 4.568155,
+        "roadRegulatorId": 31061,
+        "roadRegulatorName": "Capelle aan den IJssel",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "Goudappel Coffeng",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.35228,
           52.021657
         ]
@@ -12158,7 +12228,7 @@
         "priority_count": 3,
         "tlc_organization": "Swarco",
         "its_organization": "Gemeente Rotterdam",
-        "ris_organization": "Vialis"
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -37356,7 +37426,7 @@
         ],
         "priority_count": 2,
         "tlc_organization": "",
-        "its_organization": "Gemeente Rotterdam",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -37682,6 +37752,74 @@
         "identifier": "7aa00244",
         "latitude": 52.122694,
         "longitude": 6.215606,
+        "roadRegulatorId": 31392,
+        "roadRegulatorName": "Provincie Gelderland",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.737492,
+          51.82556
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa00262",
+        "name": "k599",
+        "identifier": "7aa00262",
+        "latitude": 51.82556,
+        "longitude": 5.737492,
+        "roadRegulatorId": 31392,
+        "roadRegulatorName": "Provincie Gelderland",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.021023,
+          52.372257
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7aa00276",
+        "name": "267",
+        "identifier": "7aa00276",
+        "latitude": 52.372257,
+        "longitude": 6.021023,
         "roadRegulatorId": 31392,
         "roadRegulatorName": "Provincie Gelderland",
         "subjectTypeName": "iVRI",
@@ -46002,7 +46140,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7aad000a",
-        "name": "830.tlc",
+        "name": "IV704830_VRI_A28_N331_Spoolde_Zwolle-Zuid",
         "identifier": "7aad000a",
         "latitude": 52.505866,
         "longitude": 6.068412,
@@ -46036,7 +46174,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7aaf000a",
-        "name": "708",
+        "name": "IV704708_VRI_A12_N325_Velperbroek",
         "identifier": "7aaf000a",
         "latitude": 51.981675,
         "longitude": 5.975712,
@@ -46072,7 +46210,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab2000a",
-        "name": "RWS-124",
+        "name": "IV708124_VRI_N44_N14",
         "identifier": "7ab2000a",
         "latitude": 52.105644,
         "longitude": 4.358089,
@@ -46108,7 +46246,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab20014",
-        "name": "RWS 103",
+        "name": "IV708103_VRI_A4c_Afrit8_Leidschendam",
         "identifier": "7ab20014",
         "latitude": 52.07247,
         "longitude": 4.397066,
@@ -46144,7 +46282,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab2001e",
-        "name": "RWS 126",
+        "name": "IV708126_VRI_N14_Wittenburgerweg",
         "identifier": "7ab2001e",
         "latitude": 52.109547,
         "longitude": 4.352279,
@@ -46180,7 +46318,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab20028",
-        "name": "RWS 120",
+        "name": "IV708120_VRI_A4a_Afrit8_Leidschendam",
         "identifier": "7ab20028",
         "latitude": 52.074479,
         "longitude": 4.393655,
@@ -46216,7 +46354,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab20032",
-        "name": "RWS 121",
+        "name": "IV708121_VRI_N14_Prins-Bernardlaan",
         "identifier": "7ab20032",
         "latitude": 52.084825,
         "longitude": 4.379211,
@@ -46252,7 +46390,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab2003c",
-        "name": "RWS 122",
+        "name": "IV708122_VRI_N14_Monsigneur-van-Steelaan",
         "identifier": "7ab2003c",
         "latitude": 52.088761,
         "longitude": 4.376654,
@@ -46288,7 +46426,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab20046",
-        "name": "RWS 123",
+        "name": "IV708123_VRI_N14_Bezuidenhoutseweg",
         "identifier": "7ab20046",
         "latitude": 52.101713,
         "longitude": 4.363648,
@@ -46324,7 +46462,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab20050",
-        "name": "RWS-125",
+        "name": "IV708125_VRI_Zijdeweg_Hotel-Bijhorst",
         "identifier": "7ab20050",
         "latitude": 52.104738,
         "longitude": 4.359749,
@@ -46468,7 +46606,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab6000a",
-        "name": "VRI-Vught-Noord",
+        "name": "IV700007_VRI_A2_A65_Vught-Noord",
         "identifier": "7ab6000a",
         "latitude": 51.666685,
         "longitude": 5.299608,
@@ -46504,7 +46642,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab60014",
-        "name": "VRI-Vught-Zuid",
+        "name": "IV700008_VRI_A2_A65_Vught-Zuid",
         "identifier": "7ab60014",
         "latitude": 51.664226,
         "longitude": 5.301679,
@@ -46540,7 +46678,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab6001e",
-        "name": "VRI-Leenderheide",
+        "name": "IV700010_VRI_A2_A67_Leenderheide",
         "identifier": "7ab6001e",
         "latitude": 51.406401,
         "longitude": 5.501729,
@@ -46576,7 +46714,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab7000a",
-        "name": "VRI-Hooipolder",
+        "name": "IV700009_VRI_A27_A59_Hooipolder",
         "identifier": "7ab7000a",
         "latitude": 51.687181,
         "longitude": 4.883432,
@@ -46612,7 +46750,7 @@
       "properties": {
         "type": "traffic_light",
         "id": "7ab7001e",
-        "name": "VRI-Quatre-Bras",
+        "name": "IV700015_VRI_N65_Pannenschuurlaan",
         "identifier": "7ab7001e",
         "latitude": 51.593092,
         "longitude": 5.171554,
