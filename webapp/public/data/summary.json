@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-21T07:18:06.488342",
-  "total_traffic_lights": 1354,
+  "generated_at": "2026-09-28T07:48:10.379213",
+  "total_traffic_lights": 1355,
   "by_authority": {
     "Alkmaar": 1,
     "Almelo": 42,
@@ -37,7 +37,7 @@
     "Pijnacker-Nootdorp": 2,
     "Port of Moerdijk": 9,
     "Provincie Drenthe": 2,
-    "Provincie Gelderland": 27,
+    "Provincie Gelderland": 28,
     "Provincie Groningen": 5,
     "Provincie Limburg": 9,
     "Provincie Noord-Brabant": 67,
@@ -80,15 +80,15 @@
     "s-Hertogenbosch": 44
   },
   "by_tlc_organization": {
-    "": 103,
+    "": 105,
     "Ko Hartog": 12,
-    "Swarco": 433,
-    "Swarco - Peek Traffic": 342,
-    "Vialis": 464
+    "Swarco": 434,
+    "Swarco - Peek Traffic": 341,
+    "Vialis": 463
   },
   "priority_stats": {
-    "emergency": 1336,
-    "road_operator": 1316,
+    "emergency": 1337,
+    "road_operator": 1317,
     "public_transport": 529,
     "logistics": 469,
     "agriculture": 14
