@@ -99,7 +99,10 @@ The UDAP (Urban Data Access Platform) is a Dutch national platform connecting in
 - `latitude`, `longitude` - Geographic coordinates
 - `roadRegulatorId`, `roadRegulatorName` - Road authority info
 - `subjectComponents` - TLC, ITS, and RIS organizations
+- `subjectTypeCode`, `subjectTypeName` - `TRAFFIC_LIGHT` (iVRI) or `MOVABLE_BARRIER` (iFBA, a handful of subjects)
 - `categories` - Priority categories (e.g., `PBC:EMERGENCY`, `PBC:LOGISTICS`)
+
+The full category list is available at `https://map.udap.nl/api/v1/categories`.
 
 ## Priority Categories
 
@@ -109,9 +112,11 @@ Traffic lights can be configured to give priority to different road users:
 |----------|-----|-------------|
 | Emergency | `PBC:EMERGENCY` | Fire, ambulance, police |
 | Road Operator | `PBC:ROAD_OPERATOR` | Road inspectors, recovery vehicles |
-| Public Transport | `PBC:PUBLIC_TRANSPORT` | Buses, trams |
+| Public Transport | `PBC:PUBLIC` | Buses, trams |
 | Logistics | `PBC:LOGISTICS` | Freight transport |
-| Agriculture | `PBC:AGRICULTURE` | Farm vehicles |
+| Agriculture | `PBC:MACHINERY` | Farm and road construction vehicles |
+
+The webapp keys (`public_transport`, `agriculture`) differ from the API IDs; the mapping lives in `api_client.py`. The API has no bicycle priority category.
 
 ## Map Marker Colors
 
@@ -167,4 +172,3 @@ Data bron: UDAP (Urban Data Access Platform) - https://map.udap.nl
 
 - Data is a snapshot at time of fetch - not real-time
 - Some traffic lights may not have all metadata fields populated
-- Public transport priority (`PBC:PUBLIC_TRANSPORT`) appears to not be widely configured yet
