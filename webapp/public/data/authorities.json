@@ -7,7 +7,7 @@
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 68
+    "count": 69
   },
   {
     "name": "Provincie Noord-Brabant",
@@ -35,6 +35,11 @@
     "count": 53
   },
   {
+    "name": "Nijmegen",
+    "slug": "nijmegen",
+    "count": 53
+  },
+  {
     "name": "Breda",
     "slug": "breda",
     "count": 52
@@ -42,11 +47,6 @@
   {
     "name": "Enschede",
     "slug": "enschede",
-    "count": 50
-  },
-  {
-    "name": "Nijmegen",
-    "slug": "nijmegen",
     "count": 50
   },
   {
