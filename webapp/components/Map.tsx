@@ -38,6 +38,43 @@ function FitBounds({ bounds }: { bounds: [number, number, number, number] | null
   return null;
 }
 
+// The Netherlands including the Wadden islands and Zuid-Limburg, plus a margin.
+const NETHERLANDS_BOUNDS = L.latLngBounds([50.55, 3.0], [53.75, 7.5]);
+// Panning may go a bit further, since a non-square screen shows more than NL.
+const MAX_BOUNDS = NETHERLANDS_BOUNDS.pad(0.25);
+
+// Keep the map on the Netherlands: no panning off to the rest of the world and
+// no zooming out further than the level at which the whole country fits.
+// That level depends on the map size, so it is recomputed on resize.
+function LimitToNetherlands() {
+  const map = useMap();
+
+  useEffect(() => {
+    const updateMinZoom = () => {
+      // getBoundsZoom rounds down to zoomSnap, which can leave a lot of the
+      // neighbouring countries in view, so compute the exact fit and round it
+      // to the nearest snap step (the margin above absorbs rounding up). The
+      // minimum must sit on the snap grid, or Leaflet stops a step short of
+      // it and the zoom-out button never disables.
+      const nw = map.project(NETHERLANDS_BOUNDS.getNorthWest(), 0);
+      const se = map.project(NETHERLANDS_BOUNDS.getSouthEast(), 0);
+      const size = map.getSize();
+      const scale = Math.min(size.x / (se.x - nw.x), size.y / (se.y - nw.y));
+      const snap = map.options.zoomSnap || 1;
+      map.setMinZoom(Math.round(map.getScaleZoom(scale, 0) / snap) * snap);
+    };
+    map.setMaxBounds(MAX_BOUNDS);
+    map.options.maxBoundsViscosity = 1;
+    updateMinZoom();
+    map.on('resize', updateMinZoom);
+    return () => {
+      map.off('resize', updateMinZoom);
+    };
+  }, [map]);
+
+  return null;
+}
+
 // Get color based on highest priority
 function getMarkerColor(props: TrafficLightProperties): string {
   if (props.has_emergency) return PRIORITY_INFO.emergency.color;
@@ -441,9 +478,9 @@ export default function Map({ data, filters }: MapProps) {
         zoomAnimation={false}
         // Leaflet's default (60px per zoom level, whole levels only) makes
         // trackpad and Magic Mouse scrolling jump several levels at once.
-        // Half-level steps and more scroll per level keep wheel zoom calm;
+        // Quarter-level steps and more scroll per level keep wheel zoom calm;
         // the +/- buttons still zoom a full level.
-        zoomSnap={0.5}
+        zoomSnap={0.25}
         zoomDelta={1}
         wheelPxPerZoomLevel={120}
         ref={mapRef}
@@ -462,6 +499,7 @@ export default function Map({ data, filters }: MapProps) {
           />
         )}
 
+        <LimitToNetherlands />
         <FitBounds bounds={bounds} />
 
         {/* Render boundaries when enabled */}
