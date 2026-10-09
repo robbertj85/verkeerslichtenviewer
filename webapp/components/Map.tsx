@@ -439,6 +439,13 @@ export default function Map({ data, filters }: MapProps) {
         // animation makes zooming a single discrete step. Raster layers zoom
         // without a tween as a result.
         zoomAnimation={false}
+        // Leaflet's default (60px per zoom level, whole levels only) makes
+        // trackpad and Magic Mouse scrolling jump several levels at once.
+        // Half-level steps and more scroll per level keep wheel zoom calm;
+        // the +/- buttons still zoom a full level.
+        zoomSnap={0.5}
+        zoomDelta={1}
+        wheelPxPerZoomLevel={120}
         ref={mapRef}
       >
         {activeBaseMap.type === 'vector' ? (
