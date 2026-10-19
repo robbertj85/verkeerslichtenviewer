@@ -7,12 +7,12 @@
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 69
+    "count": 71
   },
   {
     "name": "Provincie Noord-Brabant",
     "slug": "provincie-noord-brabant",
-    "count": 67
+    "count": 68
   },
   {
     "name": "Apeldoorn",
@@ -20,13 +20,13 @@
     "count": 58
   },
   {
-    "name": "Helmond",
-    "slug": "helmond",
+    "name": "Provincie Utrecht",
+    "slug": "provincie-utrecht",
     "count": 55
   },
   {
-    "name": "Provincie Utrecht",
-    "slug": "provincie-utrecht",
+    "name": "Helmond",
+    "slug": "helmond",
     "count": 54
   },
   {
@@ -62,17 +62,17 @@
   {
     "name": "Tilburg",
     "slug": "tilburg",
-    "count": 45
-  },
-  {
-    "name": "Delft",
-    "slug": "delft",
-    "count": 44
+    "count": 46
   },
   {
     "name": "s-Hertogenbosch",
     "slug": "s-hertogenbosch",
     "count": 44
+  },
+  {
+    "name": "Delft",
+    "slug": "delft",
+    "count": 43
   },
   {
     "name": "Almelo",
@@ -82,7 +82,7 @@
   {
     "name": "Amersfoort",
     "slug": "amersfoort",
-    "count": 31
+    "count": 35
   },
   {
     "name": "Hengelo",
