@@ -2,17 +2,17 @@
   {
     "name": "Provincie Zuid-Holland",
     "slug": "provincie-zuid-holland",
-    "count": 75
+    "count": 76
   },
   {
     "name": "Rotterdam",
     "slug": "rotterdam",
-    "count": 71
+    "count": 70
   },
   {
     "name": "Provincie Noord-Brabant",
     "slug": "provincie-noord-brabant",
-    "count": 68
+    "count": 69
   },
   {
     "name": "Apeldoorn",
@@ -50,6 +50,11 @@
     "count": 50
   },
   {
+    "name": "Tilburg",
+    "slug": "tilburg",
+    "count": 49
+  },
+  {
     "name": "Deventer",
     "slug": "deventer",
     "count": 48
@@ -58,11 +63,6 @@
     "name": "Zwolle",
     "slug": "zwolle",
     "count": 48
-  },
-  {
-    "name": "Tilburg",
-    "slug": "tilburg",
-    "count": 46
   },
   {
     "name": "s-Hertogenbosch",
@@ -82,7 +82,7 @@
   {
     "name": "Amersfoort",
     "slug": "amersfoort",
-    "count": 35
+    "count": 36
   },
   {
     "name": "Hengelo",
