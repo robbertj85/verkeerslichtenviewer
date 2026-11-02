@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "generated_at": "2026-10-26T07:08:20.493345",
-    "total_traffic_lights": 1374,
+    "generated_at": "2026-11-02T08:27:55.702826",
+    "total_traffic_lights": 1375,
     "bounds": [
       3.585204,
       50.837619,
@@ -29,6 +29,7 @@
       "Enschede",
       "Gouda",
       "Groningen",
+      "Haarlem",
       "Haarlemmermeer",
       "Helmond",
       "Hengelo",
@@ -6940,8 +6941,8 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "",
-        "its_organization": "",
+        "tlc_organization": "Vialis",
+        "its_organization": "Vialis",
         "ris_organization": "Vialis"
       }
     },
@@ -6995,40 +6996,6 @@
         "identifier": "7927019a",
         "latitude": 52.183435,
         "longitude": 5.411886,
-        "roadRegulatorId": 31015,
-        "roadRegulatorName": "Amersfoort",
-        "subjectTypeName": "iVRI",
-        "has_emergency": true,
-        "has_road_operator": true,
-        "has_public_transport": false,
-        "has_logistics": false,
-        "has_agriculture": false,
-        "priorities": [
-          "emergency",
-          "road_operator"
-        ],
-        "priority_count": 2,
-        "tlc_organization": "Vialis",
-        "its_organization": "Vialis",
-        "ris_organization": "Vialis"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          5.403207,
-          52.188012
-        ]
-      },
-      "properties": {
-        "type": "traffic_light",
-        "id": "792701a4",
-        "name": "AMF-K0093",
-        "identifier": "792701a4",
-        "latitude": 52.188012,
-        "longitude": 5.403207,
         "roadRegulatorId": 31015,
         "roadRegulatorName": "Amersfoort",
         "subjectTypeName": "iVRI",
@@ -19298,6 +19265,40 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          4.633302,
+          52.379288
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "79990168",
+        "name": "K6161",
+        "identifier": "79990168",
+        "latitude": 52.379288,
+        "longitude": 4.633302,
+        "roadRegulatorId": 31129,
+        "roadRegulatorName": "Haarlem",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": false,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator"
+        ],
+        "priority_count": 2,
+        "tlc_organization": "",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.747398,
           52.278809
         ]
@@ -25120,8 +25121,8 @@
           "road_operator"
         ],
         "priority_count": 2,
-        "tlc_organization": "Swarco - Peek Traffic",
-        "its_organization": "Gemeente Rotterdam",
+        "tlc_organization": "",
+        "its_organization": "",
         "ris_organization": "Swarco"
       }
     },
@@ -30977,6 +30978,41 @@
         "tlc_organization": "Swarco - Peek Traffic",
         "its_organization": "Swarco - Peek Traffic",
         "ris_organization": "Swarco - Peek Traffic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.95272,
+          51.55509
+        ]
+      },
+      "properties": {
+        "type": "traffic_light",
+        "id": "7a55001e",
+        "name": "TIL135",
+        "identifier": "7a55001e",
+        "latitude": 51.55509,
+        "longitude": 4.95272,
+        "roadRegulatorId": 31317,
+        "roadRegulatorName": "Tilburg",
+        "subjectTypeName": "iVRI",
+        "has_emergency": true,
+        "has_road_operator": true,
+        "has_public_transport": false,
+        "has_logistics": true,
+        "has_agriculture": false,
+        "priorities": [
+          "emergency",
+          "road_operator",
+          "logistics"
+        ],
+        "priority_count": 3,
+        "tlc_organization": "Swarco",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -42420,9 +42456,9 @@
           "logistics"
         ],
         "priority_count": 4,
-        "tlc_organization": "Ko Hartog",
-        "its_organization": "Vialis",
-        "ris_organization": "Swarco - Peek Traffic"
+        "tlc_organization": "",
+        "its_organization": "Gemeente Rotterdam",
+        "ris_organization": "Swarco"
       }
     },
     {
@@ -44655,8 +44691,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          4.20436,
-          51.96984
+          4.209212,
+          51.96977
         ]
       },
       "properties": {
@@ -44664,8 +44700,8 @@
         "id": "7aa800a0",
         "name": "2300",
         "identifier": "7aa800a0",
-        "latitude": 51.96984,
-        "longitude": 4.20436,
+        "latitude": 51.96977,
+        "longitude": 4.209212,
         "roadRegulatorId": 31400,
         "roadRegulatorName": "Provincie Zuid-Holland",
         "subjectTypeName": "iVRI",

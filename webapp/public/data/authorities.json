@@ -52,7 +52,7 @@
   {
     "name": "Tilburg",
     "slug": "tilburg",
-    "count": 49
+    "count": 50
   },
   {
     "name": "Deventer",
@@ -82,7 +82,7 @@
   {
     "name": "Amersfoort",
     "slug": "amersfoort",
-    "count": 36
+    "count": 35
   },
   {
     "name": "Hengelo",
@@ -342,6 +342,11 @@
   {
     "name": "Alkmaar",
     "slug": "alkmaar",
+    "count": 1
+  },
+  {
+    "name": "Haarlem",
+    "slug": "haarlem",
     "count": 1
   },
   {
