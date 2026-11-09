@@ -5,14 +5,14 @@
     "count": 76
   },
   {
+    "name": "Provincie Noord-Brabant",
+    "slug": "provincie-noord-brabant",
+    "count": 71
+  },
+  {
     "name": "Rotterdam",
     "slug": "rotterdam",
     "count": 70
-  },
-  {
-    "name": "Provincie Noord-Brabant",
-    "slug": "provincie-noord-brabant",
-    "count": 69
   },
   {
     "name": "Apeldoorn",
@@ -30,13 +30,13 @@
     "count": 54
   },
   {
-    "name": "Almere",
-    "slug": "almere",
-    "count": 53
-  },
-  {
     "name": "Nijmegen",
     "slug": "nijmegen",
+    "count": 54
+  },
+  {
+    "name": "Almere",
+    "slug": "almere",
     "count": 53
   },
   {
@@ -45,13 +45,13 @@
     "count": 52
   },
   {
-    "name": "Enschede",
-    "slug": "enschede",
-    "count": 50
-  },
-  {
     "name": "Tilburg",
     "slug": "tilburg",
+    "count": 51
+  },
+  {
+    "name": "Enschede",
+    "slug": "enschede",
     "count": 50
   },
   {
@@ -65,11 +65,6 @@
     "count": 48
   },
   {
-    "name": "s-Hertogenbosch",
-    "slug": "s-hertogenbosch",
-    "count": 44
-  },
-  {
     "name": "Delft",
     "slug": "delft",
     "count": 43
@@ -80,9 +75,14 @@
     "count": 42
   },
   {
+    "name": "s-Hertogenbosch",
+    "slug": "s-hertogenbosch",
+    "count": 42
+  },
+  {
     "name": "Amersfoort",
     "slug": "amersfoort",
-    "count": 35
+    "count": 36
   },
   {
     "name": "Hengelo",
@@ -90,13 +90,13 @@
     "count": 30
   },
   {
-    "name": "Leeuwarden",
-    "slug": "leeuwarden",
-    "count": 28
-  },
-  {
     "name": "Provincie Gelderland",
     "slug": "provincie-gelderland",
+    "count": 29
+  },
+  {
+    "name": "Leeuwarden",
+    "slug": "leeuwarden",
     "count": 28
   },
   {
@@ -175,14 +175,14 @@
     "count": 10
   },
   {
-    "name": "Nissewaard",
-    "slug": "nissewaard",
+    "name": "Nieuwegein",
+    "slug": "nieuwegein",
     "count": 10
   },
   {
-    "name": "Nieuwegein",
-    "slug": "nieuwegein",
-    "count": 9
+    "name": "Nissewaard",
+    "slug": "nissewaard",
+    "count": 10
   },
   {
     "name": "Port of Moerdijk",
